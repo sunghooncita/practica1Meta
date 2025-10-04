@@ -1,35 +1,49 @@
 package meta1;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        try {
+        File carpeta = new File("src/datos");
 
-            int[][][] matrices = LeerMatriz.leerArchivo("src/datos/ford04.dat");
-            int[][] flujos = matrices[0];
-            int[][] distancias = matrices[1];
+        File[] archivos = carpeta.listFiles((dir, name) -> name.endsWith(".dat"));
 
-            // Mostrar matrices
-            //System.out.println("\nMatriz de Flujos:");
-            //LeerMatriz.imprimirMatriz(flujos);
+        // Semilla base
+        int semillaBase = 77645037;
+        int K = 5;
+        int iterMax = 5000;
 
-            //System.out.println("\nMatriz de Distancias:");
-            //LeerMatriz.imprimirMatriz(distancias);
+        for (File archivo : archivos) {
+            try {
+                System.out.println("Archivo: " + archivo.getName());
 
-            int[] solucion = Greedy.algoritmoGreedy(flujos, distancias);
-            int costo = Greedy.calcularCosto(solucion, flujos, distancias);
+                int[][][] matrices = LeerMatriz.leerArchivo(archivo.getPath());
+                int[][] flujos = matrices[0];
+                int[][] distancias = matrices[1];
 
-            System.out.println(" Costo total: " + costo);
-/*
-            //Mostrar asignaciones
-            System.out.println("\n Asignación unidades a ubicaciones:");
-            for (int i = 0; i < solucion.length; i++) {
-                System.out.println("   Unidad " + i + ": Ubicación " + solucion[i]);
+                // GREEDY
+                int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
+                int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
+                System.out.println("  Greedy -> Costo: " + costoGreedy);
+
+                // GREEDY ALEATORIO
+                Random rnd = new Random(semillaBase);
+                int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                int costoGA = GreedyAleatorio.calcularCosto(solGA, flujos, distancias);
+                System.out.println("  Greedy Aleatorio -> Costo: " + costoGA);
+
+                // BÚSQUEDA LOCAL
+                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA, flujos, distancias, iterMax);
+                int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
+                System.out.println("  Búsqueda Local -> Costo: " + costoBL);
+
+                System.out.println();
+
+            } catch (FileNotFoundException e) {
+                System.out.println("Error al leer " + archivo.getName() + ": " + e.getMessage());
             }
-*/
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: " + e.getMessage());
         }
     }
 }
