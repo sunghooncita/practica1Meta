@@ -34,7 +34,7 @@ public class Main {
                     System.out.println(" Ejecucion "+(i+1)+": ");
                     // GREEDY ALEATORIO
                     int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                    int costoGA = GreedyAleatorio.calcularCosto(solGA, flujos, distancias);
+                    int costoGA = Greedy.calcularCosto(solGA, flujos, distancias);
                     System.out.println("  Greedy Aleatorio -> Costo: " + costoGA);
 
                     // BÚSQUEDA LOCAL

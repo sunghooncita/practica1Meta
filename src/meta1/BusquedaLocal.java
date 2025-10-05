@@ -4,41 +4,37 @@ public class BusquedaLocal {
     public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax) {
 
         int n = solucionInicial.length;
-        int[] solucion = solucionInicial.clone();
-        int costoActual = Greedy.calcularCosto(solucion, flujos, distancias);
-
-        boolean[] noPrometedor = new boolean[n]; // false = se puede mover, true = no se mueve
+        int[] solucion = solucionInicial.clone(); //para no modificar el original
+        boolean[] noPrometedor = new boolean[n]; // false = se puede mover, true = no se revisa porque ya no mejora
         int iteraciones = 0;
 
         while (iteraciones < iterMax) {
             boolean mejoraGlobal = false;
 
             for (int i = 0; i < n; i++) {
-                if (noPrometedor[i]) continue; // saltar los desactivados
+                if (noPrometedor[i] == true) continue; // saltar los desactivados
                 boolean mejoraLocal = false;
 
                 for (int j = i + 1; j < n; j++) {
-                    int delta = calcularDelta(solucion, flujos, distancias, i, j);
-                    if (delta < 0) {
-                        // aplicar el intercambio
+                    int delta = funcionEvaluacion(solucion, flujos, distancias, i, j);
+                    if (delta < 0) { //si disminuye el costo, aplicamos el intercambio
                         int temp = solucion[i];
                         solucion[i] = solucion[j];
                         solucion[j] = temp;
 
-                        costoActual += delta;
                         noPrometedor[i] = noPrometedor[j] = false; // reactivar ambos
                         mejoraLocal = true;
                         mejoraGlobal = true;
-                        break; // first improvement
+                        break; // primera mejora
                     }
                 }
 
-                if (!mejoraLocal) {
+                if (mejoraLocal == false) {
                     noPrometedor[i] = true; // desactivar si no mejoró
                 }
             }
 
-            if (!mejoraGlobal) {
+            if (mejoraGlobal == false) {
                 break; // no hay más mejoras
             }
 
@@ -49,22 +45,8 @@ public class BusquedaLocal {
         return solucion;
     }
 
-
-    // Calcular costo total de una solución
-    public static int calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
-        int n = solucion.length;
-        int costo = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                costo += flujos[i][j] * distancias[solucion[i]][solucion[j]];
-            }
-        }
-        return costo;
-    }
-
-
-    // Calcular cambio de costo al intercambiar i y j
-    public static int calcularDelta(int[] solucion, int[][] flujos, int[][] distancias, int i, int j) {
+    // Calculamos cuanto cambia el costo al intercambiar i y j
+    public static int funcionEvaluacion(int[] solucion, int[][] flujos, int[][] distancias, int i, int j) {
         int n = solucion.length;
         int delta = 0;
         for (int k = 0; k < n; k++) {
