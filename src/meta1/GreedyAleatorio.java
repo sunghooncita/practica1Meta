@@ -34,7 +34,7 @@ public class GreedyAleatorio {
         int[] solucion = new int[n];
 
         for (int i = 0; i < n; i++) {
-            // Limitamos K si quedan menos elementos
+            // Limitamos K si quedan menos elementos, para evitar errores por pasar un número mayor que el tamaño de la lista
             int limiteU = (K < unidadesRestantes.size()) ? K : unidadesRestantes.size();
             int limiteL = (K < ubicacionesRestantes.size()) ? K : ubicacionesRestantes.size();
 
