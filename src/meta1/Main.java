@@ -28,21 +28,25 @@ public class Main {
                 int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
                 System.out.println("  Greedy -> Costo: " + costoGreedy);
 
-                // GREEDY ALEATORIO
                 Random rnd = new Random(semillaBase);
-                int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                int costoGA = GreedyAleatorio.calcularCosto(solGA, flujos, distancias);
-                System.out.println("  Greedy Aleatorio -> Costo: " + costoGA);
+                for (int i = 0; i < 5; i++) {
 
-                // BÚSQUEDA LOCAL
-                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA, flujos, distancias, iterMax);
-                int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
-                System.out.println("  Búsqueda Local -> Costo: " + costoBL);
+                    System.out.println(" Ejecucion "+(i+1)+": ");
+                    // GREEDY ALEATORIO
+                    int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                    int costoGA = GreedyAleatorio.calcularCosto(solGA, flujos, distancias);
+                    System.out.println("  Greedy Aleatorio -> Costo: " + costoGA);
 
+                    // BÚSQUEDA LOCAL
+                    int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA, flujos, distancias, iterMax);
+                    int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
+                    System.out.println("  Búsqueda Local -> Costo: " + costoBL);
+
+                }
                 System.out.println();
 
             } catch (FileNotFoundException e) {
-                System.out.println("Error al leer " + archivo.getName() + ": " + e.getMessage());
+                System.out.println(e.getMessage());
             }
         }
     }

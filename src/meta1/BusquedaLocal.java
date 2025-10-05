@@ -50,6 +50,19 @@ public class BusquedaLocal {
     }
 
 
+    // Calcular costo total de una solución
+    public static int calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
+        int n = solucion.length;
+        int costo = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                costo += flujos[i][j] * distancias[solucion[i]][solucion[j]];
+            }
+        }
+        return costo;
+    }
+
+
     // Calcular cambio de costo al intercambiar i y j
     public static int calcularDelta(int[] solucion, int[][] flujos, int[][] distancias, int i, int j) {
         int n = solucion.length;

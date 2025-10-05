@@ -27,7 +27,7 @@ public class GreedyAleatorio {
         for (int i = 0; i < n; i++) ubicaciones[i] = i;
         Arrays.sort(ubicaciones, (a, b) -> Integer.compare(sumaDistancias[a], sumaDistancias[b]));
 
-        // Creamos istas dinámicas para eliminar elementos dinamicamente
+        // Creamos listas dinámicas para eliminar elementos dinamicamente
         List<Integer> unidadesRestantes = new ArrayList<>(Arrays.asList(unidades));
         List<Integer> ubicacionesRestantes = new ArrayList<>(Arrays.asList(ubicaciones));
 
@@ -39,6 +39,7 @@ public class GreedyAleatorio {
             int limiteL = (K < ubicacionesRestantes.size()) ? K : ubicacionesRestantes.size();
 
             // Elegimos aleatoriamente entre los K mejores
+            //Para que el algoritmo sea aleatorio, pero que puedas volver a obtener el mismo resultado si usas la misma configuración, usamos una semilla
             int indiceU = rnd.nextInt(limiteU);
             int indiceL = rnd.nextInt(limiteL);
 
