@@ -5,44 +5,57 @@ public class BusquedaLocal {
     public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax) {
 
         int n = solucionInicial.length;
-        int[] solucion = solucionInicial.clone();   // para no modificar el original
-        int[] dlb = new int[n];
-        int iteraciones = 0;
+        int[] solucion = solucionInicial.clone();
+        int[] dlb = new int[n];  // 0 = prometedor, 1 = no prometedor
+        int start_i = 0;         // índice cíclico de inicio
 
+        for (int iter = 0; iter < iterMax; iter++) {
+            boolean improved = false;
 
-        for (int i = 0; i < n; i++) {
-            if (dlb[i] == 0) {
-                boolean improve_flag = false;
+            for (int step = 0; step < n; step++) {
+                int i = (start_i + step) % n;
 
-                for (int j = i + 1; j < n; j++) {
-                    int check = checkMove(solucion, flujos, distancias, i, j);
-                    if (check < 0) { //si disminuye el costo, aplicamos el intercambio
-                        int temp = solucion[i]; //aplicamos el movimiento
-                        solucion[i] = solucion[j];
-                        solucion[j] = temp;
+                if (dlb[i] == 0) {
+                    boolean localImproved = false;
 
-                        dlb[i] = dlb[j] = 0;
-                        improve_flag = true;
+                    // j también cíclico
+                    for (int jStep = 1; jStep < n; jStep++) {
+                        int j = (i + jStep) % n;
+                        int delta = checkMove(solucion, flujos, distancias, i, j);
 
+                        if (delta < 0) { // mejora
+                            // intercambio
+                            int temp = solucion[i];
+                            solucion[i] = solucion[j];
+                            solucion[j] = temp;
 
-                        break;
+                            dlb[i] = dlb[j] = 0;
+                            localImproved = true;
+                            improved = true;
+
+                            break; // primer mejor
+                        }
+                    }
+
+                    if (!localImproved) {
+                        dlb[i] = 1;  // marcar como no prometedor
                     }
                 }
+            }
 
-                // si no hubo mejora, marcamos dlb[i] = 1 (ya no mira más)
-                if (!improve_flag) {
-                    dlb[i] = 1;
-                }
+            // actualizar start_i para que sea cíclico
+            start_i = (start_i + 1) % n;
+
+            // estancamiento: ninguna mejora en esta iteración
+            if (!improved) {
+                break;
             }
         }
 
-        iteraciones++;
-
-        System.out.println("Búsqueda Local en " + iteraciones + " iteraciones.");
         return solucion;
     }
 
-    // calculamos el cambio en el costo al intercambiar i y j
+    // calcular cambio en costo al intercambiar i y j
     public static int checkMove(int[] solucion, int[][] flujos, int[][] distancias, int i, int j) {
         int n = solucion.length;
         int delta = 0;
@@ -58,6 +71,7 @@ public class BusquedaLocal {
         return delta;
     }
 }
+
 //comprobar q i da la vuelta completa
 //la i no vale 0 si no lo q nos quedamos en la anterior posicion
 //yo hago las comprobaciones del dlb y la 3 se intercambia con la 6, la siguiente vez que empiece empieza en el 4 no en el 0

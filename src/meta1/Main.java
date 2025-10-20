@@ -20,7 +20,6 @@ public class Main {
 
         // Semilla base y número de ejecuciones
 
-        int numEjecuciones = 5;
         int K = 5; // valor K para GreedyAleatorio
 
         // Recorremos los archivos configurados
@@ -40,9 +39,11 @@ public class Main {
                 int[][] flujos = matrices[0];
                 int[][] distancias = matrices[1];
 
-                // Hacemos 5 ejecuciones con diferentes semillas
                 Random rnd = new Random(semillaConfig);
-                for (int i = 1; i <= numEjecuciones; i++) {
+                for (int i = 1; i <= 5; i++) {
+
+                    System.out.println("\n Ejecución " + i + ": ");
+
                     // Ejecutar los algoritmos definidos en el archivo de configuración
                     for (String algoritmo : algoritmosConfig) {
                         switch (algoritmo) {
