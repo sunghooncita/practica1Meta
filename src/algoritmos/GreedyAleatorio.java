@@ -1,4 +1,4 @@
-package meta1;
+package algoritmos;
 
 import java.util.*;
 

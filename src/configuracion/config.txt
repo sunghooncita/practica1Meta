@@ -1,0 +1,4 @@
+Archivos=src/datos/ford01.dat src/datos/ford02.dat src/datos/ford03.dat src/datos/ford04.dat
+Semillas=77645037
+Algoritmos=Greedy BusquedaLocal GreedyAleatorio
+OtrosParametros=5000
