@@ -10,7 +10,8 @@ public class Configurador {
     ArrayList<String> archivos;
     ArrayList<String> algoritmos;
     Integer semilla;
-    Integer parametroExtra;
+    Integer iteraciones;
+    Integer K;
     Integer tenenciaTabu;
     Double oscilacionEstrategica;
     Double estancamiento;
@@ -42,8 +43,11 @@ public class Configurador {
                             algoritmos.add(valgoritmos[i]);
                         }
                         break;
-                    case "OtrosParametros":
-                        parametroExtra = Integer.parseInt(split[1]);
+                    case "iteraciones":
+                        iteraciones = Integer.parseInt(split[1]);
+                        break;
+                    case "K":
+                        K = Integer.parseInt(split[1]);
                         break;
                     case "tenenciaTabu":
                         tenenciaTabu = Integer.parseInt(split[1]);
@@ -74,8 +78,8 @@ public class Configurador {
         return semilla;
     }
 
-    public Integer getParametroExtra() {
-        return parametroExtra;
+    public Integer getIteraciones() {
+        return iteraciones;
     }
 
     public Integer getTenenciaTabu() {
@@ -90,4 +94,7 @@ public class Configurador {
         return estancamiento;
     }
 
+    public int getK() {
+        return K;
+    }
 }

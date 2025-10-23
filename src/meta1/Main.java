@@ -16,14 +16,15 @@ public class Main {
         ArrayList<String> archivosConfig = config.getArchivos();
         ArrayList<String> algoritmosConfig = config.getAlgoritmos();
         Integer semillaConfig = config.getSemillas();
-        Integer iterMax = config.getParametroExtra();
+        Integer iter = config.getIteraciones();
+        int K= config.getK();
         int tenenciaTabu = config.getTenenciaTabu();
         double oscilacionEstrategica = config.getOscilacion();
         double estancamiento = config.getEstancamiento();
 
+
         // Semilla base y número de ejecuciones
 
-        int K = 5; // valor K para GreedyAleatorio
 
         // Recorremos los archivos configurados
         for (String rutaArchivo : archivosConfig) {
@@ -42,6 +43,10 @@ public class Main {
                 int[][] flujos = matrices[0];
                 int[][] distancias = matrices[1];
 
+                int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
+                int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
+                System.out.println("\n  Greedy -> Costo: " + costoGreedy);
+
                 Random rnd = new Random(semillaConfig);
                 for (int i = 1; i <= 5; i++) {
 
@@ -50,12 +55,6 @@ public class Main {
                     // Ejecutar los algoritmos definidos en el archivo de configuración
                     for (String algoritmo : algoritmosConfig) {
                         switch (algoritmo) {
-                            case "Greedy":
-                                int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
-                                int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
-                                System.out.println("  Greedy -> Costo: " + costoGreedy);
-                                break;
-
                             case "GreedyAleatorio":
                                 int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
                                 int costoGA = Greedy.calcularCosto(solGA, flujos, distancias);
@@ -65,7 +64,7 @@ public class Main {
                             case "BusquedaLocal":
                                 // Se parte de una solución generada por el Greedy Aleatorio
                                 int[] solGA2 = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iterMax);
+                                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter);
                                 int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
                                 System.out.println("  Búsqueda Local -> Costo: " + costoBL);
                                 break;

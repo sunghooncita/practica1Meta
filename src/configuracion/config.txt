@@ -1,7 +1,8 @@
 Archivos=src/datos/ford01.dat src/datos/ford02.dat src/datos/ford03.dat src/datos/ford04.dat
 Semillas=77645037
-Algoritmos=Greedy BusquedaLocal GreedyAleatorio
-OtrosParametros=5000
+Algoritmos=GreedyAleatorio BusquedaLocal BusquedaTabu
+iteraciones=5000
+K=5
 tenenciaTabu=3
-oscilacion=0.50
+oscilacionEstrategica=0.50
 estancamiento=0.05
