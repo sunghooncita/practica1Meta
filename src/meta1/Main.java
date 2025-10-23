@@ -17,6 +17,9 @@ public class Main {
         ArrayList<String> algoritmosConfig = config.getAlgoritmos();
         Integer semillaConfig = config.getSemillas();
         Integer iterMax = config.getParametroExtra();
+        int tenenciaTabu = config.getTenenciaTabu();
+        double oscilacionEstrategica = config.getOscilacion();
+        double estancamiento = config.getEstancamiento();
 
         // Semilla base y número de ejecuciones
 
@@ -65,6 +68,14 @@ public class Main {
                                 int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iterMax);
                                 int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
                                 System.out.println("  Búsqueda Local -> Costo: " + costoBL);
+                                break;
+
+                            case "BusquedaTabu":
+                                int[] solInicialTabu = Greedy.algoritmoGreedy(flujos, distancias);
+                                BusquedaTabu bt = new BusquedaTabu();
+                                int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento);
+                                int costoTabu = Greedy.calcularCosto(solTabu, distancias, flujos);
+                                System.out.println("  Búsqueda Tabú -> Costo: " + costoTabu);
                                 break;
 
                             default:

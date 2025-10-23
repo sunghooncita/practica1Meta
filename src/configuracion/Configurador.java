@@ -11,6 +11,9 @@ public class Configurador {
     ArrayList<String> algoritmos;
     Integer semilla;
     Integer parametroExtra;
+    Integer tenenciaTabu;
+    Double oscilacionEstrategica;
+    Double estancamiento;
 
     public Configurador(String ruta){
         archivos = new ArrayList<>();
@@ -42,6 +45,15 @@ public class Configurador {
                     case "OtrosParametros":
                         parametroExtra = Integer.parseInt(split[1]);
                         break;
+                    case "tenenciaTabu":
+                        tenenciaTabu = Integer.parseInt(split[1]);
+                        break;
+                    case "oscilacionEstrategica":
+                            oscilacionEstrategica = Double.parseDouble(split[1]);
+                        break;
+                    case "estancamiento":
+                        estancamiento = Double.parseDouble(split[1]);
+                        break;
                 }
             }
         }catch(IOException e){
@@ -64,6 +76,18 @@ public class Configurador {
 
     public Integer getParametroExtra() {
         return parametroExtra;
+    }
+
+    public Integer getTenenciaTabu() {
+        return tenenciaTabu;
+    }
+
+    public Double getOscilacion() {
+        return oscilacionEstrategica;
+    }
+
+    public Double getEstancamiento() {
+        return estancamiento;
     }
 
 }
