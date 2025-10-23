@@ -70,7 +70,8 @@ public class Main {
                                 break;
 
                             case "BusquedaTabu":
-                                int[] solInicialTabu = Greedy.algoritmoGreedy(flujos, distancias);
+                                int[] solGA3 = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                                int[] solInicialTabu = BusquedaLocal.busquedaLocalPrimerMejor(solGA3, flujos, distancias, iter);
                                 BusquedaTabu bt = new BusquedaTabu();
                                 int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento);
                                 int costoTabu = Greedy.calcularCosto(solTabu, distancias, flujos);
@@ -78,7 +79,7 @@ public class Main {
                                 break;
 
                             default:
-                                System.out.println("⚠️ Algoritmo no reconocido: " + algoritmo);
+                                System.out.println(" Algoritmo no reconocido: " + algoritmo);
                         }
                     }
                 }
