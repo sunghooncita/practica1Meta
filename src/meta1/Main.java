@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.io.File;
 import java.util.Random;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,15 +26,14 @@ public class Main {
         double estancamiento = config.getEstancamiento();
 
 
-        // Semilla base y número de ejecuciones
 
-
+        ExecutorService executor = Executors.newFixedThreadPool(5);
         // Recorremos los archivos configurados
         for (String rutaArchivo : archivosConfig) {
 
             File archivo = new File(rutaArchivo);
             if (!archivo.exists()) {
-                System.out.println("⚠️ No se encontró el archivo: " + archivo.getAbsolutePath());
+                System.out.println(" No se encontró el archivo: " + archivo.getAbsolutePath());
                 continue;
             }
 
@@ -47,6 +49,7 @@ public class Main {
                 int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
                 System.out.println("\n  Greedy -> Costo: " + costoGreedy);
 
+                CountDownLatch cdl = new CountDownLatch(5);
                 Random rnd = new Random(semillaConfig);
                 for (int i = 1; i <= 5; i++) {
 
@@ -54,8 +57,10 @@ public class Main {
 
                     // Ejecutar los algoritmos definidos en el archivo de configuración
                     for (String algoritmo : algoritmosConfig) {
+                        CountDownLatch cdl = new CountDownLatch(1);
                         switch (algoritmo) {
                             case "GreedyAleatorio":
+                                ArrayList<Logs> l = new ArrayList<>();
                                 int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
                                 int costoGA = Greedy.calcularCosto(solGA, flujos, distancias);
                                 System.out.println("  Greedy Aleatorio -> Costo: " + costoGA);
