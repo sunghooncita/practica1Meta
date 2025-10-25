@@ -48,8 +48,8 @@ public class Main {
 
                 //Registro del algoritmo greedy
                 long inicioTiempoGreedy = System.currentTimeMillis();
-                int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
-                int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
+                int[] solGreedy = AlgGE15.algoritmoGreedy(flujos, distancias);
+                int costoGreedy = AlgGE15.calcularCosto(solGreedy, flujos, distancias);
                 long tiempoGreedy = System.currentTimeMillis() - inicioTiempoGreedy;
                 //Crear y ejecutar el log de Greedy
                 CountDownLatch cdlGreedy = new CountDownLatch(1);
@@ -80,8 +80,8 @@ public class Main {
                         switch (algoritmo) {
                             case "GreedyAleatorio":
                                 // Algoritmo de construccion greedy aleatorio
-                                int[] solGA = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                                int costoGA = Greedy.calcularCosto(solGA, flujos, distancias);
+                                int[] solGA = AlgGA15.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                                int costoGA = AlgGE15.calcularCosto(solGA, flujos, distancias);
                                 long tiempoGA = System.currentTimeMillis() - inicioTiempo;
                                 //Preparamos el reporte final, como es un algoritmo no
                                 //iterativo la solucion final e inicial son las mismas
@@ -91,13 +91,13 @@ public class Main {
 
                             case "BusquedaLocal":
                                 //Solucion inicial (greedy aleatorio)
-                                int[] solGA2 = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                                int costoInicialBL = Greedy.calcularCosto(solGA2, flujos, distancias);
+                                int[] solGA2 = AlgGA15.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                                int costoInicialBL = AlgGE15.calcularCosto(solGA2, flujos, distancias);
                                 //Creamos el logs y lo inicializamos con los datos iniciales
                                 log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaBase,
                                         solGA2, costoInicialBL, null, 0, 0);
-                                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter,log);
-                                int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
+                                int[] solBL = AlgBL15.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter,log);
+                                int costoBL = AlgGE15.calcularCosto(solBL, flujos, distancias);
                                 long tiempoBL = System.currentTimeMillis() - inicioTiempo;
                                 //Sobreescribimos el log con los resultados finales y el tiempo
                                 log.solucionFinal = solBL.clone();
@@ -108,16 +108,16 @@ public class Main {
                             case "BusquedaTabu":
 
                                 //Solucion inicial (busqueda tabu)
-                                int[] solGA3 = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                                int[] solInicialTabu = BusquedaLocal.busquedaLocalPrimerMejor(solGA3, flujos, distancias, iter,null);
-                                int costoInicialTabu = Greedy.calcularCosto(solInicialTabu, flujos, distancias);
+                                int[] solGA3 = AlgGA15.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
+                                int[] solInicialTabu = AlgBL15.busquedaLocalPrimerMejor(solGA3, flujos, distancias, iter,null);
+                                int costoInicialTabu = AlgGE15.calcularCosto(solInicialTabu, flujos, distancias);
 
                                 //Creamos el logs y lo inicializamos con los datos iniciales
                                 log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaBase,
                                         solInicialTabu, costoInicialTabu, null, 0, 0);
-                                BusquedaTabu bt = new BusquedaTabu();
+                                AlgBT15 bt = new AlgBT15();
                                 int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento,log);
-                                int costoTabu = Greedy.calcularCosto(solTabu, flujos,distancias);
+                                int costoTabu = AlgGE15.calcularCosto(solTabu, flujos,distancias);
                                 long tiempoTabu = System.currentTimeMillis() - inicioTiempo;
                                 //Sobreescribimos el log con los resultados finales y el tiempo
                                 log.solucionFinal = solTabu.clone();

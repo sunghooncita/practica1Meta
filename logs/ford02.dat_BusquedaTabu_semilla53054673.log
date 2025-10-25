@@ -1,0 +1,1019 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaTabu
+Dataset: ford02.dat
+Semilla: 53054673
+
+Solución inicial y su coste
+---------------------------
+[12, 1, 18, 6, 0, 13, 7, 19, 16, 10, 11, 5, 15, 3, 17, 2, 9, 14, 8, 4]
+Coste: 31396
+
+Evolución de la búsqueda
+------------------------
+Intercambio (0, 4) -> Nueva solución con coste 31772
+Intercambio (2, 14) -> Nueva solución con coste 31746
+Intercambio (16, 18) -> Nueva solución con coste 31652
+Intercambio (3, 18) -> Nueva solución con coste 31268
+Intercambio (6, 14) -> Nueva solución con coste 30818
+Intercambio (2, 16) -> Nueva solución con coste 30760
+Intercambio (15, 17) -> Nueva solución con coste 30752
+Intercambio (5, 9) -> Peor solución (coste 30808) — no aceptada
+Intercambio (12, 18) -> Peor solución (coste 30872) — no aceptada
+Intercambio (2, 16) -> Peor solución (coste 30988) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30920
+Intercambio (3, 15) -> Peor solución (coste 30978) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 31020) — no aceptada
+Intercambio (14, 19) -> Peor solución (coste 31026) — no aceptada
+Intercambio (4, 5) -> Peor solución (coste 31080) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 31020
+Intercambio (12, 18) -> Nueva solución con coste 30914
+Intercambio (6, 18) -> Peor solución (coste 31052) — no aceptada
+Intercambio (3, 11) -> Nueva solución con coste 30972
+Intercambio (10, 13) -> Nueva solución con coste 30726
+Intercambio (10, 15) -> Nueva solución con coste 30696
+Intercambio (5, 15) -> Peor solución (coste 30704) — no aceptada
+Intercambio (9, 13) -> Nueva solución con coste 30594
+Intercambio (4, 10) -> Nueva solución con coste 30208
+Intercambio (12, 15) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30364
+Intercambio (3, 14) -> Nueva solución con coste 30050
+Intercambio (10, 12) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (14, 15) -> Peor solución (coste 30096) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30258) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 30336) — no aceptada
+Intercambio (0, 1) -> Peor solución (coste 30336) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 30050
+Intercambio (4, 14) -> Peor solución (coste 30118) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 29914
+Intercambio (10, 13) -> Peor solución (coste 30254) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 30388) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30514) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 30600) — no aceptada
+Intercambio (10, 13) -> Nueva solución con coste 30368
+Intercambio (14, 15) -> Nueva solución con coste 30292
+Intercambio (4, 15) -> Nueva solución con coste 30000
+Intercambio (4, 14) -> Nueva solución con coste 29914
+Intercambio (10, 12) -> Peor solución (coste 30118) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 30284) — no aceptada
+Intercambio (4, 15) -> Peor solución (coste 30336) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 30482) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 30472
+Intercambio (10, 12) -> Nueva solución con coste 30374
+Intercambio (3, 5) -> Nueva solución con coste 30066
+Intercambio (5, 9) -> Peor solución (coste 30206) — no aceptada
+Intercambio (11, 15) -> Peor solución (coste 30344) — no aceptada
+Intercambio (6, 18) -> Nueva solución con coste 30098
+Intercambio (4, 14) -> Peor solución (coste 30300) — no aceptada
+Intercambio (9, 15) -> Nueva solución con coste 30258
+Intercambio (7, 19) -> Nueva solución con coste 29746
+Intercambio (5, 11) -> Nueva solución con coste 29486
+Intercambio (6, 18) -> Nueva solución con coste 28644
+Intercambio (8, 16) -> Nueva solución con coste 28530
+Intercambio (2, 17) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28098) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27656
+Intercambio (10, 12) -> Peor solución (coste 28106) — no aceptada
+Intercambio (12, 13) -> Peor solución (coste 28620) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 28116
+Intercambio (10, 13) -> Nueva solución con coste 27766
+Intercambio (10, 12) -> Peor solución (coste 28130) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27670
+Intercambio (3, 6) -> Peor solución (coste 28262) — no aceptada
+Intercambio (10, 13) -> Peor solución (coste 28284) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28524) — no aceptada
+Intercambio (6, 15) -> Peor solución (coste 28856) — no aceptada
+Intercambio (3, 6) -> Nueva solución con coste 28106
+Intercambio (3, 15) -> Nueva solución con coste 27686
+Intercambio (10, 12) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (0, 1) -> Peor solución (coste 27818) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28098) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27656
+Intercambio (3, 15) -> Nueva solución con coste 26876
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (0, 1) -> Peor solución (coste 27818) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (14, 15) -> Nueva solución con coste 26876
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (0, 1) -> Peor solución (coste 27818) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (14, 15) -> Nueva solución con coste 26876
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Nueva solución con coste 27670
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (0, 1) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (0, 1) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28644) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28444
+Intercambio (14, 15) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 27656
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Nueva solución con coste 27656
+Intercambio (10, 12) -> Peor solución (coste 28106) — no aceptada
+Intercambio (12, 13) -> Peor solución (coste 28620) — no aceptada
+Intercambio (10, 13) -> Nueva solución con coste 28420
+Intercambio (3, 15) -> Nueva solución con coste 27766
+Intercambio (10, 12) -> Peor solución (coste 28130) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28098) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27656
+Intercambio (10, 12) -> Peor solución (coste 28106) — no aceptada
+Intercambio (12, 13) -> Peor solución (coste 28620) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 28116
+Intercambio (10, 13) -> Nueva solución con coste 27766
+Intercambio (10, 12) -> Peor solución (coste 28130) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27670
+Intercambio (3, 6) -> Peor solución (coste 28262) — no aceptada
+Intercambio (10, 13) -> Peor solución (coste 28284) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28524) — no aceptada
+Intercambio (6, 15) -> Peor solución (coste 28856) — no aceptada
+Intercambio (3, 6) -> Nueva solución con coste 28106
+Intercambio (3, 15) -> Nueva solución con coste 27686
+Intercambio (10, 12) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 28724) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28390
+Intercambio (3, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (14, 15) -> Peor solución (coste 27650) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Nueva solución con coste 27670
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (0, 1) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (4, 5) -> Peor solución (coste 27672) — no aceptada
+Intercambio (16, 19) -> Peor solución (coste 28272) — no aceptada
+Intercambio (0, 18) -> Peor solución (coste 28538) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 29038) — no aceptada
+Intercambio (4, 5) -> Peor solución (coste 29192) — no aceptada
+Intercambio (16, 19) -> Nueva solución con coste 28818
+Intercambio (0, 18) -> Nueva solución con coste 27650
+Intercambio (14, 15) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 18) -> Peor solución (coste 28618) — no aceptada
+Intercambio (15, 18) -> Nueva solución con coste 28564
+Intercambio (3, 18) -> Nueva solución con coste 27942
+Intercambio (14, 15) -> Peor solución (coste 28242) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 27762
+Intercambio (15, 18) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Nueva solución con coste 27670
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (0, 1) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (4, 5) -> Peor solución (coste 27672) — no aceptada
+Intercambio (16, 19) -> Peor solución (coste 28272) — no aceptada
+Intercambio (0, 18) -> Peor solución (coste 28538) — no aceptada
+Intercambio (14, 15) -> Peor solución (coste 29038) — no aceptada
+Intercambio (4, 5) -> Peor solución (coste 29192) — no aceptada
+Intercambio (16, 19) -> Nueva solución con coste 28818
+Intercambio (0, 18) -> Nueva solución con coste 27650
+Intercambio (14, 15) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 18) -> Peor solución (coste 28618) — no aceptada
+Intercambio (15, 18) -> Nueva solución con coste 28564
+Intercambio (3, 18) -> Nueva solución con coste 27942
+Intercambio (14, 15) -> Peor solución (coste 28242) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 27762
+Intercambio (15, 18) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Nueva solución con coste 27670
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Peor solución (coste 27670) — no aceptada
+Intercambio (10, 12) -> Peor solución (coste 28116) — no aceptada
+Intercambio (12, 13) -> Nueva solución con coste 27686
+Intercambio (3, 15) -> Peor solución (coste 28106) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28628) — no aceptada
+Intercambio (10, 12) -> Nueva solución con coste 28098
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (3, 15) -> Peor solución (coste 28150) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 27650
+Intercambio (10, 15) -> Peor solución (coste 28234) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27826
+Intercambio (10, 14) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+Intercambio (10, 13) -> Nueva solución con coste 26876
+Intercambio (3, 15) -> Peor solución (coste 27656) — no aceptada
+Intercambio (3, 14) -> Peor solución (coste 28098) — no aceptada
+Intercambio (14, 15) -> Nueva solución con coste 27818
+Intercambio (10, 13) -> Peor solución (coste 28396) — no aceptada
+Intercambio (3, 15) -> Peor solución (coste 28788) — no aceptada
+Intercambio (3, 14) -> Nueva solución con coste 28396
+Intercambio (14, 15) -> Nueva solución con coste 27670
+
+Solución final
+--------------
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+Coste final: 26876
+Duración: 0.088 segundos

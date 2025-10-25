@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.util.Arrays;
 
-public class Greedy {
+public class AlgGE15 {
     public static int[] algoritmoGreedy(int[][] flujos, int[][] distancias) {
 
         int n = flujos.length;

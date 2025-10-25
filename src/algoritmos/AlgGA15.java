@@ -2,7 +2,7 @@ package algoritmos;
 
 import java.util.*;
 
-public class GreedyAleatorio {
+public class AlgGA15 {
     public static int[] algoritmoGreedyAleatorio(int[][] flujos, int[][] distancias, int K, Random rnd) {
 
         int n = flujos.length;

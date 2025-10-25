@@ -1,0 +1,20 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: Greedy
+Dataset: ford04.dat
+Semilla: 0
+
+Solución inicial y su coste
+---------------------------
+[26, 1, 25, 3, 24, 12, 22, 5, 8, 6, 21, 4, 14, 28, 7, 13, 16, 17, 10, 19, 20, 18, 29, 23, 11, 2, 0, 27, 15, 9]
+Coste: 188018
+
+Evolución de la búsqueda
+------------------------
+(Algoritmo no iterativo)
+
+Solución final
+--------------
+[26, 1, 25, 3, 24, 12, 22, 5, 8, 6, 21, 4, 14, 28, 7, 13, 16, 17, 10, 19, 20, 18, 29, 23, 11, 2, 0, 27, 15, 9]
+Coste final: 188018
+Duración: 0.0 segundos

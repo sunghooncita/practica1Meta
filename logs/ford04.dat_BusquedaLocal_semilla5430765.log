@@ -1,0 +1,66 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaLocal
+Dataset: ford04.dat
+Semilla: 5430765
+
+Solución inicial y su coste
+---------------------------
+[0, 21, 15, 22, 11, 20, 17, 24, 25, 7, 18, 8, 16, 28, 12, 4, 23, 29, 10, 13, 14, 1, 3, 6, 26, 2, 5, 27, 19, 9]
+Coste: 197030
+
+Evolución de la búsqueda
+------------------------
+Intercambio (0, 1) -> Nueva solución con coste 195300
+Intercambio (1, 2) -> Nueva solución con coste 192120
+Intercambio (2, 17) -> Nueva solución con coste 192094
+Intercambio (3, 4) -> Nueva solución con coste 191792
+Intercambio (4, 5) -> Nueva solución con coste 190724
+Intercambio (5, 6) -> Nueva solución con coste 190440
+Intercambio (6, 15) -> Nueva solución con coste 189760
+Intercambio (7, 8) -> Nueva solución con coste 189744
+Intercambio (8, 9) -> Nueva solución con coste 188794
+Intercambio (9, 10) -> Nueva solución con coste 188514
+Intercambio (10, 11) -> Nueva solución con coste 187164
+Intercambio (11, 22) -> Nueva solución con coste 186816
+Intercambio (12, 21) -> Nueva solución con coste 186436
+Intercambio (13, 21) -> Nueva solución con coste 185994
+Intercambio (14, 20) -> Nueva solución con coste 185946
+Intercambio (15, 21) -> Nueva solución con coste 185932
+Intercambio (16, 3) -> Nueva solución con coste 184898
+Intercambio (17, 2) -> Nueva solución con coste 183360
+Intercambio (18, 6) -> Nueva solución con coste 183304
+Intercambio (19, 24) -> Nueva solución con coste 182520
+Intercambio (20, 4) -> Nueva solución con coste 182408
+Intercambio (22, 23) -> Nueva solución con coste 181114
+Intercambio (23, 24) -> Nueva solución con coste 180700
+Intercambio (29, 17) -> Nueva solución con coste 180188
+Intercambio (1, 23) -> Nueva solución con coste 180154
+Intercambio (4, 9) -> Nueva solución con coste 179708
+Intercambio (5, 7) -> Nueva solución con coste 179260
+Intercambio (6, 0) -> Nueva solución con coste 178850
+Intercambio (7, 9) -> Nueva solución con coste 178770
+Intercambio (11, 13) -> Nueva solución con coste 178390
+Intercambio (13, 28) -> Nueva solución con coste 178182
+Intercambio (16, 11) -> Nueva solución con coste 178082
+Intercambio (19, 26) -> Nueva solución con coste 177190
+Intercambio (22, 6) -> Nueva solución con coste 176576
+Intercambio (28, 3) -> Nueva solución con coste 176362
+Intercambio (0, 7) -> Nueva solución con coste 175622
+Intercambio (5, 25) -> Nueva solución con coste 174894
+Intercambio (7, 8) -> Nueva solución con coste 173738
+Intercambio (8, 10) -> Nueva solución con coste 173484
+Intercambio (13, 19) -> Nueva solución con coste 172774
+Intercambio (28, 23) -> Nueva solución con coste 172238
+Intercambio (0, 2) -> Nueva solución con coste 171478
+Intercambio (1, 2) -> Nueva solución con coste 171108
+Intercambio (5, 13) -> Nueva solución con coste 169604
+Intercambio (13, 2) -> Nueva solución con coste 166760
+Intercambio (28, 15) -> Nueva solución con coste 166600
+Intercambio (1, 12) -> Nueva solución con coste 162682
+
+Solución final
+--------------
+[0, 1, 2, 3, 18, 5, 6, 7, 8, 17, 10, 11, 12, 13, 14, 15, 16, 9, 4, 19, 20, 22, 21, 23, 24, 25, 26, 27, 28, 29]
+Coste final: 162682
+Duración: 0.0 segundos

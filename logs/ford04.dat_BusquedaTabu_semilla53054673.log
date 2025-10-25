@@ -1,0 +1,1019 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaTabu
+Dataset: ford04.dat
+Semilla: 53054673
+
+Solución inicial y su coste
+---------------------------
+[12, 25, 2, 10, 6, 24, 7, 27, 26, 5, 8, 22, 0, 13, 3, 23, 17, 16, 4, 19, 9, 21, 11, 15, 28, 20, 18, 14, 1, 29]
+Coste: 175060
+
+Evolución de la búsqueda
+------------------------
+Intercambio (5, 19) -> Peor solución (coste 175740) — no aceptada
+Intercambio (1, 5) -> Nueva solución con coste 175390
+Intercambio (4, 14) -> Nueva solución con coste 175222
+Intercambio (1, 13) -> Peor solución (coste 175438) — no aceptada
+Intercambio (13, 28) -> Nueva solución con coste 175184
+Intercambio (6, 8) -> Peor solución (coste 175334) — no aceptada
+Intercambio (9, 10) -> Peor solución (coste 175536) — no aceptada
+Intercambio (4, 14) -> Nueva solución con coste 175380
+Intercambio (6, 8) -> Nueva solución con coste 174966
+Intercambio (15, 28) -> Peor solución (coste 175202) — no aceptada
+Intercambio (10, 17) -> Nueva solución con coste 174736
+Intercambio (8, 25) -> Peor solución (coste 175040) — no aceptada
+Intercambio (4, 12) -> Peor solución (coste 175218) — no aceptada
+Intercambio (8, 20) -> Peor solución (coste 175364) — no aceptada
+Intercambio (20, 29) -> Peor solución (coste 175484) — no aceptada
+Intercambio (4, 7) -> Nueva solución con coste 175378
+Intercambio (4, 14) -> Nueva solución con coste 175274
+Intercambio (10, 28) -> Peor solución (coste 175310) — no aceptada
+Intercambio (4, 10) -> Nueva solución con coste 175302
+Intercambio (17, 28) -> Nueva solución con coste 175012
+Intercambio (15, 24) -> Nueva solución con coste 173760
+Intercambio (5, 20) -> Peor solución (coste 173926) — no aceptada
+Intercambio (5, 29) -> Nueva solución con coste 173852
+Intercambio (6, 21) -> Peor solución (coste 174066) — no aceptada
+Intercambio (3, 8) -> Peor solución (coste 174294) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173908
+Intercambio (13, 16) -> Peor solución (coste 174080) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 174136) — no aceptada
+Intercambio (6, 21) -> Nueva solución con coste 173974
+Intercambio (13, 23) -> Peor solución (coste 174274) — no aceptada
+Intercambio (13, 25) -> Nueva solución con coste 173354
+Intercambio (5, 29) -> Peor solución (coste 173484) — no aceptada
+Intercambio (5, 20) -> Peor solución (coste 173710) — no aceptada
+Intercambio (19, 28) -> Peor solución (coste 173740) — no aceptada
+Intercambio (3, 8) -> Peor solución (coste 173850) — no aceptada
+Intercambio (16, 23) -> Nueva solución con coste 173520
+Intercambio (18, 28) -> Nueva solución con coste 173402
+Intercambio (19, 24) -> Peor solución (coste 173508) — no aceptada
+Intercambio (23, 26) -> Peor solución (coste 173694) — no aceptada
+Intercambio (0, 5) -> Nueva solución con coste 173294
+Intercambio (4, 18) -> Nueva solución con coste 173168
+Intercambio (0, 6) -> Peor solución (coste 173388) — no aceptada
+Intercambio (1, 26) -> Nueva solución con coste 172858
+Intercambio (6, 12) -> Peor solución (coste 172896) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172706
+Intercambio (5, 12) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (5, 19) -> Peor solución (coste 172380) — no aceptada
+Intercambio (5, 24) -> Peor solución (coste 172520) — no aceptada
+Intercambio (19, 24) -> Nueva solución con coste 172430
+Intercambio (6, 12) -> Peor solución (coste 172458) — no aceptada
+Intercambio (1, 2) -> Nueva solución con coste 172388
+Intercambio (6, 7) -> Peor solución (coste 172864) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 173202) — no aceptada
+Intercambio (7, 9) -> Nueva solución con coste 173102
+Intercambio (4, 6) -> Peor solución (coste 173270) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 173448) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 173478) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172888
+Intercambio (1, 2) -> Nueva solución con coste 172430
+Intercambio (5, 24) -> Nueva solución con coste 171686
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 21) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 172894) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172634
+Intercambio (4, 6) -> Nueva solución con coste 172514
+Intercambio (6, 12) -> Nueva solución con coste 172490
+Intercambio (9, 10) -> Nueva solución con coste 172262
+Intercambio (4, 14) -> Peor solución (coste 172542) — no aceptada
+Intercambio (9, 14) -> Peor solución (coste 172554) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 172416
+Intercambio (12, 20) -> Peor solución (coste 172788) — no aceptada
+Intercambio (19, 24) -> Peor solución (coste 173352) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 173720) — no aceptada
+Intercambio (5, 12) -> Nueva solución con coste 173518
+Intercambio (5, 20) -> Nueva solución con coste 173408
+Intercambio (2, 13) -> Peor solución (coste 173592) — no aceptada
+Intercambio (7, 10) -> Peor solución (coste 173796) — no aceptada
+Intercambio (5, 17) -> Peor solución (coste 174064) — no aceptada
+Intercambio (19, 23) -> Nueva solución con coste 174046
+Intercambio (19, 24) -> Peor solución (coste 174082) — no aceptada
+Intercambio (14, 23) -> Nueva solución con coste 173986
+Intercambio (5, 17) -> Nueva solución con coste 173882
+Intercambio (7, 10) -> Peor solución (coste 173934) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173524
+Intercambio (4, 14) -> Nueva solución con coste 173390
+Intercambio (4, 18) -> Nueva solución con coste 173146
+Intercambio (3, 4) -> Peor solución (coste 173432) — no aceptada
+Intercambio (4, 6) -> Nueva solución con coste 173030
+Intercambio (10, 25) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 172710
+Intercambio (23, 24) -> Peor solución (coste 173046) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 173416) — no aceptada
+Intercambio (18, 24) -> Nueva solución con coste 173296
+Intercambio (10, 23) -> Nueva solución con coste 173174
+Intercambio (10, 18) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 25) -> Nueva solución con coste 173030
+Intercambio (4, 6) -> Peor solución (coste 173432) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 173432) — no aceptada
+Intercambio (3, 4) -> Nueva solución con coste 173146
+Intercambio (4, 18) -> Peor solución (coste 173390) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 173524) — no aceptada
+Intercambio (14, 23) -> Peor solución (coste 173892) — no aceptada
+Intercambio (23, 24) -> Nueva solución con coste 173756
+Intercambio (5, 24) -> Nueva solución con coste 173282
+Intercambio (12, 24) -> Nueva solución con coste 172416
+Intercambio (6, 12) -> Peor solución (coste 172554) — no aceptada
+Intercambio (9, 14) -> Nueva solución con coste 172542
+Intercambio (4, 14) -> Nueva solución con coste 172262
+Intercambio (9, 10) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 172380) — no aceptada
+Intercambio (5, 24) -> Peor solución (coste 172520) — no aceptada
+Intercambio (19, 24) -> Nueva solución con coste 172430
+Intercambio (6, 12) -> Peor solución (coste 172458) — no aceptada
+Intercambio (1, 2) -> Nueva solución con coste 172388
+Intercambio (6, 7) -> Peor solución (coste 172864) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 173202) — no aceptada
+Intercambio (7, 9) -> Nueva solución con coste 173102
+Intercambio (4, 6) -> Peor solución (coste 173270) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 173448) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 173478) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172888
+Intercambio (1, 2) -> Nueva solución con coste 172430
+Intercambio (5, 24) -> Nueva solución con coste 171686
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 21) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 172894) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172634
+Intercambio (4, 6) -> Nueva solución con coste 172514
+Intercambio (6, 12) -> Nueva solución con coste 172490
+Intercambio (9, 10) -> Nueva solución con coste 172262
+Intercambio (4, 14) -> Peor solución (coste 172542) — no aceptada
+Intercambio (9, 14) -> Peor solución (coste 172554) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 172416
+Intercambio (12, 20) -> Peor solución (coste 172788) — no aceptada
+Intercambio (19, 24) -> Peor solución (coste 173352) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 173720) — no aceptada
+Intercambio (5, 12) -> Nueva solución con coste 173518
+Intercambio (5, 20) -> Nueva solución con coste 173408
+Intercambio (2, 13) -> Peor solución (coste 173592) — no aceptada
+Intercambio (7, 10) -> Peor solución (coste 173796) — no aceptada
+Intercambio (5, 17) -> Peor solución (coste 174064) — no aceptada
+Intercambio (19, 23) -> Nueva solución con coste 174046
+Intercambio (19, 24) -> Peor solución (coste 174082) — no aceptada
+Intercambio (14, 23) -> Nueva solución con coste 173986
+Intercambio (5, 17) -> Nueva solución con coste 173882
+Intercambio (7, 10) -> Peor solución (coste 173934) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173524
+Intercambio (4, 14) -> Nueva solución con coste 173390
+Intercambio (4, 18) -> Nueva solución con coste 173146
+Intercambio (3, 4) -> Peor solución (coste 173432) — no aceptada
+Intercambio (4, 6) -> Nueva solución con coste 173030
+Intercambio (10, 25) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 172710
+Intercambio (23, 24) -> Peor solución (coste 173046) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 173416) — no aceptada
+Intercambio (18, 24) -> Nueva solución con coste 173296
+Intercambio (10, 23) -> Nueva solución con coste 173174
+Intercambio (10, 18) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 25) -> Nueva solución con coste 173030
+Intercambio (4, 6) -> Peor solución (coste 173432) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 173432) — no aceptada
+Intercambio (3, 4) -> Nueva solución con coste 173146
+Intercambio (4, 18) -> Peor solución (coste 173390) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 173524) — no aceptada
+Intercambio (14, 23) -> Peor solución (coste 173892) — no aceptada
+Intercambio (23, 24) -> Nueva solución con coste 173756
+Intercambio (5, 24) -> Nueva solución con coste 173282
+Intercambio (12, 24) -> Nueva solución con coste 172416
+Intercambio (6, 12) -> Peor solución (coste 172554) — no aceptada
+Intercambio (9, 14) -> Nueva solución con coste 172542
+Intercambio (4, 14) -> Nueva solución con coste 172262
+Intercambio (9, 10) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 172380) — no aceptada
+Intercambio (5, 24) -> Peor solución (coste 172520) — no aceptada
+Intercambio (19, 24) -> Nueva solución con coste 172430
+Intercambio (6, 12) -> Peor solución (coste 172458) — no aceptada
+Intercambio (1, 2) -> Nueva solución con coste 172388
+Intercambio (6, 7) -> Peor solución (coste 172864) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 173202) — no aceptada
+Intercambio (7, 9) -> Nueva solución con coste 173102
+Intercambio (4, 6) -> Peor solución (coste 173270) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 173448) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 173478) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172888
+Intercambio (1, 2) -> Nueva solución con coste 172430
+Intercambio (5, 24) -> Nueva solución con coste 171686
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 21) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 172894) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172634
+Intercambio (4, 6) -> Nueva solución con coste 172514
+Intercambio (6, 12) -> Nueva solución con coste 172490
+Intercambio (9, 10) -> Nueva solución con coste 172262
+Intercambio (4, 14) -> Peor solución (coste 172542) — no aceptada
+Intercambio (9, 14) -> Peor solución (coste 172554) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 172416
+Intercambio (12, 20) -> Peor solución (coste 172788) — no aceptada
+Intercambio (19, 24) -> Peor solución (coste 173352) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 173720) — no aceptada
+Intercambio (5, 12) -> Nueva solución con coste 173518
+Intercambio (5, 20) -> Nueva solución con coste 173408
+Intercambio (2, 13) -> Peor solución (coste 173592) — no aceptada
+Intercambio (7, 10) -> Peor solución (coste 173796) — no aceptada
+Intercambio (5, 17) -> Peor solución (coste 174064) — no aceptada
+Intercambio (19, 23) -> Nueva solución con coste 174046
+Intercambio (19, 24) -> Peor solución (coste 174082) — no aceptada
+Intercambio (14, 23) -> Nueva solución con coste 173986
+Intercambio (5, 17) -> Nueva solución con coste 173882
+Intercambio (7, 10) -> Peor solución (coste 173934) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173524
+Intercambio (4, 14) -> Nueva solución con coste 173390
+Intercambio (4, 18) -> Nueva solución con coste 173146
+Intercambio (3, 4) -> Peor solución (coste 173432) — no aceptada
+Intercambio (4, 6) -> Nueva solución con coste 173030
+Intercambio (10, 25) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 172710
+Intercambio (23, 24) -> Peor solución (coste 173046) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 173416) — no aceptada
+Intercambio (18, 24) -> Nueva solución con coste 173296
+Intercambio (10, 23) -> Nueva solución con coste 173174
+Intercambio (10, 18) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 25) -> Nueva solución con coste 173030
+Intercambio (4, 6) -> Peor solución (coste 173432) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 173432) — no aceptada
+Intercambio (3, 4) -> Nueva solución con coste 173146
+Intercambio (4, 18) -> Peor solución (coste 173390) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 173524) — no aceptada
+Intercambio (14, 23) -> Peor solución (coste 173892) — no aceptada
+Intercambio (23, 24) -> Nueva solución con coste 173756
+Intercambio (5, 24) -> Nueva solución con coste 173282
+Intercambio (12, 24) -> Nueva solución con coste 172416
+Intercambio (6, 12) -> Peor solución (coste 172554) — no aceptada
+Intercambio (9, 14) -> Nueva solución con coste 172542
+Intercambio (4, 14) -> Nueva solución con coste 172262
+Intercambio (9, 10) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 172380) — no aceptada
+Intercambio (5, 24) -> Peor solución (coste 172520) — no aceptada
+Intercambio (19, 24) -> Nueva solución con coste 172430
+Intercambio (6, 12) -> Peor solución (coste 172458) — no aceptada
+Intercambio (1, 2) -> Nueva solución con coste 172388
+Intercambio (6, 7) -> Peor solución (coste 172864) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 173202) — no aceptada
+Intercambio (7, 9) -> Nueva solución con coste 173102
+Intercambio (4, 6) -> Peor solución (coste 173270) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 173448) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 173478) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172888
+Intercambio (1, 2) -> Nueva solución con coste 172430
+Intercambio (5, 24) -> Nueva solución con coste 171686
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 21) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 172894) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172634
+Intercambio (4, 6) -> Nueva solución con coste 172514
+Intercambio (6, 12) -> Nueva solución con coste 172490
+Intercambio (9, 10) -> Nueva solución con coste 172262
+Intercambio (4, 14) -> Peor solución (coste 172542) — no aceptada
+Intercambio (9, 14) -> Peor solución (coste 172554) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 172416
+Intercambio (12, 20) -> Peor solución (coste 172788) — no aceptada
+Intercambio (19, 24) -> Peor solución (coste 173352) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 173720) — no aceptada
+Intercambio (5, 12) -> Nueva solución con coste 173518
+Intercambio (5, 20) -> Nueva solución con coste 173408
+Intercambio (2, 13) -> Peor solución (coste 173592) — no aceptada
+Intercambio (7, 10) -> Peor solución (coste 173796) — no aceptada
+Intercambio (5, 17) -> Peor solución (coste 174064) — no aceptada
+Intercambio (19, 23) -> Nueva solución con coste 174046
+Intercambio (19, 24) -> Peor solución (coste 174082) — no aceptada
+Intercambio (14, 23) -> Nueva solución con coste 173986
+Intercambio (5, 17) -> Nueva solución con coste 173882
+Intercambio (7, 10) -> Peor solución (coste 173934) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173524
+Intercambio (4, 14) -> Nueva solución con coste 173390
+Intercambio (4, 18) -> Nueva solución con coste 173146
+Intercambio (3, 4) -> Peor solución (coste 173432) — no aceptada
+Intercambio (4, 6) -> Nueva solución con coste 173030
+Intercambio (10, 25) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 172710
+Intercambio (23, 24) -> Peor solución (coste 173046) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 173416) — no aceptada
+Intercambio (18, 24) -> Nueva solución con coste 173296
+Intercambio (10, 23) -> Nueva solución con coste 173174
+Intercambio (10, 18) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 25) -> Nueva solución con coste 173030
+Intercambio (4, 6) -> Peor solución (coste 173432) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 173432) — no aceptada
+Intercambio (3, 4) -> Nueva solución con coste 173146
+Intercambio (4, 18) -> Peor solución (coste 173390) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 173524) — no aceptada
+Intercambio (14, 23) -> Peor solución (coste 173892) — no aceptada
+Intercambio (23, 24) -> Nueva solución con coste 173756
+Intercambio (5, 24) -> Nueva solución con coste 173282
+Intercambio (12, 24) -> Nueva solución con coste 172416
+Intercambio (6, 12) -> Peor solución (coste 172554) — no aceptada
+Intercambio (9, 14) -> Nueva solución con coste 172542
+Intercambio (4, 14) -> Nueva solución con coste 172262
+Intercambio (9, 10) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (11, 22) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (11, 22) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (11, 22) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 7) -> Peor solución (coste 172340) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 172660) — no aceptada
+Intercambio (7, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 7) -> Peor solución (coste 172340) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172720) — no aceptada
+Intercambio (4, 7) -> Nueva solución con coste 172516
+Intercambio (6, 12) -> Nueva solución con coste 172300
+Intercambio (4, 12) -> Nueva solución con coste 171686
+Intercambio (5, 19) -> Peor solución (coste 172380) — no aceptada
+Intercambio (5, 24) -> Peor solución (coste 172520) — no aceptada
+Intercambio (19, 24) -> Nueva solución con coste 172430
+Intercambio (6, 12) -> Peor solución (coste 172458) — no aceptada
+Intercambio (1, 2) -> Nueva solución con coste 172388
+Intercambio (6, 7) -> Peor solución (coste 172864) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 173202) — no aceptada
+Intercambio (7, 9) -> Nueva solución con coste 173102
+Intercambio (4, 6) -> Peor solución (coste 173270) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 173448) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 173478) — no aceptada
+Intercambio (4, 12) -> Nueva solución con coste 172888
+Intercambio (1, 2) -> Nueva solución con coste 172430
+Intercambio (5, 24) -> Nueva solución con coste 171686
+Intercambio (6, 12) -> Peor solución (coste 171744) — no aceptada
+Intercambio (6, 21) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 9) -> Peor solución (coste 172894) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172634
+Intercambio (4, 6) -> Nueva solución con coste 172514
+Intercambio (6, 12) -> Nueva solución con coste 172490
+Intercambio (9, 10) -> Nueva solución con coste 172262
+Intercambio (4, 14) -> Peor solución (coste 172542) — no aceptada
+Intercambio (9, 14) -> Peor solución (coste 172554) — no aceptada
+Intercambio (6, 12) -> Nueva solución con coste 172416
+Intercambio (12, 20) -> Peor solución (coste 172788) — no aceptada
+Intercambio (19, 24) -> Peor solución (coste 173352) — no aceptada
+Intercambio (5, 19) -> Peor solución (coste 173720) — no aceptada
+Intercambio (5, 12) -> Nueva solución con coste 173518
+Intercambio (5, 20) -> Nueva solución con coste 173408
+Intercambio (2, 13) -> Peor solución (coste 173592) — no aceptada
+Intercambio (7, 10) -> Peor solución (coste 173796) — no aceptada
+Intercambio (5, 17) -> Peor solución (coste 174064) — no aceptada
+Intercambio (19, 23) -> Nueva solución con coste 174046
+Intercambio (19, 24) -> Peor solución (coste 174082) — no aceptada
+Intercambio (14, 23) -> Nueva solución con coste 173986
+Intercambio (5, 17) -> Nueva solución con coste 173882
+Intercambio (7, 10) -> Peor solución (coste 173934) — no aceptada
+Intercambio (2, 13) -> Nueva solución con coste 173524
+Intercambio (4, 14) -> Nueva solución con coste 173390
+Intercambio (4, 18) -> Nueva solución con coste 173146
+Intercambio (3, 4) -> Peor solución (coste 173432) — no aceptada
+Intercambio (4, 6) -> Nueva solución con coste 173030
+Intercambio (10, 25) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 172710
+Intercambio (23, 24) -> Peor solución (coste 173046) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 173046) — no aceptada
+Intercambio (18, 23) -> Peor solución (coste 173416) — no aceptada
+Intercambio (10, 23) -> Nueva solución con coste 173126
+Intercambio (18, 24) -> Peor solución (coste 173174) — no aceptada
+Intercambio (10, 18) -> Peor solución (coste 173232) — no aceptada
+Intercambio (10, 25) -> Nueva solución con coste 173030
+Intercambio (4, 6) -> Peor solución (coste 173432) — no aceptada
+Intercambio (3, 4) -> Nueva solución con coste 173146
+Intercambio (4, 18) -> Peor solución (coste 173390) — no aceptada
+Intercambio (4, 14) -> Peor solución (coste 173524) — no aceptada
+Intercambio (14, 23) -> Peor solución (coste 173892) — no aceptada
+Intercambio (23, 24) -> Nueva solución con coste 173756
+Intercambio (5, 24) -> Nueva solución con coste 173282
+Intercambio (12, 24) -> Nueva solución con coste 172416
+Intercambio (6, 12) -> Peor solución (coste 172554) — no aceptada
+Intercambio (9, 14) -> Nueva solución con coste 172542
+Intercambio (4, 14) -> Nueva solución con coste 172262
+Intercambio (9, 10) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (11, 22) -> Peor solución (coste 172252) — no aceptada
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (11, 22) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+Intercambio (6, 12) -> Nueva solución con coste 171686
+Intercambio (4, 12) -> Peor solución (coste 172300) — no aceptada
+Intercambio (4, 9) -> Peor solución (coste 172490) — no aceptada
+Intercambio (9, 21) -> Nueva solución con coste 172252
+Intercambio (6, 12) -> Peor solución (coste 172804) — no aceptada
+Intercambio (4, 6) -> Peor solución (coste 172894) — no aceptada
+Intercambio (6, 9) -> Nueva solución con coste 172252
+Intercambio (6, 21) -> Nueva solución con coste 171744
+
+Solución final
+--------------
+[7, 2, 1, 10, 25, 24, 12, 0, 9, 8, 3, 22, 6, 26, 27, 28, 17, 16, 23, 19, 29, 21, 11, 18, 5, 4, 13, 14, 15, 20]
+Coste final: 171686
+Duración: 0.417 segundos

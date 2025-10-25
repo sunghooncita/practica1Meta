@@ -1,6 +1,6 @@
 package algoritmos;
 
-public class BusquedaLocal {
+public class AlgBL15 {
 
     //Metodo principal (el logHelper registra los intercambios)
     public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax, meta1.Logs logHelper) {
@@ -31,7 +31,7 @@ public class BusquedaLocal {
                             solucion[j] = temp;
 
                             if (logHelper != null) { // Si el logHelper es nulo, no hacer nada
-                                int nuevoCosto = Greedy.calcularCosto(solucion, flujos, distancias);
+                                int nuevoCosto = AlgGE15.calcularCosto(solucion, flujos, distancias);
                                 logHelper.registrarIntercambio(i, j, nuevoCosto, true);
                             }
 

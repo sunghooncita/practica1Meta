@@ -1,7 +1,7 @@
 package algoritmos;
 import java.util.*;
 
-public class BusquedaTabu {
+public class AlgBT15 {
 
     //Metodo principal (el logHelper registra los intercambios)
     public int[] ejecutar(int[] solucion, int maxIter, int[][] dist, int[][] flujo,

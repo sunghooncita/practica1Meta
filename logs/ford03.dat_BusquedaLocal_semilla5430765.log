@@ -1,0 +1,47 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaLocal
+Dataset: ford03.dat
+Semilla: 5430765
+
+Solución inicial y su coste
+---------------------------
+[7, 22, 2, 23, 27, 0, 3, 19, 13, 9, 5, 24, 10, 8, 20, 1, 11, 18, 21, 28, 26, 4, 16, 25, 14, 12, 29, 17, 15, 6]
+Coste: 13718
+
+Evolución de la búsqueda
+------------------------
+Intercambio (0, 1) -> Nueva solución con coste 13688
+Intercambio (1, 26) -> Nueva solución con coste 13684
+Intercambio (2, 4) -> Nueva solución con coste 13656
+Intercambio (3, 7) -> Nueva solución con coste 13652
+Intercambio (4, 6) -> Nueva solución con coste 13636
+Intercambio (5, 14) -> Nueva solución con coste 13630
+Intercambio (6, 8) -> Nueva solución con coste 13614
+Intercambio (7, 12) -> Nueva solución con coste 13612
+Intercambio (8, 28) -> Nueva solución con coste 13578
+Intercambio (9, 25) -> Nueva solución con coste 13558
+Intercambio (11, 14) -> Nueva solución con coste 13554
+Intercambio (13, 27) -> Nueva solución con coste 13538
+Intercambio (14, 22) -> Nueva solución con coste 13536
+Intercambio (16, 28) -> Nueva solución con coste 13534
+Intercambio (17, 19) -> Nueva solución con coste 13520
+Intercambio (19, 8) -> Nueva solución con coste 13492
+Intercambio (20, 21) -> Nueva solución con coste 13480
+Intercambio (21, 28) -> Nueva solución con coste 13470
+Intercambio (23, 3) -> Nueva solución con coste 13460
+Intercambio (25, 11) -> Nueva solución con coste 13458
+Intercambio (26, 4) -> Nueva solución con coste 13450
+Intercambio (27, 12) -> Nueva solución con coste 13446
+Intercambio (29, 1) -> Nueva solución con coste 13420
+Intercambio (1, 11) -> Nueva solución con coste 13416
+Intercambio (6, 27) -> Nueva solución con coste 13408
+Intercambio (9, 14) -> Nueva solución con coste 13404
+Intercambio (11, 9) -> Nueva solución con coste 13402
+Intercambio (14, 6) -> Nueva solución con coste 13394
+
+Solución final
+--------------
+[22, 9, 27, 25, 7, 20, 12, 10, 18, 6, 5, 16, 8, 17, 23, 1, 2, 28, 21, 15, 4, 11, 24, 19, 14, 0, 3, 13, 26, 29]
+Coste final: 13394
+Duración: 0.0 segundos
