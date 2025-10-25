@@ -1,0 +1,32 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaLocal
+Dataset: ford02.dat
+Semilla: 53054673
+
+Solución inicial y su coste
+---------------------------
+[9, 1, 2, 13, 3, 7, 0, 10, 17, 19, 11, 16, 12, 5, 6, 18, 14, 8, 4, 15]
+Coste: 34498
+
+Evolución de la búsqueda
+------------------------
+Intercambio (0, 4) -> Nueva solución con coste 34412
+Intercambio (1, 6) -> Nueva solución con coste 34322
+Intercambio (2, 12) -> Nueva solución con coste 33940
+Intercambio (3, 9) -> Nueva solución con coste 32812
+Intercambio (4, 5) -> Nueva solución con coste 32810
+Intercambio (5, 6) -> Nueva solución con coste 32784
+Intercambio (6, 13) -> Nueva solución con coste 32292
+Intercambio (10, 4) -> Nueva solución con coste 32140
+Intercambio (14, 19) -> Nueva solución con coste 32030
+Intercambio (15, 14) -> Nueva solución con coste 32014
+Intercambio (16, 2) -> Nueva solución con coste 31682
+Intercambio (3, 5) -> Nueva solución con coste 31616
+Intercambio (14, 15) -> Nueva solución con coste 31288
+
+Solución final
+--------------
+[3, 0, 14, 1, 11, 19, 5, 10, 17, 13, 7, 16, 2, 9, 15, 18, 12, 8, 4, 6]
+Coste final: 31288
+Duración: 0.0 segundos

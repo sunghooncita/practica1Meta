@@ -1,0 +1,48 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaLocal
+Dataset: ford04.dat
+Semilla: 77645037
+
+Solución inicial y su coste
+---------------------------
+[7, 21, 25, 5, 18, 3, 9, 0, 24, 11, 16, 6, 22, 15, 26, 13, 2, 8, 1, 19, 12, 4, 17, 23, 10, 20, 14, 27, 28, 29]
+Coste: 191440
+
+Evolución de la búsqueda
+------------------------
+Intercambio (0, 8) -> Nueva solución con coste 190856
+Intercambio (1, 2) -> Nueva solución con coste 189534
+Intercambio (2, 5) -> Nueva solución con coste 188892
+Intercambio (3, 9) -> Nueva solución con coste 187482
+Intercambio (4, 18) -> Nueva solución con coste 186932
+Intercambio (5, 6) -> Nueva solución con coste 185460
+Intercambio (6, 21) -> Nueva solución con coste 183910
+Intercambio (7, 9) -> Nueva solución con coste 183006
+Intercambio (8, 20) -> Nueva solución con coste 182996
+Intercambio (11, 17) -> Nueva solución con coste 182056
+Intercambio (12, 22) -> Nueva solución con coste 181542
+Intercambio (13, 15) -> Nueva solución con coste 181402
+Intercambio (14, 26) -> Nueva solución con coste 181256
+Intercambio (15, 19) -> Nueva solución con coste 180890
+Intercambio (16, 10) -> Nueva solución con coste 180620
+Intercambio (17, 8) -> Nueva solución con coste 180112
+Intercambio (20, 24) -> Nueva solución con coste 179440
+Intercambio (23, 28) -> Nueva solución con coste 179110
+Intercambio (24, 25) -> Nueva solución con coste 177442
+Intercambio (1, 2) -> Nueva solución con coste 177326
+Intercambio (3, 24) -> Nueva solución con coste 177220
+Intercambio (5, 6) -> Nueva solución con coste 177000
+Intercambio (6, 8) -> Nueva solución con coste 176820
+Intercambio (7, 8) -> Nueva solución con coste 176742
+Intercambio (10, 16) -> Nueva solución con coste 176280
+Intercambio (15, 19) -> Nueva solución con coste 175218
+Intercambio (16, 13) -> Nueva solución con coste 175210
+Intercambio (19, 1) -> Nueva solución con coste 175084
+Intercambio (24, 5) -> Nueva solución con coste 174268
+
+Solución final
+--------------
+[24, 19, 25, 20, 1, 11, 6, 9, 5, 0, 16, 8, 17, 2, 14, 15, 13, 12, 18, 3, 10, 21, 22, 28, 4, 7, 26, 27, 23, 29]
+Coste final: 174268
+Duración: 0.0 segundos

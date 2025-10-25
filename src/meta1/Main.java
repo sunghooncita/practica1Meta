@@ -44,11 +44,27 @@ public class Main {
                 int[][] distancias = matrices[1];
 
                 long inicioTiempoGreedy = System.currentTimeMillis();
+
                 int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
                 int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
-                long tiempoGreedy = System.currentTimeMillis() - inicioTiempoGreedy;
-                System.out.printf("\n  Greedy -> Costo: %d (Tiempo: %dms)\n", costoGreedy, tiempoGreedy);
 
+                long tiempoGreedy = System.currentTimeMillis() - inicioTiempoGreedy;
+
+                // 1. Crear un CountDownLatch temporal para el log de Greedy
+                CountDownLatch cdlGreedy = new CountDownLatch(1);
+
+                // 2. Crear el objeto Logs y asignarle la semilla ficticia
+                Logs logGreedy = new Logs(config, "Greedy", archivo.getName(), cdlGreedy,
+                        0,
+                        solGreedy, costoGreedy,     // Solución inicial
+                        solGreedy, costoGreedy,     // Solución final
+                        tiempoGreedy);
+
+                // 3. Enviar el log al pool de hilos y esperar a que termine (o no, es opcional esperar)
+                executor.submit(logGreedy);
+
+
+                System.out.printf("\n  Greedy -> Costo: %d (Tiempo: %dms)\n", logGreedy.costoFinal, logGreedy.tiempoTotalMs);
 
                 // Bucle de las 5 ejecuciones
                 for (int i = 1; i <= semillaConfig.size(); i++) {

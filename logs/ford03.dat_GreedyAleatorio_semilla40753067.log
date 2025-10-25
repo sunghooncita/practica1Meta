@@ -1,0 +1,20 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: GreedyAleatorio
+Dataset: ford03.dat
+Semilla: 40753067
+
+Solución inicial y su coste
+---------------------------
+[22, 14, 25, 20, 27, 23, 5, 2, 10, 17, 7, 3, 1, 6, 26, 28, 11, 16, 19, 18, 21, 15, 12, 24, 0, 29, 9, 4, 13, 8]
+Coste: 13670
+
+Evolución de la búsqueda
+------------------------
+(Algoritmo no iterativo o no se registraron intercambios)
+
+Solución final
+--------------
+[22, 14, 25, 20, 27, 23, 5, 2, 10, 17, 7, 3, 1, 6, 26, 28, 11, 16, 19, 18, 21, 15, 12, 24, 0, 29, 9, 4, 13, 8]
+Coste final: 13670
+Duración: 0.0 segundos

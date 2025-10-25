@@ -1,0 +1,1019 @@
+Parámetros del algoritmo
+------------------------
+Algoritmo: BusquedaTabu
+Dataset: ford01.dat
+Semilla: 77645037
+
+Solución inicial y su coste
+---------------------------
+[18, 11, 6, 8, 2, 19, 5, 0, 4, 3, 12, 9, 7, 17, 14, 15, 16, 1, 13, 10]
+Coste: 3636
+
+Evolución de la búsqueda
+------------------------
+Intercambio (12, 18) -> Nueva solución con coste 3830
+Intercambio (1, 7) -> Nueva solución con coste 3780
+Intercambio (9, 10) -> Nueva solución con coste 3740
+Intercambio (0, 16) -> Nueva solución con coste 3722
+Intercambio (0, 13) -> Nueva solución con coste 3702
+Intercambio (11, 18) -> Nueva solución con coste 3682
+Intercambio (16, 19) -> Nueva solución con coste 3668
+Intercambio (1, 14) -> Nueva solución con coste 3656
+Intercambio (1, 17) -> Nueva solución con coste 3648
+Intercambio (5, 11) -> Nueva solución con coste 3646
+Intercambio (10, 19) -> Nueva solución con coste 3642
+Intercambio (10, 15) -> Nueva solución con coste 3638
+Intercambio (15, 16) -> Nueva solución con coste 3632
+Intercambio (16, 19) -> Nueva solución con coste 3626
+Intercambio (5, 11) -> Peor solución (coste 3626) — no aceptada
+Intercambio (0, 11) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+Intercambio (14, 18) -> Peor solución (coste 3612) — no aceptada
+Intercambio (14, 18) -> Nueva solución con coste 3610
+Intercambio (5, 18) -> Peor solución (coste 3614) — no aceptada
+Intercambio (5, 18) -> Nueva solución con coste 3610
+
+Solución final
+--------------
+[7, 1, 6, 8, 2, 19, 5, 11, 4, 12, 15, 17, 13, 16, 0, 10, 3, 14, 9, 18]
+Coste final: 3810
+Duración: 0.121 segundos
