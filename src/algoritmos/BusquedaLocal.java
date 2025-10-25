@@ -2,43 +2,45 @@ package algoritmos;
 
 public class BusquedaLocal {
 
+    //Metodo principal (el logHelper registra los intercambios)
     public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax, meta1.Logs logHelper) {
-
         int n = solucionInicial.length;
         int[] solucion = solucionInicial.clone();
-        int[] dlb = new int[n];  // 0 = prometedor, 1 = no prometedor
-        int start_i = 0;         // índice cíclico de inicio
+        int[] dlb = new int[n];
+        int start_i = 0;
 
         for (int iter = 0; iter < iterMax; iter++) {
             boolean improved = false;
 
+            //Bucle principal para la primera posición (i) del intercambio
             for (int step = 0; step < n; step++) {
                 int i = (start_i + step) % n;
 
-                if (dlb[i] == 0) {
+                if (dlb[i] == 0) { // Si la posición 'i' es prometedora
                     boolean localImproved = false;
 
-                    // j también cíclico
+                    // Bucle para la segunda posición (j) del intercambio
                     for (int jStep = 1; jStep < n; jStep++) {
                         int j = (i + jStep) % n;
+                        // Calcula el cambio de costo (delta) sin hacer el intercambio
                         int delta = checkMove(solucion, flujos, distancias, i, j);
 
-                        if (delta < 0) { // mejora
-                            // intercambio
+                        if (delta < 0) { //Si hay mejora se hace el intercambio
                             int temp = solucion[i];
                             solucion[i] = solucion[j];
                             solucion[j] = temp;
 
-                            if (logHelper != null) { // Si el logHelper es nulo (ej. para inicialización de Tabu), no hacer nada
+                            if (logHelper != null) { // Si el logHelper es nulo, no hacer nada
                                 int nuevoCosto = Greedy.calcularCosto(solucion, flujos, distancias);
                                 logHelper.registrarIntercambio(i, j, nuevoCosto, true);
                             }
 
+                            //Lo reseteamos para las posiciones modificadas
                             dlb[i] = dlb[j] = 0;
                             localImproved = true;
                             improved = true;
 
-                            break; // primer mejor
+                            break; //Sale del bucle, primer mejor
                         }
                     }
 
@@ -48,10 +50,10 @@ public class BusquedaLocal {
                 }
             }
 
-            // actualizar start_i para que sea cíclico
+            //Actualizamos start_i para la proxima iteracion
             start_i = (start_i + 1) % n;
 
-            // estancamiento: ninguna mejora en esta iteración
+            //Criterio de parada, si no hubo mejora en un recorrido completo, se sale
             if (!improved) {
                 break;
             }
@@ -60,7 +62,7 @@ public class BusquedaLocal {
         return solucion;
     }
 
-    // calcular cambio en costo al intercambiar i y j
+    //Calculamos cambio en costo al intercambiar i y j
     public static int checkMove(int[] solucion, int[][] flujos, int[][] distancias, int i, int j) {
         int n = solucion.length;
         int delta = 0;

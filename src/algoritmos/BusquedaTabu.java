@@ -3,7 +3,7 @@ import java.util.*;
 
 public class BusquedaTabu {
 
-    // Búsqueda Tabú simple con parámetros pasados por el main
+    //Metodo principal (el logHelper registra los intercambios)
     public int[] ejecutar(int[] solucion, int maxIter, int[][] dist, int[][] flujo,
                           int tenenciaTabu, double oscilacionEstrategica, double estancamiento, meta1.Logs logHelper) {
         int n = solucion.length;
@@ -13,7 +13,7 @@ public class BusquedaTabu {
         double valorActual = mejorValor;
 
         Deque<int[]> listaTabu = new ArrayDeque<>();
-        int[][] frecuencia = new int[n][n];
+        int[][] frecuencia = new int[n][n]; // Matriz para intensificación/diversificación
         int sinMejora = 0;
         Random rand = new Random();
 
@@ -21,39 +21,69 @@ public class BusquedaTabu {
             int[] mejorMovimiento = null; double mejorValMov = Double.MAX_VALUE;
             int[] peorMovimiento = null; double peorValMov = Double.MAX_VALUE;
 
+            //Busqueda del mejor movimiento en el vecindario
             for (int i = 0; i < n - 1; i++) {
                 for (int j = i + 1; j < n; j++) {
-                    intercambiar(actual, i, j);
+                    intercambiar(actual, i, j); //Realizar el movimiento temporalmente
                     double valor = costo(actual, dist, flujo);
                     boolean esTabu = esMovimientoTabu(listaTabu, i, j);
 
-                    if (esTabu && valor >= mejorValor) { intercambiar(actual, i, j); continue; }
+                    //Criterio de aspiracion, acepta el movimiento tabú si mejora el mejor global
+                    if (esTabu && valor >= mejorValor) {
+                        intercambiar(actual, i, j);
+                        continue;
+                    }
 
-                    if (valor < valorActual && valor < mejorValMov) { mejorMovimiento = new int[]{i,j}; mejorValMov = valor; }
-                    if (valor >= valorActual && valor < peorValMov) { peorMovimiento = new int[]{i,j}; peorValMov = valor; }
+                    //Identificamos el mejor movimiento no tabu
+                    if (valor < valorActual && valor < mejorValMov) {
+                        mejorMovimiento = new int[]{i,j};
+                        mejorValMov = valor;
+                    }
+
+                    //Identificamos el mejor movimiento que no mejora la solución actual (para cuando no haya mejoras)
+                    if (valor >= valorActual && valor < peorValMov) {
+                        peorMovimiento = new int[]{i,j};
+                        peorValMov = valor;
+                    }
 
                     intercambiar(actual, i, j);
                 }
             }
 
-            int[] mov = mejorMovimiento != null ? mejorMovimiento : peorMovimiento;
-            if (mov == null) break;
+            //Seleccionamos el movimiento, mejor mejora > mejor no mejora
+            int[] mov;
+            if (mejorMovimiento != null) {
+                mov = mejorMovimiento;
+            } else {
+                mov = peorMovimiento;
+            }
+            //Criterio de parada si no hay movimientos válidos
+            if (mov == null) {
+                break;
+            }
 
+            //Aceptamos el movimiento
             intercambiar(actual, mov[0], mov[1]);
             valorActual = costo(actual, dist, flujo);
 
+            //Registramos el intercambio aceptado y su resultado
             logHelper.registrarIntercambio(mov[0], mov[1], (int) valorActual, mejorMovimiento != null);
 
+            //Actualizamos la lista tabu
             listaTabu.addLast(mov);
             if (listaTabu.size() > tenenciaTabu) listaTabu.removeFirst();
 
+            //Actualizamos matriz de frecuencia
             for (int i = 0; i < n; i++) frecuencia[actual[i]][i]++;
 
-            if (valorActual < mejorValor) { mejorValor = valorActual; mejor = actual.clone(); sinMejora = 0; }
-            else sinMejora++;
+            //Actualizamos mejor solucion global
+            if (valorActual < mejorValor) {
+                mejorValor = valorActual;
+                mejor = actual.clone();
+                sinMejora = 0;
+            } else sinMejora++;
 
-            if (mejorMovimiento == null) { listaTabu.clear(); sinMejora = 0; }
-
+            //Estrategias de Oscilacion (Intensificación/Diversificación)
             if (sinMejora > estancamiento * maxIter) {
                 if (rand.nextDouble() < oscilacionEstrategica) intensificar(actual, frecuencia);
                 else diversificar(actual, frecuencia);
@@ -64,12 +94,14 @@ public class BusquedaTabu {
     }
 
     boolean esMovimientoTabu(Deque<int[]> listaTabu, int i, int j) {
+        //Verifica si el par de índices (i, j) o (j, i) está en la lista Tabú
         for (int[] m : listaTabu)
             if ((m[0]==i&&m[1]==j)||(m[0]==j&&m[1]==i)) return true;
         return false;
     }
 
     void intensificar(int[] sol, int[][] freq) {
+        //Favorece asignaciones de unidades/ubicaciones con alta frecuencia
         int n = sol.length; double mejor = 0; int a=-1,b=-1;
         for(int i=0;i<n-1;i++) for(int j=i+1;j<n;j++) {
             double antes = freq[sol[i]][i]+freq[sol[j]][j];
@@ -80,6 +112,7 @@ public class BusquedaTabu {
     }
 
     void diversificar(int[] sol, int[][] freq) {
+        //Favorece asignaciones de unidades/ubicaciones con baja frecuencia
         int n = sol.length; double mejor = 0; int a=-1,b=-1;
         for(int i=0;i<n-1;i++) for(int j=i+1;j<n;j++) {
             double antes = freq[sol[i]][i]+freq[sol[j]][j];
