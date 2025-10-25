@@ -9,7 +9,7 @@ import java.util.Random;
 public class Configurador {
     ArrayList<String> archivos;
     ArrayList<String> algoritmos;
-    Integer semilla;
+    ArrayList<Integer> semilla;
     Integer iteraciones;
     Integer K;
     Integer tenenciaTabu;
@@ -19,6 +19,7 @@ public class Configurador {
     public Configurador(String ruta){
         archivos = new ArrayList<>();
         algoritmos = new ArrayList<>();
+        semilla = new ArrayList<>();
         String linea;
         FileReader f= null;
         try {
@@ -34,8 +35,10 @@ public class Configurador {
                         }
                         break;
                     case "Semillas":
-                        semilla= Integer.parseInt(split[1]);
-
+                        String[] vsemillas = split[1].split(" ");
+                        for (int i = 0; i < vsemillas.length; i++){
+                            semilla.add(Integer.parseInt(vsemillas[i]));
+                        }
                         break;
                     case "Algoritmos":
                         String[] valgoritmos = split[1].split(" ");
@@ -74,7 +77,7 @@ public class Configurador {
         return algoritmos;
     }
 
-    public Integer getSemillas() {
+    public ArrayList<Integer> getSemillas() {
         return semilla;
     }
 

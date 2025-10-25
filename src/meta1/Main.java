@@ -19,7 +19,7 @@ public class Main {
 
         ArrayList<String> archivosConfig = config.getArchivos();
         ArrayList<String> algoritmosConfig = config.getAlgoritmos();
-        Integer semillaConfig = config.getSemillas();
+        ArrayList<Integer> semillaConfig = config.getSemillas();
         Integer iter = config.getIteraciones();
         int K= config.getK();
         int tenenciaTabu = config.getTenenciaTabu();
@@ -48,25 +48,15 @@ public class Main {
                 int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
                 System.out.println("\n  Greedy -> Costo: " + costoGreedy);
 
-                Random rnd = new Random(semillaConfig);
+
 
                 // Bucle de las 5 ejecuciones
-                for (int i = 1; i <= 5; i++) {
+                for (int i = 1; i <= semillaConfig.size(); i++) {
 
-                    int semillaActual;
-
-                    if (i == 1) {
-                        // 1. 🚨 Ejecución 1: Usar el DNI exacto sin rotar.
-                        semillaActual = semillaConfig;
-                    } else {
-                        // 2. 🔄 Ejecuciones 2 a 5: Aplicar la rotación a la semilla del DNI.
-                        // Se rota (i - 1) veces. La Ejecución 2 (i=2) rota 1 vez.
-                        semillaActual = rotarSemilla(semillaConfig, i - 1);
-                    }
-
+                    long semillaBase =  semillaConfig.get(i-1).longValue();
+                    Random rnd = new Random(semillaBase);
                     // 3. Inicializar el Random con la semilla maestra (rotada o el DNI original).
-                    Random rndBase = new Random(semillaActual);
-                    System.out.println("\n Ejecución " + i + " con semilla " + semillaActual + "\n");
+                    System.out.println("\n Ejecución " + i + " con semilla " + semillaBase + "\n");
                     CountDownLatch cdl = new CountDownLatch(algoritmosConfig.size());
 
                     for (String algoritmo : algoritmosConfig) {
@@ -81,7 +71,7 @@ public class Main {
                                 long tiempoGA = System.currentTimeMillis() - inicioTiempo;
 
                                 //Inicialización de Logs con los resultados finales
-                                log = new Logs(config, "GreedyAleatorio", archivo.getName(), cdl, semillaActual,
+                                log = new Logs(config, "GreedyAleatorio", archivo.getName(), cdl, semillaBase,
                                         solGA, costoGA,     // Solución inicial
                                         solGA, costoGA,     // Solución final
                                         tiempoGA);
@@ -94,18 +84,17 @@ public class Main {
                                 int costoInicialBL = Greedy.calcularCosto(solGA2, flujos, distancias);
 
                                 // 2. Creamos el objeto Logs ANTES de la ejecución de BL para que pueda registrar
-                                log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaActual,
+                                log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaBase,
                                         solGA2, costoInicialBL, // Solución inicial (GA)
                                         null, 0, 0); // Temporales para final
 
-                                // 🚨 Debes pasar el objeto 'log' al método busquedaLocalPrimerMejor para que registre los intercambios
                                 int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter);
                                 int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
 
                                 long tiempoBL = System.currentTimeMillis() - inicioTiempo;
 
                                 // 🚨 Sobreescribir 'log' con los resultados finales y el tiempo
-                                log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaActual,
+                                log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaBase,
                                         solGA2, costoInicialBL,
                                         solBL, costoBL,
                                         tiempoBL);
@@ -119,7 +108,7 @@ public class Main {
                                 int costoInicialTabu = Greedy.calcularCosto(solInicialTabu, flujos, distancias);
 
                                 // 2. Creamos el objeto Logs ANTES de la ejecución de BT
-                                log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaActual,
+                                log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaBase,
                                         solInicialTabu, costoInicialTabu, // Solución inicial (BL)
                                         null, 0, 0); // Temporales para final
 
@@ -127,22 +116,16 @@ public class Main {
                                 BusquedaTabu bt = new BusquedaTabu();
                                 int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento);
                                 int costoTabu = Greedy.calcularCosto(solTabu, distancias, flujos);
-
                                 long tiempoTabu = System.currentTimeMillis() - inicioTiempo;
-
-                                // 🚨 Sobreescribir 'log' con los resultados finales y el tiempo
-                                log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaActual,
+                                log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaBase,
                                         solInicialTabu, costoInicialTabu,
                                         solTabu, costoTabu,
                                         tiempoTabu);
                                 break;
-
                             default:
                                 System.out.println(" Algoritmo no reconocido: " + algoritmo);
                                 cdl.countDown(); // Contar abajo para que la espera no se bloquee por algoritmos no existentes
                         }
-
-                        // Si 'log' fue inicializado (es decir, el algoritmo existe)
                         if (log != null) {
                             executor.submit(log);
                             System.out.printf("  %s -> Costo: %d (Tiempo: %dms)%n", algoritmo, log.costoFinal, log.tiempoTotalMs);
@@ -162,7 +145,6 @@ public class Main {
                 System.out.println("Error leyendo el archivo: " + e.getMessage());
             }
         }
-
         executor.shutdown();
     }
 
@@ -178,7 +160,6 @@ public class Main {
 
         return right * (int)Math.pow(10, digits - rotationCount) + left;
     }
-
 
 }
 
