@@ -43,10 +43,11 @@ public class Main {
                 int[][] flujos = matrices[0];
                 int[][] distancias = matrices[1];
 
+                long inicioTiempoGreedy = System.currentTimeMillis();
                 int[] solGreedy = Greedy.algoritmoGreedy(flujos, distancias);
                 int costoGreedy = Greedy.calcularCosto(solGreedy, flujos, distancias);
-                System.out.println("\n  Greedy -> Costo: " + costoGreedy);
-
+                long tiempoGreedy = System.currentTimeMillis() - inicioTiempoGreedy;
+                System.out.printf("\n  Greedy -> Costo: %d (Tiempo: %dms)\n", costoGreedy, tiempoGreedy);
 
 
                 // Bucle de las 5 ejecuciones
