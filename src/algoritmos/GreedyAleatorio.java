@@ -35,8 +35,19 @@ public class GreedyAleatorio {
 
         for (int i = 0; i < n; i++) {
             // Limitamos K si quedan menos elementos, para evitar errores por pasar un número mayor que el tamaño de la lista
-            int limiteU = (K < unidadesRestantes.size()) ? K : unidadesRestantes.size();
-            int limiteL = (K < ubicacionesRestantes.size()) ? K : ubicacionesRestantes.size();
+            int limiteU, limiteL;
+
+            if(K < unidadesRestantes.size()){
+                limiteU = K;
+            }else{
+                limiteU = unidadesRestantes.size();
+            }
+
+            if(K < ubicacionesRestantes.size()){
+                limiteL = K;
+            }else{
+                limiteL = ubicacionesRestantes.size();
+            }
 
             // Elegimos aleatoriamente entre los K mejores
             //Para que el algoritmo sea aleatorio, pero que puedas volver a obtener el mismo resultado si usas la misma configuración, usamos una semilla
