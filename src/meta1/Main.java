@@ -2,9 +2,9 @@ package meta1;
 
 import configuracion.Configurador;
 import algoritmos.*;
-import java.io.FileNotFoundException;
+
+import java.io.*;
 import java.util.ArrayList;
-import java.io.File;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -94,6 +94,25 @@ public class Main {
             } catch (FileNotFoundException e) {
                 System.out.println("Error leyendo el archivo: " + e.getMessage());
             }
+        }
+    }
+
+    public void guardarArchivos(String ruta, String texto){
+        FileWriter fichero = null;
+        PrintWriter pw = null;
+        try {
+            fichero = new FileWriter(ruta);
+            pw = new PrintWriter(fichero);
+
+            pw.println(texto);
+        }catch (IOException e){
+        }finally {{
+            try{
+                if(fichero != null){
+                    fichero.close();
+                }
+            }catch (IOException e2){}
+        }
         }
     }
 }
