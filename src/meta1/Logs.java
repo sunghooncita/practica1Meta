@@ -17,7 +17,7 @@ public class Logs implements Runnable {
     private String nombreAlgoritmo;
     private String nombreArchivo;
     private long semilla;
-    long tiempoTotalMs;
+    public long tiempoTotalMs;
 
     // Usamos el StringBuilder directamente para que los algoritmos puedan añadir contenido.
     // Esto es un enfoque común para el logging inter-clase asíncrono.
@@ -25,8 +25,8 @@ public class Logs implements Runnable {
 
     private int[] solucionInicial;
     private int costoInicial;
-    private int[] solucionFinal;
-    int costoFinal;
+    public int[] solucionFinal;
+    public int costoFinal;
 
     public Logs(Configurador configurador, String nombreAlgoritmo, String nombreArchivo, CountDownLatch cdl,
                 long semilla,

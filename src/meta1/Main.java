@@ -2,7 +2,6 @@ package meta1;
 
 import configuracion.Configurador;
 import algoritmos.*;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
@@ -57,6 +56,7 @@ public class Main {
                     Random rnd = new Random(semillaBase);
                     // 3. Inicializar el Random con la semilla maestra (rotada o el DNI original).
                     System.out.println("\n Ejecución " + i + " con semilla " + semillaBase + "\n");
+
                     CountDownLatch cdl = new CountDownLatch(algoritmosConfig.size());
 
                     for (String algoritmo : algoritmosConfig) {
@@ -88,23 +88,22 @@ public class Main {
                                         solGA2, costoInicialBL, // Solución inicial (GA)
                                         null, 0, 0); // Temporales para final
 
-                                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter);
+                                int[] solBL = BusquedaLocal.busquedaLocalPrimerMejor(solGA2, flujos, distancias, iter,log);
                                 int costoBL = Greedy.calcularCosto(solBL, flujos, distancias);
 
                                 long tiempoBL = System.currentTimeMillis() - inicioTiempo;
 
                                 // 🚨 Sobreescribir 'log' con los resultados finales y el tiempo
-                                log = new Logs(config, "BusquedaLocal", archivo.getName(), cdl, semillaBase,
-                                        solGA2, costoInicialBL,
-                                        solBL, costoBL,
-                                        tiempoBL);
+                                log.solucionFinal = solBL.clone();
+                                log.costoFinal = costoBL;
+                                log.tiempoTotalMs = tiempoBL;
                                 break;
 
                             case "BusquedaTabu":
 
                                 // 1. Solución Inicial (de BL, que viene de GA con la misma semilla)
                                 int[] solGA3 = GreedyAleatorio.algoritmoGreedyAleatorio(flujos, distancias, K, rnd);
-                                int[] solInicialTabu = BusquedaLocal.busquedaLocalPrimerMejor(solGA3, flujos, distancias, iter);
+                                int[] solInicialTabu = BusquedaLocal.busquedaLocalPrimerMejor(solGA3, flujos, distancias, iter,null);
                                 int costoInicialTabu = Greedy.calcularCosto(solInicialTabu, flujos, distancias);
 
                                 // 2. Creamos el objeto Logs ANTES de la ejecución de BT
@@ -114,13 +113,12 @@ public class Main {
 
                                 // 🚨 Debes pasar el objeto 'log' al método ejecutar para que registre los intercambios
                                 BusquedaTabu bt = new BusquedaTabu();
-                                int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento);
-                                int costoTabu = Greedy.calcularCosto(solTabu, distancias, flujos);
+                                int[] solTabu = bt.ejecutar(solInicialTabu, 1000, flujos, distancias, tenenciaTabu, oscilacionEstrategica, estancamiento,log);
+                                int costoTabu = Greedy.calcularCosto(solTabu, flujos,distancias);
                                 long tiempoTabu = System.currentTimeMillis() - inicioTiempo;
-                                log = new Logs(config, "BusquedaTabu", archivo.getName(), cdl, semillaBase,
-                                        solInicialTabu, costoInicialTabu,
-                                        solTabu, costoTabu,
-                                        tiempoTabu);
+                                log.solucionFinal = solTabu.clone();
+                                log.costoFinal = costoTabu;
+                                log.tiempoTotalMs = tiempoTabu;
                                 break;
                             default:
                                 System.out.println(" Algoritmo no reconocido: " + algoritmo);
@@ -146,19 +144,6 @@ public class Main {
             }
         }
         executor.shutdown();
-    }
-
-    public static int rotarSemilla(int baseSeed, int rotationCount) {
-        int num = baseSeed;
-        int digits = (int) Math.log10(num) + 1;  // número de dígitos
-        rotationCount %= digits;                 // rotación efectiva
-        if (rotationCount == 0) return num;
-
-        int pow = (int) Math.pow(10, rotationCount);
-        int right = num % pow;
-        int left = num / pow;
-
-        return right * (int)Math.pow(10, digits - rotationCount) + left;
     }
 
 }

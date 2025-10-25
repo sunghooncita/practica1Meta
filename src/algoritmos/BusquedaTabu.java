@@ -5,7 +5,7 @@ public class BusquedaTabu {
 
     // Búsqueda Tabú simple con parámetros pasados por el main
     public int[] ejecutar(int[] solucion, int maxIter, int[][] dist, int[][] flujo,
-                          int tenenciaTabu, double oscilacionEstrategica, double estancamiento) {
+                          int tenenciaTabu, double oscilacionEstrategica, double estancamiento, meta1.Logs logHelper) {
         int n = solucion.length;
         int[] mejor = solucion.clone();
         double mejorValor = costo(solucion, dist, flujo);
@@ -41,6 +41,8 @@ public class BusquedaTabu {
 
             intercambiar(actual, mov[0], mov[1]);
             valorActual = costo(actual, dist, flujo);
+
+            logHelper.registrarIntercambio(mov[0], mov[1], (int) valorActual, mejorMovimiento != null);
 
             listaTabu.addLast(mov);
             if (listaTabu.size() > tenenciaTabu) listaTabu.removeFirst();
@@ -89,7 +91,7 @@ public class BusquedaTabu {
 
     double costo(int[] sol, int[][] dist, int[][] flujo) {
         double c=0; int n=sol.length;
-        for(int i=0;i<n;i++) for(int j=0;j<n;j++) c+=dist[i][j]*flujo[sol[i]][sol[j]];
+        for(int i=0;i<n;i++) for(int j=0;j<n;j++) c += flujo[i][j] * dist[sol[i]][sol[j]];
         return c;
     }
 

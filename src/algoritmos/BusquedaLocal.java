@@ -2,7 +2,7 @@ package algoritmos;
 
 public class BusquedaLocal {
 
-    public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax) {
+    public static int[] busquedaLocalPrimerMejor(int[] solucionInicial, int[][] flujos, int[][] distancias, int iterMax, meta1.Logs logHelper) {
 
         int n = solucionInicial.length;
         int[] solucion = solucionInicial.clone();
@@ -28,6 +28,11 @@ public class BusquedaLocal {
                             int temp = solucion[i];
                             solucion[i] = solucion[j];
                             solucion[j] = temp;
+
+                            if (logHelper != null) { // Si el logHelper es nulo (ej. para inicialización de Tabu), no hacer nada
+                                int nuevoCosto = Greedy.calcularCosto(solucion, flujos, distancias);
+                                logHelper.registrarIntercambio(i, j, nuevoCosto, true);
+                            }
 
                             dlb[i] = dlb[j] = 0;
                             localImproved = true;
@@ -71,19 +76,3 @@ public class BusquedaLocal {
         return delta;
     }
 }
-
-//comprobar q i da la vuelta completa
-//la i no vale 0 si no lo q nos quedamos en la anterior posicion
-//yo hago las comprobaciones del dlb y la 3 se intercambia con la 6, la siguiente vez que empiece empieza en el 4 no en el 0
-//la i del dlb tiene eq comprobarse n veces
-//la j del dlb tiene tambien q hacer la vuelta completa
-//es ciclico
-//lo hacemos porque si siempre empezamos en el 0 las primeras unidades tienen mas probabilidad de cambiarse; sin embargo, haciendolo asi todos tienen
-//  las mismas posibilidades
-
-//Fichero de parametros el algoritmo tiene 2 parametros, tiene que ejecutarse entero del tiron, sean 2 parametros o 5000
-//el random es indepe de cada ejecucion pero lo tenemos bien chat la inicializacion de la semilla tiene que estar en el main al principio,
-// tenemos q llamar 64 veces al random
-//FALLO GORDO LO DEL CICLICO
-//los logs: lanzo el greedy aleatorizado su resultado es tanto, entra el dlb y su resultado es tanto, lo vamos registrando todo, si hay estancamiento
-// o no, tenemos tantos ficheros logs como instancias es decir 64 ficheros, estos se suben a drive y en el informa ponemos el enlace
