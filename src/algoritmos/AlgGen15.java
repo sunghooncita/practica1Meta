@@ -91,7 +91,7 @@ public class AlgGen15 {
         int numAleatorios = (int) Math.round(TAMANO_POBLACION * PROPORCION_ALEATORIA);
         int numGreedy = TAMANO_POBLACION - numAleatorios;
 
-        System.out.println("🚀 Inicializando: " + numAleatorios + " Aleatorios, " + numGreedy + " Greedy (TCL=" + TCL_GREEDY + ")");
+        System.out.println(" Inicializando: " + numAleatorios + " Aleatorios, " + numGreedy + " Greedy (TCL=" + TCL_GREEDY + ")");
 
         // 80% Aleatorio
         for (int i = 0; i < numAleatorios; i++) {

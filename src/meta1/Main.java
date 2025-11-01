@@ -26,7 +26,7 @@ public class Main {
         double oscilacionEstrategica = config.getOscilacion();
         double estancamiento = config.getEstancamiento();
 
-        System.out.println("🤖 Iniciando el Algoritmo Genético AlgGen15...");
+        System.out.println(" Iniciando el Algoritmo Genético AlgGen15...");
 
         try {
             // 1. Instanciar la clase del algoritmo
