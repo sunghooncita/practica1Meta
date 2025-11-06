@@ -26,24 +26,7 @@ public class Main {
         double oscilacionEstrategica = config.getOscilacion();
         double estancamiento = config.getEstancamiento();
 
-        System.out.println(" Iniciando el Algoritmo Genético AlgGen15...");
 
-        try {
-            // 1. Instanciar la clase del algoritmo
-            AlgGen15 ag = new AlgGen15();
-
-            // 2. Ejecutar el algoritmo
-            Individuo mejorSolucion = ag.ejecutar();
-
-            // 3. Mostrar resultados finales
-            System.out.println("\n--- SOLUCIÓN FINAL ---");
-            System.out.println("Mejor Fitness Encontrado: " + mejorSolucion.getFitness());
-            // Nota: La información sobre evaluaciones y tiempo se imprime en el método 'ejecutar' de AlgGen15.
-
-        } catch (Exception e) {
-            System.err.println(" Ocurrió un error grave durante la ejecución del AG.");
-            e.printStackTrace();
-        }
 
         //Creamos varios hilos para guardar los logs al mismo tiempo,
         //así el programa no se queda esperando mientras se escriben los archivos.

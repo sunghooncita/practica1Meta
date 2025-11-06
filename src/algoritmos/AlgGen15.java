@@ -19,7 +19,7 @@ public class AlgGen15 {
         return descendientes;
     }
 
-    // 2. CRUCE (Solo OX2, Pc=70%)
+    // 2. CRUCE
     public static List<Individuo> cruce(List<Individuo> descendientes, double Pc) {
         List<Individuo> hijos = new ArrayList<>();
         Collections.shuffle(descendientes);
@@ -37,7 +37,7 @@ public class AlgGen15 {
         return hijos;
     }
 
-    // 3. MUTACIÓN (Intercambio 2-opt, Pm=10%)
+    // 3. MUTACIÓN
     public static List<Individuo> mutacion(List<Individuo> poblacion, double Pm) {
         for (int i = 0; i < poblacion.size(); i++) {
             if (RANDOM.nextDouble() < Pm) {
@@ -47,7 +47,7 @@ public class AlgGen15 {
         return poblacion;
     }
 
-    // 4. REEMPLAZAMIENTO (Reemplazo Completo con Elitismo E=1)
+    // 4. REEMPLAZAMIENTO
     public static List<Individuo> reemplazamiento(List<Individuo> nuevaPob, Individuo mejorAnterior, int kWorst) {
         // Copia para asegurar que el listado pueda ser modificado
         List<Individuo> poblacionFinal = new ArrayList<>(nuevaPob);
