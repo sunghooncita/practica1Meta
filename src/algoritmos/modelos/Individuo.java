@@ -1,54 +1,58 @@
 package algoritmos.modelos;
-
 import java.util.Arrays;
+import java.util.Random;
 
+/**
+ * Representa un individuo (solución) para el Problema de Asignación Cuadrática (QAP).
+ * El constructor maneja la inicialización única de las matrices de flujo y distancia.
+ */
 public class Individuo {
-    private int[] cromosoma;
-    private double fitness;
 
+    private int[] genoma; // Permutación: genoma[departamento_i] = ubicacion_j
+    private double fitness; // Almacenará el Coste Total (valor a MINIMIZAR)
 
-    public Individuo(int[] cromosoma) {
-        this.cromosoma = cromosoma.clone();
-        this.fitness = Double.MAX_VALUE; // Inicialmente, fitness muy malo (minimización).
+    /**
+     * Constructor de conveniencia: Asume que los datos globales (F y D) ya están inicializados.
+     * Ideal para crear individuos descendientes (hijos de cruce/mutación).
+     */
+    public Individuo(int[] genoma) {
+        this.genoma = genoma;
     }
 
 
-    public void evaluar() {
-        // *** Lógica de evaluación de tu problema (Práctica 1) ***
-        // Simulación: Fitness es la suma de los genes (debería ser tu función de coste real)
-        double sum = 0;
-        for (int gene : cromosoma) {
-            sum += gene;
+    private double calcularFitness(int[] genoma, int[][] flujos, int[][] distancias) {
+        double costo = 0.0;
+        int n = genoma.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                // El cast (double) asegura que la multiplicación se maneje correctamente
+                costo += (double) flujos[i][j] * distancias[genoma[i]][genoma[j]];
+            }
         }
-        // El fitness real debe ser calculado por tu función de coste
-        this.fitness = Math.random() * 1000;
+        return costo;// Este valor es el Coste Total (a MINIMIZAR)
     }
 
-    public Individuo clonar() {
-        Individuo clon = new Individuo(this.cromosoma);
-        clon.fitness = this.fitness;
-        return clon;
-    }
 
     public double getFitness() {
         return fitness;
     }
 
-    public int[] getCromosoma() {
-        return cromosoma;
+    public int[] getGenoma() {
+        return genoma;
     }
 
-    public void setCromosoma(int[] nuevoCromosoma) {
-        this.cromosoma = nuevoCromosoma;
+
+    // ... Métodos equals y hashCode (necesarios para el elitismo)
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Individuo other = (Individuo) obj;
+        return Arrays.equals(this.genoma, other.genoma);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        // Método para comparar si dos individuos son iguales (se usa en el elitismo).
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Individuo that = (Individuo) obj;
-        // La igualdad se basa en el contenido del cromosoma y el fitness.
-        return Double.compare(that.fitness, fitness) == 0 && Arrays.equals(cromosoma, that.cromosoma);
+    public int hashCode() {
+        return Arrays.hashCode(genoma);
     }
 }
