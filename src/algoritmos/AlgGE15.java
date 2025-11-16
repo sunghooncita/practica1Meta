@@ -43,16 +43,4 @@ public class AlgGE15 {
         return solucion;
     }
 
-    // Metodo para calcular costos
-    public static int calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
-        //Recorres todos los pares (i, j), tomas los flujos y la distancia entre las posiciones, multiplicas y acumulas en costo.
-        int costo = 0;
-        int n = solucion.length;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                costo += flujos[i][j] * distancias[solucion[i]][solucion[j]];
-            }
-        }
-        return costo;
-    }
 }
