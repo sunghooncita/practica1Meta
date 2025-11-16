@@ -53,7 +53,7 @@ public class AlgEst15 {
                 utilities.cruceMOC(hijo1, hijo2);
             }
 
-            // --- MUTACIÓN ---
+            // MUTACIÓN
             mutar(hijo1, kProbMuta, tamCrom);
             mutar(hijo2, kProbMuta, tamCrom);
 
@@ -62,13 +62,13 @@ public class AlgEst15 {
             int costeH2 = utilities.calcularCosto(hijo2, flujos, localizaciones);
             contadorE += 2;
 
-            // --- REEMPLAZAMIENTO POR TORNEO DE PERDEDORES ---
+            // REEMPLAZAMIENTO POR TORNEO DE PERDEDORES
             reemplazarPeores(poblacion, costes, hijo1, hijo2, costeH1, costeH2, kWorst);
 
             tiempoTranscurrido = System.currentTimeMillis() - inicio;
         }
 
-        // --- Obtener mejor solución ---
+        // Obtener mejor solución
         int mejorIdx = 0;
         int mejorCosto = costes.get(0);
         for (int i = 1; i < tamPobl; i++) {
@@ -87,7 +87,7 @@ public class AlgEst15 {
         return mejorCosto;
     }
 
-    // --- TORNEO BINARIO ---
+    // TORNEO BINARIO
     private static int torneoBinario(ArrayList<int[]> poblacion, ArrayList<Integer> costes, int k) {
         int mejor = RAND.nextInt(poblacion.size());
         for (int i = 1; i < k; i++) {
@@ -97,7 +97,7 @@ public class AlgEst15 {
         return mejor;
     }
 
-    // --- MUTACIÓN ---
+    // MUTACIÓN
     private static void mutar(int[] cromosoma, double probMuta, int tamCrom) {
         double x = RAND.nextDouble() * 100;
         if (x < probMuta) {
@@ -110,7 +110,7 @@ public class AlgEst15 {
         }
     }
 
-    // --- REEMPLAZAR LOS DOS PEORES ---
+    // REEMPLAZAR LOS DOS PEORES
     private static void reemplazarPeores(ArrayList<int[]> poblacion, ArrayList<Integer> costes,
                                          int[] hijo1, int[] hijo2, int costeH1, int costeH2, int kWorst) {
 
@@ -124,7 +124,7 @@ public class AlgEst15 {
         costes.set(idxPeor2, costeH2);
     }
 
-    // --- TORNEO DE PERDEDORES ---
+    // TORNEO DE PERDEDORES
     private static int torneoPeor(ArrayList<Integer> costes, int k) {
         int peor = RAND.nextInt(costes.size());
         for (int i = 1; i < k; i++) {

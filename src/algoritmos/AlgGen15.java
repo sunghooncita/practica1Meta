@@ -8,13 +8,7 @@ public class AlgGen15 {
 
     private static final Random RAND = new Random();
 
-    public static double AlgGen(int tamPobl, int tamCrom, int evaluacionesMax,
-                                int[][] flujos, int[][] localizaciones,
-                                ArrayList<Integer> mejorSolIn,
-                                int tiempoMax, int kbest, int kworst,
-                                double kProbMuta, double kProbCruce,
-                                int elitismo,
-                                int porPoblAle, int tipoCruce, int k) {
+    public static double AlgGen(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones, ArrayList<Integer> mejorSolIn, int tiempoMax, int kbest, int kworst, double kProbMuta, double kProbCruce, int elitismo, int porPoblAle, int tipoCruce, int k) {
 
         int iteraciones = 0;
 
@@ -73,186 +67,33 @@ public class AlgGen15 {
 
 
             // ELITISMO
-            mejorCoste.clear();
-            for (int i = 0; i < elitismo + 1; i++) {
-                mejorCoste.add(Integer.MAX_VALUE);
-            }
-
-            // Guardamos los mejores individuos de la población
-            for (int i = 0; i < tamPobl; i++) {
-                int c = costes.get(i);
-
-                if (c < mejorCoste.get(0)) {
-                    mejorCoste.set(1, mejorCoste.get(0));
-                    mejorCromosoma.set(1, mejorCromosoma.get(0).clone());
-                    mejorCoste.set(0, c);
-                    mejorCromosoma.set(0, cromosomas.get(i).clone());
-
-                } else if (elitismo == 2 && c < mejorCoste.get(1)) {
-                    mejorCoste.set(1, c);
-                    mejorCromosoma.set(1, cromosomas.get(i).clone());
-                }
-            }
+            actualizarElitismo(tamPobl, elitismo, cromosomas, costes, mejorCromosoma, mejorCoste);
 
             // SELECCIÓN POR TORNEO k-best
-            for (int kk = 0; kk < tamPobl; kk++) {
-                ArrayList<Integer> elegidos = new ArrayList<>();
-                for (int i = 0; i < kbest; i++) elegidos.add(-1);
-                //elegimos kbest individuos sin repetir
-                for (int i = 0; i < kbest; i++) {
-                    boolean enc;
-                    int valor;
-                    do {
-                        valor = RAND.nextInt(0, tamPobl - 1);
-                        enc = false;
-                        //evitamos duplicados
-                        for (int j = 0; j < i; j++) {
-                            if (valor == elegidos.get(j)) {
-                                enc = true;
-                                break;
-                            }
-                        }
-                    } while (enc);
-                    elegidos.set(i, valor);
-                }
-                //posición del mejor de los elegidos
-                posi.set(kk, utilities.posMenorCoste(elegidos, costes));
-            }
+            ArrayList<Integer> posicionesSeleccionadas = seleccionTorneoKBest(tamPobl, kbest, costes);
+            posi = posicionesSeleccionadas; // Actualizamos la variable 'posi'
 
             // PADRES SELECCIONADOS
-            for (int i = 0; i < tamPobl; i++) {
-                int p = posi.get(i);
-                nuevaGen.set(i, cromosomas.get(p).clone());
-                costesGen.set(i, costes.get(p));
-            }
+            copiarPadres(tamPobl, cromosomas, costes, posi, nuevaGen, costesGen);
 
             // CRUCE
-            boolean[] marcados = new boolean[tamPobl];
-            nuevaGenDCruce.clear();
-            costesGenDC.clear();
-            for (int i = 0; i < tamPobl; i++) costesGenDC.add(0);
-
-            for (int i = 0; i < tamPobl / 2; i++) {
-                //elegimos padres diferentes
-                int c1 = RAND.nextInt(0, tamPobl - 1);
-                int c2;
-                do {c2 = RAND.nextInt(0, tamPobl - 1);
-                } while (c1 == c2);
-
-                int x = RAND.nextInt(0, 100);
-                //si se cruzan
-                if (x < kProbCruce) {
-                    int[] h1 = nuevaGen.get(c1).clone();
-                    int[] h2 = nuevaGen.get(c2).clone();
-
-                    if (tipoCruce == 0)
-                        utilities.cruceOx2(h1, h2);
-                    else
-                        utilities.cruceMOC(h1, h2);
-
-                    nuevaGenDCruce.add(h1);
-                    marcados[nuevaGenDCruce.size() - 1] = true;
-
-                    nuevaGenDCruce.add(h2);
-                    marcados[nuevaGenDCruce.size() - 1] = true;
-
-                } else { //si no se cruzan pasan tal cual
-                    nuevaGenDCruce.add(nuevaGen.get(c1).clone());
-                    costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c1));
-
-                    nuevaGenDCruce.add(nuevaGen.get(c2).clone());
-                    costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c2));
-                }
-            }
-
-            //actualizamos la gen
+            ResultadoCruce resCruce = realizarCruce(tamPobl, tamCrom, kProbCruce, tipoCruce, nuevaGen, costesGen);
             nuevaGen.clear();
-            nuevaGen.addAll(nuevaGenDCruce);
-            costesGen = new ArrayList<>(costesGenDC);
+            nuevaGen.addAll(resCruce.nuevaGenDCruce);
+            costesGen = new ArrayList<>(resCruce.costesGenDC);
+            boolean[] marcados = resCruce.marcados;
+
 
             // MUTACIÓN
-            for (int i = 0; i < tamPobl; i++) {
-                double x = RAND.nextFloat(0, 100);
-
-                if (x < kProbMuta) {
-                    int pos1 = RAND.nextInt(0, tamCrom - 1);
-                    int pos2;
-                    do {
-                        pos2 = RAND.nextInt(0, tamCrom - 1);
-                    } while (pos1 == pos2);
-                    // Mutamos intercambiando dos posiciones
-                    int temp = nuevaGen.get(i)[pos1];
-                    nuevaGen.get(i)[pos1] = nuevaGen.get(i)[pos2];
-                    nuevaGen.get(i)[pos2] = temp;
-                    marcados[i] = true;
-                }
-            }
+            mutarPoblacion(tamPobl, tamCrom, kProbMuta, nuevaGen, marcados);
 
             // ACTUALIZACIÓN DE COSTES
-            for (int i = 0; i < tamPobl; i++) {
-                if (marcados[i]) {
-                    costesGen.set(i, utilities.calcularCosto(nuevaGen.get(i), flujos, localizaciones));
-                    contadorE++;
-                }
-            }
+            contadorE = actualizarCostes(tamPobl, flujos, localizaciones, nuevaGen, costesGen, contadorE, marcados);
 
-            // MANTENER ELITISMO
-            boolean[] encElite = new boolean[elitismo];
-            for (int i = 0; i < nuevaGen.size(); i++) {
-                for (int j = 0; j < elitismo; j++) {
-                    if (arrayEquals(mejorCromosoma.get(j), nuevaGen.get(i))) {
-                        encElite[j] = true;
-                    }
-                }
-            }
+            // MANTENER ELITISMO (Reemplazo del peor por el élite si es necesario)
+            mantenerElitismo(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen);
 
-            //si un elite no esta, lo recuperamos sustituyendolo x un peor
-            ArrayList<Integer> peores = new ArrayList<>();
-
-            for (int i = 0; i < elitismo; i++) {
-                if (!encElite[i]) {
-
-                    boolean enc2;
-                    ArrayList<Integer> elegidos = new ArrayList<>();
-                    for (int x = 0; x < kworst; x++) elegidos.add(-1);
-
-                    //elegimos kworst pos distintas
-                    for (int kk = 0; kk < kworst; kk++) {
-                        int valor;
-                        boolean enc;
-
-                        do {
-                            valor = RAND.nextInt(0, tamPobl - 1);
-                            enc = false;
-                            for (int j = 0; j < kk; j++) { //evitamos repetidos
-                                if (valor == elegidos.get(j)) {
-                                    enc = true;
-                                    break;
-                                }
-                            }
-                            //evitamos pos ya sustituidas
-                            enc2 = false;
-                            for (int p : peores) {
-                                if (valor == p) {
-                                    enc2 = true;
-                                    break;
-                                }
-                            }
-
-                        } while (enc || enc2);
-
-                        elegidos.set(kk, valor);
-                    }
-
-                    //seleccionamos el peor para sustituirlo
-                    int peor = utilities.posMayorCoste(elegidos, costesGen);
-                    peores.add(peor);
-                    //Recuperamos el elite
-                    nuevaGen.set(peor, mejorCromosoma.get(i).clone());
-                    costesGen.set(peor, mejorCoste.get(i));
-                }
-            }
-
+            // Preparar para la siguiente iteración
             costes = new ArrayList<>(costesGen);
             cromosomas.clear();
             cromosomas.addAll(nuevaGen);
@@ -271,6 +112,259 @@ public class AlgGen15 {
         System.out.println(" Total Iteraciones:" + iteraciones);
 
         return mejorCoste.get(0);
+    }
+
+
+    // MÉTODOS
+
+    // Estructura auxiliar para devolver los resultados del Cruce
+    private static class ResultadoCruce {
+        public ArrayList<int[]> nuevaGenDCruce;
+        public ArrayList<Integer> costesGenDC;
+        public boolean[] marcados;
+
+        public ResultadoCruce(ArrayList<int[]> nuevaGenDCruce, ArrayList<Integer> costesGenDC, boolean[] marcados) {
+            this.nuevaGenDCruce = nuevaGenDCruce;
+            this.costesGenDC = costesGenDC;
+            this.marcados = marcados;
+        }
+    }
+
+
+    /**
+     * Guarda los mejores individuos de la población actual.
+     * Corresponde al bloque 'ELITISMO' en el código original.
+     */
+    private static void actualizarElitismo(int tamPobl, int elitismo,
+                                           ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
+                                           ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste) {
+        // ELITISMO
+        mejorCoste.clear();
+        for (int i = 0; i < elitismo + 1; i++) {
+            mejorCoste.add(Integer.MAX_VALUE);
+        }
+
+        // Guardamos los mejores individuos de la población
+        for (int i = 0; i < tamPobl; i++) {
+            int c = costes.get(i);
+
+            if (c < mejorCoste.get(0)) {
+                mejorCoste.set(1, mejorCoste.get(0));
+                mejorCromosoma.set(1, mejorCromosoma.get(0).clone());
+                mejorCoste.set(0, c);
+                mejorCromosoma.set(0, cromosomas.get(i).clone());
+
+            } else if (elitismo == 2 && c < mejorCoste.get(1)) {
+                mejorCoste.set(1, c);
+                mejorCromosoma.set(1, cromosomas.get(i).clone());
+            }
+        }
+    }
+
+
+    /**
+     * Realiza la selección por torneo k-best para toda la población.
+     * Corresponde al bloque 'SELECCIÓN POR TORNEO k-best' en el código original.
+     */
+    private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Integer> costes) {
+        ArrayList<Integer> posi = new ArrayList<>();
+        for (int kk = 0; kk < tamPobl; kk++) posi.add(0); // Inicialización
+
+        for (int kk = 0; kk < tamPobl; kk++) {
+            ArrayList<Integer> elegidos = new ArrayList<>();
+            for (int i = 0; i < kbest; i++) elegidos.add(-1);
+            //elegimos kbest individuos sin repetir
+            for (int i = 0; i < kbest; i++) {
+                boolean enc;
+                int valor;
+                do {
+                    valor = RAND.nextInt(0, tamPobl - 1);
+                    enc = false;
+                    //evitamos duplicados
+                    for (int j = 0; j < i; j++) {
+                        if (valor == elegidos.get(j)) {
+                            enc = true;
+                            break;
+                        }
+                    }
+                } while (enc);
+                elegidos.set(i, valor);
+            }
+            //posición del mejor de los elegidos
+            posi.set(kk, utilities.posMenorCoste(elegidos, costes));
+        }
+        return posi;
+    }
+
+
+    /**
+     * Copia los padres seleccionados a la nueva generación (antes del cruce).
+     * Corresponde al bloque 'PADRES SELECCIONADOS' en el código original.
+     */
+    private static void copiarPadres(int tamPobl, ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
+                                     ArrayList<Integer> posi, ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
+        // PADRES SELECCIONADOS
+        for (int i = 0; i < tamPobl; i++) {
+            int p = posi.get(i);
+            nuevaGen.set(i, cromosomas.get(p).clone());
+            costesGen.set(i, costes.get(p));
+        }
+    }
+
+
+    /**
+     * Realiza el cruce con la probabilidad kProbCruce y los tipos OX2 o MOC.
+     * Corresponde al bloque 'CRUCE' en el código original.
+     */
+    private static ResultadoCruce realizarCruce(int tamPobl, int tamCrom, double kProbCruce, int tipoCruce,
+                                                ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
+        boolean[] marcados = new boolean[tamPobl];
+        ArrayList<int[]> nuevaGenDCruce = new ArrayList<>();
+        ArrayList<Integer> costesGenDC = new ArrayList<>();
+        for (int i = 0; i < tamPobl; i++) costesGenDC.add(0); // Inicializar costesGenDC
+
+        for (int i = 0; i < tamPobl / 2; i++) {
+            //elegimos padres diferentes
+            int c1 = RAND.nextInt(0, tamPobl - 1);
+            int c2;
+            do {c2 = RAND.nextInt(0, tamPobl - 1);
+            } while (c1 == c2);
+
+            int x = RAND.nextInt(0, 100);
+            //si se cruzan
+            if (x < kProbCruce) {
+                int[] h1 = nuevaGen.get(c1).clone();
+                int[] h2 = nuevaGen.get(c2).clone();
+
+                if (tipoCruce == 0)
+                    utilities.cruceOx2(h1, h2);
+                else
+                    utilities.cruceMOC(h1, h2);
+
+                nuevaGenDCruce.add(h1);
+                marcados[nuevaGenDCruce.size() - 1] = true;
+
+                nuevaGenDCruce.add(h2);
+                marcados[nuevaGenDCruce.size() - 1] = true;
+
+            } else { //si no se cruzan pasan tal cual
+                nuevaGenDCruce.add(nuevaGen.get(c1).clone());
+                costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c1));
+
+                nuevaGenDCruce.add(nuevaGen.get(c2).clone());
+                costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c2));
+            }
+        }
+        return new ResultadoCruce(nuevaGenDCruce, costesGenDC, marcados);
+    }
+
+
+    /**
+     * Aplica la mutación (intercambio 2-opt) a cada individuo con probabilidad kProbMuta.
+     * Corresponde al bloque 'MUTACIÓN' en el código original.
+     */
+    private static void mutarPoblacion(int tamPobl, int tamCrom, double kProbMuta,
+                                       ArrayList<int[]> nuevaGen, boolean[] marcados) {
+        for (int i = 0; i < tamPobl; i++) {
+            double x = RAND.nextFloat(0, 100);
+
+            if (x < kProbMuta) {
+                int pos1 = RAND.nextInt(0, tamCrom - 1);
+                int pos2;
+                do {
+                    pos2 = RAND.nextInt(0, tamCrom - 1);
+                } while (pos1 == pos2);
+                // Mutamos intercambiando dos posiciones
+                int temp = nuevaGen.get(i)[pos1];
+                nuevaGen.get(i)[pos1] = nuevaGen.get(i)[pos2];
+                nuevaGen.get(i)[pos2] = temp;
+                marcados[i] = true;
+            }
+        }
+    }
+
+
+    /**
+     * Calcula los costes de los individuos marcados (que fueron modificados).
+     * Corresponde al bloque 'ACTUALIZACIÓN DE COSTES' en el código original.
+     */
+    private static int actualizarCostes(int tamPobl, int[][] flujos, int[][] localizaciones,
+                                        ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
+                                        int contadorE, boolean[] marcados) {
+        // ACTUALIZACIÓN DE COSTES
+        for (int i = 0; i < tamPobl; i++) {
+            if (marcados[i]) {
+                costesGen.set(i, utilities.calcularCosto(nuevaGen.get(i), flujos, localizaciones));
+                contadorE++;
+            }
+        }
+        return contadorE;
+    }
+
+
+    /**
+     * Implementa la recuperación de los individuos élite que no sobrevivieron.
+     * Corresponde al bloque 'MANTENER ELITISMO' en el código original.
+     */
+    private static void mantenerElitismo(int elitismo, int kworst,
+                                         ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste,
+                                         ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
+        // MANTENER ELITISMO
+        boolean[] encElite = new boolean[elitismo];
+        for (int i = 0; i < nuevaGen.size(); i++) {
+            for (int j = 0; j < elitismo; j++) {
+                if (arrayEquals(mejorCromosoma.get(j), nuevaGen.get(i))) {
+                    encElite[j] = true;
+                }
+            }
+        }
+
+        //si un elite no esta, lo recuperamos sustituyendolo x un peor
+        ArrayList<Integer> peores = new ArrayList<>();
+
+        for (int i = 0; i < elitismo; i++) {
+            if (!encElite[i]) {
+
+                boolean enc2;
+                ArrayList<Integer> elegidos = new ArrayList<>();
+                for (int x = 0; x < kworst; x++) elegidos.add(-1);
+
+                //elegimos kworst pos distintas
+                for (int kk = 0; kk < kworst; kk++) {
+                    int valor;
+                    boolean enc;
+
+                    do {
+                        valor = RAND.nextInt(0, nuevaGen.size() - 1);
+                        enc = false;
+                        for (int j = 0; j < kk; j++) { //evitamos repetidos
+                            if (valor == elegidos.get(j)) {
+                                enc = true;
+                                break;
+                            }
+                        }
+                        //evitamos pos ya sustituidas
+                        enc2 = false;
+                        for (int p : peores) {
+                            if (valor == p) {
+                                enc2 = true;
+                                break;
+                            }
+                        }
+
+                    } while (enc || enc2);
+
+                    elegidos.set(kk, valor);
+                }
+
+                //seleccionamos el peor para sustituirlo
+                int peor = utilities.posMayorCoste(elegidos, costesGen);
+                peores.add(peor);
+                //Recuperamos el elite
+                nuevaGen.set(peor, mejorCromosoma.get(i).clone());
+                costesGen.set(peor, mejorCoste.get(i));
+            }
+        }
     }
 
 
