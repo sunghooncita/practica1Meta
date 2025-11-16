@@ -1,5 +1,7 @@
 package algoritmos;
 
+import meta1.utilities;
+
 public class AlgBL15 {
 
     //Metodo principal (el logHelper registra los intercambios)
@@ -31,7 +33,7 @@ public class AlgBL15 {
                             solucion[j] = temp;
 
                             if (logHelper != null) { // Si el logHelper es nulo, no hacer nada
-                                int nuevoCosto = AlgGE15.calcularCosto(solucion, flujos, distancias);
+                                int nuevoCosto = utilities.calcularCosto(solucion, flujos, distancias);
                                 logHelper.registrarIntercambio(i, j, nuevoCosto, true);
                             }
 

@@ -1,6 +1,6 @@
 Archivos=src/datos/ford01.dat src/datos/ford02.dat src/datos/ford03.dat src/datos/ford04.dat
 Semillas=77645037 53054673 05430765 35470364 40753067
-Algoritmos=GreedyAleatorio BusquedaLocal BusquedaTabu
+Algoritmos=GreedyAleatorio BusquedaLocal BusquedaTabu Generacional Estacionario
 iteraciones=5000
 K=5
 tenenciaTabu=3
