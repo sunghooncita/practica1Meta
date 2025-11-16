@@ -163,19 +163,4 @@ public class utilities {
         return false;
     }
 
-    public static void Mutacion(int[] genoma, int pos1, int pos2) {
-        // Implementación de Mutación por Intercambio (Swap Mutation)
-
-        // 1. Guarda temporalmente el valor de la posición 1
-        int temp = genoma[pos1];
-
-        // 2. Coloca el valor de la posición 2 en la posición 1
-        genoma[pos1] = genoma[pos2];
-
-        // 3. Coloca el valor guardado (original de pos1) en la posición 2
-        genoma[pos2] = temp;
-
-        // Nota: No hay return ya que modifica el array 'genoma' por referencia.
-    }
-
 }

@@ -1,8 +1,6 @@
 package algoritmos;
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Set;
-import java.util.Timer;
 
 import meta1.utilities;
 
@@ -183,7 +181,9 @@ public class AlgGen15 {
                         pos2 = RAND.nextInt(0, tamCrom - 1);
                     } while (pos1 == pos2);
                     // Mutamos intercambiando dos posiciones
-                    utilities.Mutacion(nuevaGen.get(i), pos1, pos2);
+                    int temp = nuevaGen.get(i)[pos1];
+                    nuevaGen.get(i)[pos1] = nuevaGen.get(i)[pos2];
+                    nuevaGen.get(i)[pos2] = temp;
                     marcados[i] = true;
                 }
             }
