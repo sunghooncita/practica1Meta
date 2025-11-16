@@ -29,7 +29,7 @@ public class Main {
         List<Integer> eliteGEN = Arrays.asList(1, 2);           // E = 1 o 2
         List<Integer> kBestGEN = Arrays.asList(2, 3);           // kBest = 2 o 3
         List<String> crucesGEN = Arrays.asList("OX2", "MOC");   // Cruce = OX2 o MOC
-        int M_GEN = 100;                                        // Máximo evaluaciones (M)
+        int M_GEN = 50000;                                        // Máximo evaluaciones (M)
         int tamPobl = 100;     // Tamaño población
         int porPoblAle = 80;   // 80% aleatorio
         int kWorstGEN = 3;     // fijo
@@ -40,7 +40,7 @@ public class Main {
         // Parámetros para EST (Evolutivo Estacionario)
         List<Integer> kBestEST = Arrays.asList(2);             // kBest = 2
         List<String> crucesEST = Arrays.asList("OX2", "MOC");  // Cruce = OX2 o MOC
-        int M_EST = 100;// Máximo evaluaciones (M)
+        int M_EST = 50000;// Máximo evaluaciones (M)
         int kWorstEST = 2;
         double probMutaEST = 0.1;
         double probCruceEST = 1.0; // 100% según enunciado
