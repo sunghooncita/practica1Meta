@@ -56,6 +56,23 @@ public class utilities {
         return indicePoblacionMenor;
     }
 
+    public static int posMayorCoste(List<Integer> elegidos, List<Integer> costes) {
+
+        int indicePoblacionMayor = elegidos.get(0);
+        int mayorCoste = costes.get(indicePoblacionMayor);
+
+        for (int i = 1; i < elegidos.size(); i++) {
+            int indicePoblacionActual = elegidos.get(i);
+            int costeActual = costes.get(indicePoblacionActual);
+
+            if (costeActual > mayorCoste) {
+                mayorCoste = costeActual;
+                indicePoblacionMayor = indicePoblacionActual;
+            }
+        }
+        return indicePoblacionMayor;
+    }
+
     public static void cruceOx2(int[] h1, int[] h2) {
         int size = h1.length;
         int numGenes = RAND.nextInt(size - 1) + 1; // número de genes a tomar de h2
@@ -144,6 +161,21 @@ public class utilities {
             if (v == value) return true;
         }
         return false;
+    }
+
+    public static void Mutacion(int[] genoma, int pos1, int pos2) {
+        // Implementación de Mutación por Intercambio (Swap Mutation)
+
+        // 1. Guarda temporalmente el valor de la posición 1
+        int temp = genoma[pos1];
+
+        // 2. Coloca el valor de la posición 2 en la posición 1
+        genoma[pos1] = genoma[pos2];
+
+        // 3. Coloca el valor guardado (original de pos1) en la posición 2
+        genoma[pos2] = temp;
+
+        // Nota: No hay return ya que modifica el array 'genoma' por referencia.
     }
 
 }

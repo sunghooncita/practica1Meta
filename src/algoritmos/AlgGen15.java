@@ -1,6 +1,7 @@
 package algoritmos;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Set;
 import java.util.Timer;
 
 import meta1.utilities;
@@ -29,7 +30,7 @@ public class AlgGen15 {
         ArrayList<Integer> costesGenDC = new ArrayList<>();
 
         ArrayList<int[]> mejorCromosoma = new ArrayList<>();
-        ArrayList<Double> mejorCoste = new ArrayList<>();
+        ArrayList<Integer> mejorCoste = new ArrayList<>();
 
         ArrayList<Integer> posi = new ArrayList<>(); //posiciones seleccionadas por torneo
 
@@ -46,7 +47,7 @@ public class AlgGen15 {
         //reservamos memoria - elitismo+1
         for (int i = 0; i < elitismo + 1; i++) {
             mejorCromosoma.add(new int[tamCrom]);
-            mejorCoste.add(0.0);
+            mejorCoste.add(0);
         }
 
         // CARGA INICIAL
@@ -62,23 +63,26 @@ public class AlgGen15 {
 
         int contadorE = tamPobl; //contador de las evaluaciones realizadas
 
-        Timer timer = new Timer();
-        double temp = 0;
+        long inicio = 0;                // instante en el que empieza el bucle
+        double tiempoTranscurrido = 0;
 
         // BUCLE PRINCIPAL
-        while (contadorE < evaluacionesMax && temp < tiempoMax * 1000) {
+        while (contadorE < evaluacionesMax && tiempoTranscurrido  < tiempoMax * 1000) {
+            if (iteraciones == 0) {
+                inicio = System.currentTimeMillis();
+            }
             iteraciones++;
-            timer.start();
+
 
             // ELITISMO
             mejorCoste.clear();
             for (int i = 0; i < elitismo + 1; i++) {
-                mejorCoste.add(99999999999e9);
+                mejorCoste.add(Integer.MAX_VALUE);
             }
 
             // Guardamos los mejores individuos de la población
             for (int i = 0; i < tamPobl; i++) {
-                double c = costes.get(i);
+                int c = costes.get(i);
 
                 if (c < mejorCoste.get(0)) {
                     mejorCoste.set(1, mejorCoste.get(0));
@@ -179,7 +183,7 @@ public class AlgGen15 {
                         pos2 = RAND.nextInt(0, tamCrom - 1);
                     } while (pos1 == pos2);
                     // Mutamos intercambiando dos posiciones
-                    Mutacion(nuevaGen.get(i), pos1, pos2);
+                    utilities.Mutacion(nuevaGen.get(i), pos1, pos2);
                     marcados[i] = true;
                 }
             }
@@ -202,6 +206,7 @@ public class AlgGen15 {
                 }
             }
 
+            //si un elite no esta, lo recuperamos sustituyendolo x un peor
             ArrayList<Integer> peores = new ArrayList<>();
 
             for (int i = 0; i < elitismo; i++) {
@@ -211,20 +216,21 @@ public class AlgGen15 {
                     ArrayList<Integer> elegidos = new ArrayList<>();
                     for (int x = 0; x < kworst; x++) elegidos.add(-1);
 
-                    for (int kkk = 0; kkk < kworst; kkk++) {
+                    //elegimos kworst pos distintas
+                    for (int kk = 0; kk < kworst; kk++) {
                         int valor;
                         boolean enc;
 
                         do {
                             valor = RAND.nextInt(0, tamPobl - 1);
                             enc = false;
-                            for (int j = 0; j < kkk; j++) {
+                            for (int j = 0; j < kk; j++) { //evitamos repetidos
                                 if (valor == elegidos.get(j)) {
                                     enc = true;
                                     break;
                                 }
                             }
-
+                            //evitamos pos ya sustituidas
                             enc2 = false;
                             for (int p : peores) {
                                 if (valor == p) {
@@ -235,23 +241,24 @@ public class AlgGen15 {
 
                         } while (enc || enc2);
 
-                        elegidos.set(kkk, valor);
+                        elegidos.set(kk, valor);
                     }
 
-                    int peor = posMayorCoste(elegidos, costesH);
+                    //seleccionamos el peor para sustituirlo
+                    int peor = utilities.posMayorCoste(elegidos, costesGen);
                     peores.add(peor);
-
+                    //Recuperamos el elite
                     nuevaGen.set(peor, mejorCromosoma.get(i).clone());
-                    costesH.set(peor, mejorCoste.get(i));
+                    costesGen.set(peor, mejorCoste.get(i));
                 }
             }
 
-            costes = new ArrayList<>(costesH);
+            costes = new ArrayList<>(costesGen);
             cromosomas.clear();
             cromosomas.addAll(nuevaGen);
 
-            timer.stop();
-            temp += timer.getElapsedTimeInMilliSec();
+            tiempoTranscurrido = System.currentTimeMillis() - inicio;
+
         }
 
         int[] best = mejorCromosoma.get(0);
@@ -261,20 +268,34 @@ public class AlgGen15 {
         if (repetidos(best)) System.out.println("Repetidos");
 
         System.out.println("Total Evaluaciones:" + contadorE);
-        System.out.println(" Total Iteraciones:" + t);
+        System.out.println(" Total Iteraciones:" + iteraciones);
 
         return mejorCoste.get(0);
     }
 
 
-    // --------------------------
-    // Función auxiliar interna usada solo para comparar arrays
-    // --------------------------
+    //función para comparar arrays
     private static boolean arrayEquals(int[] a, int[] b) {
         if (a.length != b.length) return false;
         for (int i = 0; i < a.length; i++) {
             if (a[i] != b[i]) return false;
         }
         return true;
+    }
+
+    private static boolean repetidos(int[] genoma) {
+        int N = genoma.length;
+        boolean[] visto = new boolean[N];
+
+        for (int valor : genoma) {
+            if (valor < 0 || valor >= N) {
+                return true;
+            }
+            if (visto[valor]) {
+                return true; // ¡Duplicado encontrado!
+            }
+            visto[valor] = true;
+        }
+        return false;
     }
 }
