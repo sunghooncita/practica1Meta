@@ -12,7 +12,6 @@ public class AlgGen15 {
 
         int iteraciones = 0;
 
-
         ArrayList<int[]> cromosomas = new ArrayList<>(); //poblacion actual
         ArrayList<int[]> nuevaGen = new ArrayList<>();
         ArrayList<int[]> nuevaGenDCruce = new ArrayList<>();
@@ -52,10 +51,8 @@ public class AlgGen15 {
             }
             costes.set(i, utilities.calcularCosto(cromosomas.get(i), flujos, localizaciones));
         }
-
         int contadorE = tamPobl; //contador de las evaluaciones realizadas
-
-        long inicio = 0;                // instante en el que empieza el bucle
+        long inicio = 0;// instante en el que empieza el bucle
         double tiempoTranscurrido = 0;
 
         // BUCLE PRINCIPAL
@@ -65,24 +62,21 @@ public class AlgGen15 {
             }
             iteraciones++;
 
-
             // ELITISMO
             actualizarElitismo(tamPobl, elitismo, cromosomas, costes, mejorCromosoma, mejorCoste);
 
             // SELECCIÓN POR TORNEO k-best
             ArrayList<Integer> posicionesSeleccionadas = seleccionTorneoKBest(tamPobl, kbest, costes);
-            posi = posicionesSeleccionadas; // Actualizamos la variable 'posi'
+            posi = posicionesSeleccionadas;
 
             // PADRES SELECCIONADOS
             copiarPadres(tamPobl, cromosomas, costes, posi, nuevaGen, costesGen);
 
             // CRUCE
-            ResultadoCruce resCruce = realizarCruce(tamPobl, tamCrom, kProbCruce, tipoCruce, nuevaGen, costesGen);
+            boolean[] marcados = realizarCruce(tamPobl, tamCrom, kProbCruce, tipoCruce, nuevaGen, costesGen, nuevaGenDCruce, costesGenDC);
             nuevaGen.clear();
-            nuevaGen.addAll(resCruce.nuevaGenDCruce);
-            costesGen = new ArrayList<>(resCruce.costesGenDC);
-            boolean[] marcados = resCruce.marcados;
-
+            nuevaGen.addAll(nuevaGenDCruce);
+            costesGen = new ArrayList<>(costesGenDC);
 
             // MUTACIÓN
             mutarPoblacion(tamPobl, tamCrom, kProbMuta, nuevaGen, marcados);
@@ -90,8 +84,8 @@ public class AlgGen15 {
             // ACTUALIZACIÓN DE COSTES
             contadorE = actualizarCostes(tamPobl, flujos, localizaciones, nuevaGen, costesGen, contadorE, marcados);
 
-            // MANTENER ELITISMO (Reemplazo del peor por el élite si es necesario)
-            mantenerElitismo(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen);
+            // MANTENER ELITISMO (reemplazo del peor por el élite si es necesario)
+            reemplazoConTorneoDePerdedores(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen);
 
             // Preparar para la siguiente iteración
             costes = new ArrayList<>(costesGen);
@@ -106,8 +100,6 @@ public class AlgGen15 {
         mejorSolIn.clear();
         for (int v : best) mejorSolIn.add(v);
 
-        if (repetidos(best)) System.out.println("Repetidos");
-
         System.out.println("Total Evaluaciones:" + contadorE);
         System.out.println(" Total Iteraciones:" + iteraciones);
 
@@ -115,30 +107,14 @@ public class AlgGen15 {
     }
 
 
-    // MÉTODOS
-
-    // Estructura auxiliar para devolver los resultados del Cruce
-    private static class ResultadoCruce {
-        public ArrayList<int[]> nuevaGenDCruce;
-        public ArrayList<Integer> costesGenDC;
-        public boolean[] marcados;
-
-        public ResultadoCruce(ArrayList<int[]> nuevaGenDCruce, ArrayList<Integer> costesGenDC, boolean[] marcados) {
-            this.nuevaGenDCruce = nuevaGenDCruce;
-            this.costesGenDC = costesGenDC;
-            this.marcados = marcados;
-        }
-    }
-
+    // METODOS
 
     /**
      * Guarda los mejores individuos de la población actual.
-     * Corresponde al bloque 'ELITISMO' en el código original.
      */
     private static void actualizarElitismo(int tamPobl, int elitismo,
                                            ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
                                            ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste) {
-        // ELITISMO
         mejorCoste.clear();
         for (int i = 0; i < elitismo + 1; i++) {
             mejorCoste.add(Integer.MAX_VALUE);
@@ -164,11 +140,10 @@ public class AlgGen15 {
 
     /**
      * Realiza la selección por torneo k-best para toda la población.
-     * Corresponde al bloque 'SELECCIÓN POR TORNEO k-best' en el código original.
      */
     private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Integer> costes) {
         ArrayList<Integer> posi = new ArrayList<>();
-        for (int kk = 0; kk < tamPobl; kk++) posi.add(0); // Inicialización
+        for (int kk = 0; kk < tamPobl; kk++) posi.add(0);
 
         for (int kk = 0; kk < tamPobl; kk++) {
             ArrayList<Integer> elegidos = new ArrayList<>();
@@ -199,11 +174,9 @@ public class AlgGen15 {
 
     /**
      * Copia los padres seleccionados a la nueva generación (antes del cruce).
-     * Corresponde al bloque 'PADRES SELECCIONADOS' en el código original.
      */
     private static void copiarPadres(int tamPobl, ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
                                      ArrayList<Integer> posi, ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
-        // PADRES SELECCIONADOS
         for (int i = 0; i < tamPobl; i++) {
             int p = posi.get(i);
             nuevaGen.set(i, cromosomas.get(p).clone());
@@ -214,14 +187,15 @@ public class AlgGen15 {
 
     /**
      * Realiza el cruce con la probabilidad kProbCruce y los tipos OX2 o MOC.
-     * Corresponde al bloque 'CRUCE' en el código original.
      */
-    private static ResultadoCruce realizarCruce(int tamPobl, int tamCrom, double kProbCruce, int tipoCruce,
-                                                ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
-        boolean[] marcados = new boolean[tamPobl];
-        ArrayList<int[]> nuevaGenDCruce = new ArrayList<>();
-        ArrayList<Integer> costesGenDC = new ArrayList<>();
-        for (int i = 0; i < tamPobl; i++) costesGenDC.add(0); // Inicializar costesGenDC
+    private static boolean[] realizarCruce(int tamPobl, int tamCrom, double kProbCruce, int tipoCruce,
+                                           ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
+                                           ArrayList<int[]> nuevaGenDCruceOut, ArrayList<Integer> costesGenDCOut) {
+        boolean[] marcados = new boolean[tamPobl]; // Inicializado aquí para mantener la lógica original
+
+        nuevaGenDCruceOut.clear();
+        costesGenDCOut.clear();
+        for (int i = 0; i < tamPobl; i++) costesGenDCOut.add(0); // Inicialización de costesGenDC
 
         for (int i = 0; i < tamPobl / 2; i++) {
             //elegimos padres diferentes
@@ -241,27 +215,26 @@ public class AlgGen15 {
                 else
                     utilities.cruceMOC(h1, h2);
 
-                nuevaGenDCruce.add(h1);
-                marcados[nuevaGenDCruce.size() - 1] = true;
+                nuevaGenDCruceOut.add(h1);
+                marcados[nuevaGenDCruceOut.size() - 1] = true;
 
-                nuevaGenDCruce.add(h2);
-                marcados[nuevaGenDCruce.size() - 1] = true;
+                nuevaGenDCruceOut.add(h2);
+                marcados[nuevaGenDCruceOut.size() - 1] = true;
 
             } else { //si no se cruzan pasan tal cual
-                nuevaGenDCruce.add(nuevaGen.get(c1).clone());
-                costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c1));
+                nuevaGenDCruceOut.add(nuevaGen.get(c1).clone());
+                costesGenDCOut.set(nuevaGenDCruceOut.size() - 1, costesGen.get(c1));
 
-                nuevaGenDCruce.add(nuevaGen.get(c2).clone());
-                costesGenDC.set(nuevaGenDCruce.size() - 1, costesGen.get(c2));
+                nuevaGenDCruceOut.add(nuevaGen.get(c2).clone());
+                costesGenDCOut.set(nuevaGenDCruceOut.size() - 1, costesGen.get(c2));
             }
         }
-        return new ResultadoCruce(nuevaGenDCruce, costesGenDC, marcados);
+        return marcados;
     }
 
 
     /**
      * Aplica la mutación (intercambio 2-opt) a cada individuo con probabilidad kProbMuta.
-     * Corresponde al bloque 'MUTACIÓN' en el código original.
      */
     private static void mutarPoblacion(int tamPobl, int tamCrom, double kProbMuta,
                                        ArrayList<int[]> nuevaGen, boolean[] marcados) {
@@ -286,7 +259,6 @@ public class AlgGen15 {
 
     /**
      * Calcula los costes de los individuos marcados (que fueron modificados).
-     * Corresponde al bloque 'ACTUALIZACIÓN DE COSTES' en el código original.
      */
     private static int actualizarCostes(int tamPobl, int[][] flujos, int[][] localizaciones,
                                         ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
@@ -304,16 +276,14 @@ public class AlgGen15 {
 
     /**
      * Implementa la recuperación de los individuos élite que no sobrevivieron.
-     * Corresponde al bloque 'MANTENER ELITISMO' en el código original.
      */
-    private static void mantenerElitismo(int elitismo, int kworst,
+    private static void reemplazoConTorneoDePerdedores(int elitismo, int kworst,
                                          ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste,
                                          ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
-        // MANTENER ELITISMO
         boolean[] encElite = new boolean[elitismo];
         for (int i = 0; i < nuevaGen.size(); i++) {
             for (int j = 0; j < elitismo; j++) {
-                if (arrayEquals(mejorCromosoma.get(j), nuevaGen.get(i))) {
+                if (arraysiguales(mejorCromosoma.get(j), nuevaGen.get(i))) {
                     encElite[j] = true;
                 }
             }
@@ -367,9 +337,10 @@ public class AlgGen15 {
         }
     }
 
-
-    //función para comparar arrays
-    private static boolean arrayEquals(int[] a, int[] b) {
+    /**
+     * Función para comparar arrays
+     */
+    private static boolean arraysiguales(int[] a, int[] b) {
         if (a.length != b.length) return false;
         for (int i = 0; i < a.length; i++) {
             if (a[i] != b[i]) return false;
@@ -377,19 +348,4 @@ public class AlgGen15 {
         return true;
     }
 
-    private static boolean repetidos(int[] genoma) {
-        int N = genoma.length;
-        boolean[] visto = new boolean[N];
-
-        for (int valor : genoma) {
-            if (valor < 0 || valor >= N) {
-                return true;
-            }
-            if (visto[valor]) {
-                return true; // ¡Duplicado encontrado!
-            }
-            visto[valor] = true;
-        }
-        return false;
-    }
 }
