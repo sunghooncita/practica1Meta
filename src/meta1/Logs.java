@@ -26,6 +26,7 @@ public class Logs implements Runnable {
     private double costoFinal;
     private long tiempoTotalMs;
 
+
     public Logs(String nombreAlgoritmo, String nombreArchivoDatos, long semilla,
                 int elite, int kBest, int kWorst, String tipoCruce,
                 double probMuta, double probCruce, int tamPoblacion,

@@ -6,7 +6,7 @@ import java.util.*;
 public class utilities {
 
     // Metodo para calcular costos
-    public static int calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
+    public static long calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
         //Recorres todos los pares (i, j), tomas los flujos y la distancia entre las posiciones, multiplicas y acumulas en costo.
         int costo = 0;
         int n = solucion.length;
@@ -39,14 +39,14 @@ public class utilities {
         return solucionArray;
     }
 
-    public static int posMenorCoste(List<Integer> elegidos, List<Integer> costes) {
+    public static int posMenorCoste(List<Integer> elegidos, List<Long> costes) {
 
         int indicePoblacionMenor = elegidos.get(0);
-        int menorCoste = costes.get(indicePoblacionMenor);
+        long menorCoste = costes.get(indicePoblacionMenor);
 
         for (int i = 1; i < elegidos.size(); i++) {
             int indicePoblacionActual = elegidos.get(i);
-            int costeActual = costes.get(indicePoblacionActual);
+            long costeActual = costes.get(indicePoblacionActual);
             if (costeActual < menorCoste) {
                 // Si encontramos un coste menor, actualizamos.
                 menorCoste = costeActual;
@@ -56,14 +56,14 @@ public class utilities {
         return indicePoblacionMenor;
     }
 
-    public static int posMayorCoste(List<Integer> elegidos, List<Integer> costes) {
+    public static int posMayorCoste(List<Integer> elegidos, List<Long> costes) {
 
         int indicePoblacionMayor = elegidos.get(0);
-        int mayorCoste = costes.get(indicePoblacionMayor);
+        long mayorCoste = costes.get(indicePoblacionMayor);
 
         for (int i = 1; i < elegidos.size(); i++) {
             int indicePoblacionActual = elegidos.get(i);
-            int costeActual = costes.get(indicePoblacionActual);
+            long costeActual = costes.get(indicePoblacionActual);
 
             if (costeActual > mayorCoste) {
                 mayorCoste = costeActual;

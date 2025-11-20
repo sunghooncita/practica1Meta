@@ -16,12 +16,12 @@ public class AlgGen_Clase01_Grupo05 {
         ArrayList<int[]> nuevaGen = new ArrayList<>();
         ArrayList<int[]> nuevaGenDCruce = new ArrayList<>();
 
-        ArrayList<Integer> costes = new ArrayList<>(); //costes de la poblacion
-        ArrayList<Integer> costesGen = new ArrayList<>();
-        ArrayList<Integer> costesGenDC = new ArrayList<>();
+        ArrayList<Long> costes = new ArrayList<>(); //costes de la poblacion
+        ArrayList<Long> costesGen = new ArrayList<>();
+        ArrayList<Long> costesGenDC = new ArrayList<>();
 
         ArrayList<int[]> mejorCromosoma = new ArrayList<>();
-        ArrayList<Integer> mejorCoste = new ArrayList<>();
+        ArrayList<Long> mejorCoste = new ArrayList<>();
 
         ArrayList<Integer> posi = new ArrayList<>(); //posiciones seleccionadas por torneo
 
@@ -29,16 +29,16 @@ public class AlgGen_Clase01_Grupo05 {
         for (int i = 0; i < tamPobl; i++) {
             cromosomas.add(new int[tamCrom]);
             nuevaGen.add(new int[tamCrom]);
-            costes.add(0);
-            costesGen.add(0);
-            costesGenDC.add(0);
+            costes.add(0L);
+            costesGen.add(0L);
+            costesGenDC.add(0L);
             posi.add(0);
         }
 
         //reservamos memoria - elitismo+1
         for (int i = 0; i < elitismo + 1; i++) {
             mejorCromosoma.add(new int[tamCrom]);
-            mejorCoste.add(0);
+            mejorCoste.add(0L);
         }
 
         // CARGA INICIAL
@@ -113,16 +113,16 @@ public class AlgGen_Clase01_Grupo05 {
      * Guarda los mejores individuos de la población actual.
      */
     private static void actualizarElitismo(int tamPobl, int elitismo,
-                                           ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
-                                           ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste) {
+                                           ArrayList<int[]> cromosomas, ArrayList<Long> costes,
+                                           ArrayList<int[]> mejorCromosoma, ArrayList<Long> mejorCoste) {
         mejorCoste.clear();
         for (int i = 0; i < elitismo + 1; i++) {
-            mejorCoste.add(Integer.MAX_VALUE);
+            mejorCoste.add(Long.MAX_VALUE);
         }
 
         // Guardamos los mejores individuos de la población
         for (int i = 0; i < tamPobl; i++) {
-            int c = costes.get(i);
+            long c = costes.get(i);
 
             if (c < mejorCoste.get(0)) {
                 mejorCoste.set(1, mejorCoste.get(0));
@@ -141,7 +141,7 @@ public class AlgGen_Clase01_Grupo05 {
     /**
      * Realiza la selección por torneo k-best para toda la población.
      */
-    private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Integer> costes, Random rand) {
+    private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Long> costes, Random rand) {
         ArrayList<Integer> posi = new ArrayList<>();
         for (int kk = 0; kk < tamPobl; kk++) posi.add(0);
 
@@ -175,8 +175,8 @@ public class AlgGen_Clase01_Grupo05 {
     /**
      * Copia los padres seleccionados a la nueva generación (antes del cruce).
      */
-    private static void copiarPadres(int tamPobl, ArrayList<int[]> cromosomas, ArrayList<Integer> costes,
-                                     ArrayList<Integer> posi, ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
+    private static void copiarPadres(int tamPobl, ArrayList<int[]> cromosomas, ArrayList<Long> costes,
+                                     ArrayList<Integer> posi, ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen) {
         for (int i = 0; i < tamPobl; i++) {
             int p = posi.get(i);
             nuevaGen.set(i, cromosomas.get(p).clone());
@@ -189,13 +189,13 @@ public class AlgGen_Clase01_Grupo05 {
      * Realiza el cruce con la probabilidad kProbCruce y los tipos OX2 o MOC.
      */
     private static boolean[] realizarCruce(int tamPobl, int tamCrom, double kProbCruce, int tipoCruce,
-                                           ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
-                                           ArrayList<int[]> nuevaGenDCruceOut, ArrayList<Integer> costesGenDCOut, Random rand) {
+                                           ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen,
+                                           ArrayList<int[]> nuevaGenDCruceOut, ArrayList<Long> costesGenDCOut, Random rand) {
         boolean[] marcados = new boolean[tamPobl]; // Inicializado aquí para mantener la lógica original
 
         nuevaGenDCruceOut.clear();
         costesGenDCOut.clear();
-        for (int i = 0; i < tamPobl; i++) costesGenDCOut.add(0); // Inicialización de costesGenDC
+        for (int i = 0; i < tamPobl; i++) costesGenDCOut.add(0L); // Inicialización de costesGenDC
 
         for (int i = 0; i < tamPobl / 2; i++) {
             //elegimos padres diferentes
@@ -261,7 +261,7 @@ public class AlgGen_Clase01_Grupo05 {
      * Calcula los costes de los individuos marcados (que fueron modificados).
      */
     private static int actualizarCostes(int tamPobl, int[][] flujos, int[][] localizaciones,
-                                        ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
+                                        ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen,
                                         int contadorE, boolean[] marcados) {
         // ACTUALIZACIÓN DE COSTES
         for (int i = 0; i < tamPobl; i++) {
@@ -278,8 +278,8 @@ public class AlgGen_Clase01_Grupo05 {
      * Implementa la recuperación de los individuos élite que no sobrevivieron.
      */
     private static void reemplazoConTorneoDePerdedores(int elitismo, int kworst,
-                                         ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste,
-                                         ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen, Random rand) {
+                                         ArrayList<int[]> mejorCromosoma, ArrayList<Long> mejorCoste,
+                                         ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen, Random rand) {
         boolean[] encElite = new boolean[elitismo];
         for (int i = 0; i < nuevaGen.size(); i++) {
             for (int j = 0; j < elitismo; j++) {

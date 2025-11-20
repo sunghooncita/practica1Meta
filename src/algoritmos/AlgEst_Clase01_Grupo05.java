@@ -14,7 +14,7 @@ public class AlgEst_Clase01_Grupo05 {
 
         int generaciones = 0;
         ArrayList<int[]> poblacion = new ArrayList<>(); //almacena los cromosomas (soluciones).
-        ArrayList<Integer> costes = new ArrayList<>(); //almacena los costos asociados a cada cromosoma de la población
+        ArrayList<Long> costes = new ArrayList<>(); //almacena los costos asociados a cada cromosoma de la población
 
         // Inicializar población
         for (int i = 0; i < tamPobl; i++) {
@@ -58,8 +58,8 @@ public class AlgEst_Clase01_Grupo05 {
             mutar(hijo2, kProbMuta, tamCrom, rand);
 
             // Calcular costes de los hijos
-            int costeH1 = utilities.calcularCosto(hijo1, flujos, localizaciones);
-            int costeH2 = utilities.calcularCosto(hijo2, flujos, localizaciones);
+            long costeH1 = utilities.calcularCosto(hijo1, flujos, localizaciones);
+            long costeH2 = utilities.calcularCosto(hijo2, flujos, localizaciones);
             contadorE += 2;
 
             // REEMPLAZAMIENTO POR TORNEO DE PERDEDORES
@@ -70,7 +70,7 @@ public class AlgEst_Clase01_Grupo05 {
 
         // Obtener mejor solución
         int mejorIdx = 0; //indice mejor sol
-        int mejorCosto = costes.get(0); //mejor costo encontrado
+        long mejorCosto = costes.get(0); //mejor costo encontrado
         for (int i = 1; i < tamPobl; i++) {
             if (costes.get(i) < mejorCosto) { //coste actual mejor q mejor costo
                 mejorCosto = costes.get(i); //actualiza costo
@@ -88,7 +88,7 @@ public class AlgEst_Clase01_Grupo05 {
     }
 
     // TORNEO BINARIO
-    private static int torneoBinario(ArrayList<int[]> poblacion, ArrayList<Integer> costes, int k, Random rand) {
+    private static int torneoBinario(ArrayList<int[]> poblacion, ArrayList<Long> costes, int k, Random rand) {
         int mejor = rand.nextInt(poblacion.size()); //mejor indice inicial aleatorio
         for (int i = 1; i < k; i++) {
             int idx = rand.nextInt(poblacion.size()); //otro indice aleatorio
@@ -112,8 +112,8 @@ public class AlgEst_Clase01_Grupo05 {
     }
 
     // REEMPLAZAR LOS DOS PEORES
-    private static void reemplazarPeores(ArrayList<int[]> poblacion, ArrayList<Integer> costes,
-                                         int[] hijo1, int[] hijo2, int costeH1, int costeH2, int kWorst, Random rand) {
+    private static void reemplazarPeores(ArrayList<int[]> poblacion, ArrayList<Long> costes,
+                                         int[] hijo1, int[] hijo2, long costeH1, long costeH2, int kWorst, Random rand) {
 
         int idxPeor1 = torneoPeor(costes, kWorst, rand); //Usa el Torneo de Perdedores para encontrar el índice del individuo con el PEOR costo entre 'kWorst' seleccionados.
         int idxPeor2;
@@ -126,7 +126,7 @@ public class AlgEst_Clase01_Grupo05 {
     }
 
     // TORNEO DE PERDEDORES
-    private static int torneoPeor(ArrayList<Integer> costes, int k, Random rand) {
+    private static int torneoPeor(ArrayList<Long> costes, int k, Random rand) {
         int peor = rand.nextInt(costes.size()); //indice al azar
         for (int i = 1; i < k; i++) {
             int idx = rand.nextInt(costes.size()); //indice aleatorio
