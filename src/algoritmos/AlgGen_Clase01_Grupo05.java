@@ -4,13 +4,13 @@ import java.util.Random;
 
 import meta1.utilities;
 
-public class AlgGen15 {
+public class AlgGen_Clase01_Grupo05 {
 
-    private static final Random RAND = new Random();
+    public static double AlgGen(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones, ArrayList<Integer> mejorSolIn, int tiempoMax, int kbest, int kworst, double kProbMuta, double kProbCruce, int elitismo, int porPoblAle, int tipoCruce, int k,int semilla) {
 
-    public static double AlgGen(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones, ArrayList<Integer> mejorSolIn, int tiempoMax, int kbest, int kworst, double kProbMuta, double kProbCruce, int elitismo, int porPoblAle, int tipoCruce, int k) {
+        Random rand = new Random(semilla);
 
-        int iteraciones = 0;
+        int generaciones = 0;
 
         ArrayList<int[]> cromosomas = new ArrayList<>(); //poblacion actual
         ArrayList<int[]> nuevaGen = new ArrayList<>();
@@ -45,9 +45,9 @@ public class AlgGen15 {
         for (int i = 0; i < tamPobl; i++) {
 
             if (i < porPoblAle * tamPobl / 100) {
-                cromosomas.set(i,utilities.generarSolucionAleatoria(tamCrom, RAND));
+                cromosomas.set(i,utilities.generarSolucionAleatoria(tamCrom, rand));
             } else {
-                cromosomas.set(i,AlgGA15.algoritmoGreedyAleatorio(flujos, localizaciones, k, RAND));
+                cromosomas.set(i,AlgGA15.algoritmoGreedyAleatorio(flujos, localizaciones, k, rand));
             }
             costes.set(i, utilities.calcularCosto(cromosomas.get(i), flujos, localizaciones));
         }
@@ -57,35 +57,35 @@ public class AlgGen15 {
 
         // BUCLE PRINCIPAL
         while (contadorE < evaluacionesMax && tiempoTranscurrido  < tiempoMax * 1000) {
-            if (iteraciones == 0) {
+            if (generaciones == 0) {
                 inicio = System.currentTimeMillis();
             }
-            iteraciones++;
+            generaciones++;
 
             // ELITISMO
             actualizarElitismo(tamPobl, elitismo, cromosomas, costes, mejorCromosoma, mejorCoste);
 
             // SELECCIÓN POR TORNEO k-best
-            ArrayList<Integer> posicionesSeleccionadas = seleccionTorneoKBest(tamPobl, kbest, costes);
+            ArrayList<Integer> posicionesSeleccionadas = seleccionTorneoKBest(tamPobl, kbest, costes, rand);
             posi = posicionesSeleccionadas;
 
             // PADRES SELECCIONADOS
             copiarPadres(tamPobl, cromosomas, costes, posi, nuevaGen, costesGen);
 
             // CRUCE
-            boolean[] marcados = realizarCruce(tamPobl, tamCrom, kProbCruce, tipoCruce, nuevaGen, costesGen, nuevaGenDCruce, costesGenDC);
+            boolean[] marcados = realizarCruce(tamPobl, tamCrom, kProbCruce, tipoCruce, nuevaGen, costesGen, nuevaGenDCruce, costesGenDC, rand);
             nuevaGen.clear();
             nuevaGen.addAll(nuevaGenDCruce);
             costesGen = new ArrayList<>(costesGenDC);
 
             // MUTACIÓN
-            mutarPoblacion(tamPobl, tamCrom, kProbMuta, nuevaGen, marcados);
+            mutarPoblacion(tamPobl, tamCrom, kProbMuta, nuevaGen, marcados, rand);
 
             // ACTUALIZACIÓN DE COSTES
             contadorE = actualizarCostes(tamPobl, flujos, localizaciones, nuevaGen, costesGen, contadorE, marcados);
 
             // MANTENER ELITISMO (reemplazo del peor por el élite si es necesario)
-            reemplazoConTorneoDePerdedores(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen);
+            reemplazoConTorneoDePerdedores(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen, rand);
 
             // Preparar para la siguiente iteración
             costes = new ArrayList<>(costesGen);
@@ -101,7 +101,7 @@ public class AlgGen15 {
         for (int v : best) mejorSolIn.add(v);
 
         System.out.println("Total Evaluaciones:" + contadorE);
-        System.out.println(" Total Iteraciones:" + iteraciones);
+        System.out.println("Total Generaciones:" + generaciones);
 
         return mejorCoste.get(0);
     }
@@ -141,7 +141,7 @@ public class AlgGen15 {
     /**
      * Realiza la selección por torneo k-best para toda la población.
      */
-    private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Integer> costes) {
+    private static ArrayList<Integer> seleccionTorneoKBest(int tamPobl, int kbest, ArrayList<Integer> costes, Random rand) {
         ArrayList<Integer> posi = new ArrayList<>();
         for (int kk = 0; kk < tamPobl; kk++) posi.add(0);
 
@@ -153,7 +153,7 @@ public class AlgGen15 {
                 boolean enc;
                 int valor;
                 do {
-                    valor = RAND.nextInt(0, tamPobl - 1);
+                    valor = rand.nextInt(0, tamPobl - 1);
                     enc = false;
                     //evitamos duplicados
                     for (int j = 0; j < i; j++) {
@@ -190,7 +190,7 @@ public class AlgGen15 {
      */
     private static boolean[] realizarCruce(int tamPobl, int tamCrom, double kProbCruce, int tipoCruce,
                                            ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen,
-                                           ArrayList<int[]> nuevaGenDCruceOut, ArrayList<Integer> costesGenDCOut) {
+                                           ArrayList<int[]> nuevaGenDCruceOut, ArrayList<Integer> costesGenDCOut, Random rand) {
         boolean[] marcados = new boolean[tamPobl]; // Inicializado aquí para mantener la lógica original
 
         nuevaGenDCruceOut.clear();
@@ -199,12 +199,12 @@ public class AlgGen15 {
 
         for (int i = 0; i < tamPobl / 2; i++) {
             //elegimos padres diferentes
-            int c1 = RAND.nextInt(0, tamPobl - 1);
+            int c1 = rand.nextInt(0, tamPobl - 1);
             int c2;
-            do {c2 = RAND.nextInt(0, tamPobl - 1);
+            do {c2 = rand.nextInt(0, tamPobl - 1);
             } while (c1 == c2);
 
-            int x = RAND.nextInt(0, 100);
+            int x = rand.nextInt(0, 100);
             //si se cruzan
             if (x < kProbCruce) {
                 int[] h1 = nuevaGen.get(c1).clone();
@@ -237,15 +237,15 @@ public class AlgGen15 {
      * Aplica la mutación (intercambio 2-opt) a cada individuo con probabilidad kProbMuta.
      */
     private static void mutarPoblacion(int tamPobl, int tamCrom, double kProbMuta,
-                                       ArrayList<int[]> nuevaGen, boolean[] marcados) {
+                                       ArrayList<int[]> nuevaGen, boolean[] marcados, Random rand) {
         for (int i = 0; i < tamPobl; i++) {
-            double x = RAND.nextFloat(0, 100);
+            double x = rand.nextFloat(0, 100);
 
             if (x < kProbMuta) {
-                int pos1 = RAND.nextInt(0, tamCrom - 1);
+                int pos1 = rand.nextInt(0, tamCrom - 1);
                 int pos2;
                 do {
-                    pos2 = RAND.nextInt(0, tamCrom - 1);
+                    pos2 = rand.nextInt(0, tamCrom - 1);
                 } while (pos1 == pos2);
                 // Mutamos intercambiando dos posiciones
                 int temp = nuevaGen.get(i)[pos1];
@@ -279,7 +279,7 @@ public class AlgGen15 {
      */
     private static void reemplazoConTorneoDePerdedores(int elitismo, int kworst,
                                          ArrayList<int[]> mejorCromosoma, ArrayList<Integer> mejorCoste,
-                                         ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen) {
+                                         ArrayList<int[]> nuevaGen, ArrayList<Integer> costesGen, Random rand) {
         boolean[] encElite = new boolean[elitismo];
         for (int i = 0; i < nuevaGen.size(); i++) {
             for (int j = 0; j < elitismo; j++) {
@@ -305,7 +305,7 @@ public class AlgGen15 {
                     boolean enc;
 
                     do {
-                        valor = RAND.nextInt(0, nuevaGen.size() - 1);
+                        valor = rand.nextInt(0, nuevaGen.size() - 1);
                         enc = false;
                         for (int j = 0; j < kk; j++) { //evitamos repetidos
                             if (valor == elegidos.get(j)) {

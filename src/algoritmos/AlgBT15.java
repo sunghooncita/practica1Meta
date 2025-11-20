@@ -1,4 +1,4 @@
-package algoritmos;
+/*package algoritmos;
 import java.util.*;
 
 public class AlgBT15 {
@@ -130,4 +130,4 @@ public class AlgBT15 {
 
     void intercambiar(int[] s, int i, int j) { int t=s[i]; s[i]=s[j]; s[j]=t; }
 
-}
+}*/

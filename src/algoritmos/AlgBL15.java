@@ -32,10 +32,10 @@ public class AlgBL15 {
                             solucion[i] = solucion[j];
                             solucion[j] = temp;
 
-                            if (logHelper != null) { // Si el logHelper es nulo, no hacer nada
-                                int nuevoCosto = utilities.calcularCosto(solucion, flujos, distancias);
-                                logHelper.registrarIntercambio(i, j, nuevoCosto, true);
-                            }
+                            //if (logHelper != null) { // Si el logHelper es nulo, no hacer nada
+                            //    int nuevoCosto = utilities.calcularCosto(solucion, flujos, distancias);
+                            //    logHelper.registrarIntercambio(i, j, nuevoCosto, true);
+                            //}
 
                             //Lo reseteamos para las posiciones modificadas
                             dlb[i] = dlb[j] = 0;
