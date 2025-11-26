@@ -26,6 +26,7 @@ public class Main {
         int tamPobl = config.getTamPoblacion();
         String cruce = config.getCruce();
         int porPoblAle = config.getPorPoblAle();
+        int evaluacionesMax = config.getEvaluacionesMax();
         int tiempoMax = config.getTiempoMax();
 
         int elite = config.getElite();
@@ -58,46 +59,50 @@ public class Main {
 
                for (String alg : algoritmosConfig) {
 
-                   switch (alg) {
 
-                       case "Generacional":
+                   System.out.println("\nEjecutando Algoritmo: Memético Generacional (MGen)");
 
-                           System.out.println("\nEjecutando Algoritmo: Generacional");
+                   // Bucle anidado para las 9 combinaciones requeridas
+                   for (Integer eval : evaluaciones) { // 1000, 2000, 5000 (Frecuencia/Anchura)
+                       for (Integer iter : iteraciones) { // 10, 50, 100 (Profundidad/Explotación)
                            for (Integer semilla : semillaConfig) {
-                               for (Integer E : elite) {
-                                   for (Integer kB : kBestMGen) {
-                                       for (String cruceM : cruce) {
 
-                                           int tipoCruce = cruceM.equals("MOC") ? 1 : 0;
-                                           ArrayList<Integer> mejorSolIn = new ArrayList<>();
+                               int tipoCruce = cruce.equals("MOC") ? 1 : 0;
+                               ArrayList<Integer> mejorSolIn = new ArrayList<>();
 
-                                           System.out.printf("Configuración GEN -> Elite: %d, kBest: %d, kWorst: %d, Cruce: %s, Semilla: %d\n", E, kB, kWorstGen, cruceM,semilla);
-                                           long inicioTiempo = System.currentTimeMillis();
+                               System.out.printf("Configuración MGen -> Evaluaciones: %d, Iteraciones: %d, Semilla: %d\n", eval, iter, semilla);
+                               long inicioTiempo = System.currentTimeMillis();
 
-                                           long[] resultados = AlgGen_Clase01_Grupo05.AlgMGen(tamPobl, flujos.length, evaluaciones, flujos, distancias, mejorSolIn, tiempoMax, kB, kWorstGen, probMutaGen, probCruceGen, E, porPoblAle, tipoCruce, K,semilla);
-                                           long resultado = resultados[0];
-                                           int generaciones = (int) resultados[1]; // Conversión a int
+                               // Llamada al nuevo método AlgMGenMemetico
+                               long[] resultados = AlgMGen_Clase01_Grupo05.AlgMGen(
+                                       tamPobl, flujos.length, evaluacionesMax, flujos, distancias, mejorSolIn,
+                                       tiempoMax, kBestMGen, kWorstMGen, probMutaMGen, probCruceMGen, elite,
+                                       porPoblAle, tipoCruce, K, semilla,
+                                       eval, // evaluacionLanzamientoBT
+                                       iter    // iteracionesBT
+                               );
 
-                                           long tiempoGen = System.currentTimeMillis() - inicioTiempo;
+                               long resultado = resultados[0];
+                               int generaciones = (int) resultados[1];
 
-                                           System.out.println("Tiempo total: " + tiempoGen + "\nResultado GEN: " + resultado + "\n");
+                               long tiempoGen = System.currentTimeMillis() - inicioTiempo;
 
-                                           Logs log = new Logs(
-                                                   "Generacional",
-                                                   archivo.getName(), semilla,
-                                                   E, kB, kWorstMGen, cruceM, probMutaGen, probCruceGen, tamPobl,
-                                                   new ArrayList<>(mejorSolIn), //copia d la solución
-                                                   resultado,
-                                                   tiempoGen, evaluaciones,generaciones
-                                           );
-                                           executor.execute(log);
+                               System.out.println("Tiempo total: " + tiempoGen + "\nResultado MGen: " + resultado + "\n");
 
-                                       }
-                                   }
-                               }
+                               // Registro de logs para el Algoritmo Memético
+                               Logs log = new Logs(
+                                       "Memetico",
+                                       archivo.getName(), semilla,
+                                       elite, kBestMGen, kWorstMGen, cruce, tamPobl,
+                                       new ArrayList<>(mejorSolIn),
+                                       resultado,
+                                       tiempoGen, evaluacionesMax, generaciones,
+                                       eval, // Añadir parámetro de lanzamiento BT
+                                       iter    // Añadir parámetro de iteraciones BT
+                               );
+                               executor.execute(log);
                            }
-                           break;
-
+                       }
                    }
 
                }

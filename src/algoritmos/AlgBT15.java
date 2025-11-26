@@ -5,7 +5,7 @@ public class AlgBT15 {
 
     //Metodo principal (el logHelper registra los intercambios)
     public int[] ejecutar(int[] solucion, int maxIter, int[][] dist, int[][] flujo,
-                          int tenenciaTabu, meta1.Logs logHelper) {
+                          int tenenciaTabu) {
         int n = solucion.length;
         int[] mejor = solucion.clone();
         double mejorValor = costo(solucion, dist, flujo);
@@ -79,11 +79,6 @@ public class AlgBT15 {
             // Aceptamos el movimiento
             intercambiar(actual, mov[0], mov[1]);
             // El valorActual ya se ha establecido arriba.
-
-            // Registramos el intercambio aceptado y su resultado (si se usa logHelper)
-            if (logHelper != null) {
-                logHelper.registrarIntercambio(mov[0], mov[1], (int) valorActual, mov == mejorMovimiento);
-            }
 
             // Actualizamos la lista tabú
             listaTabu.addLast(mov);

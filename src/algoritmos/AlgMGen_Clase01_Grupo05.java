@@ -78,8 +78,7 @@ public class AlgMGen_Clase01_Grupo05 {
                         iteracionesBT,
                         localizaciones, // Matriz de distancias
                         flujos,         // Matriz de flujos
-                        10,             // Tenencia Tabú (fijo, por ejemplo, 10)
-                        null            // logs, se ignora
+                        10            // Tenencia Tabú (fijo, por ejemplo, 10)
                 );
 
                 long costeEliteOpt = utilities.calcularCosto(eliteOptimizada, flujos, localizaciones);
