@@ -8,11 +8,11 @@ public class utilities {
     // Metodo para calcular costos
     public static long calcularCosto(int[] solucion, int[][] flujos, int[][] distancias) {
         //Recorres todos los pares (i, j), tomas los flujos y la distancia entre las posiciones, multiplicas y acumulas en costo.
-        int costo = 0;
+        long costo = 0;
         int n = solucion.length;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                costo += flujos[i][j] * distancias[solucion[i]][solucion[j]];
+                costo += (long)flujos[i][j] * distancias[solucion[i]][solucion[j]];
             }
         }
         return costo;
@@ -39,7 +39,7 @@ public class utilities {
         return solucionArray;
     }
 
-    public static int posMenorCoste(List<Integer> elegidos, List<Long> costes) {
+    public static int posMenorCoste(ArrayList<Integer> elegidos, ArrayList<Long> costes) {
 
         int indicePoblacionMenor = elegidos.get(0);
         long menorCoste = costes.get(indicePoblacionMenor);
@@ -56,7 +56,7 @@ public class utilities {
         return indicePoblacionMenor;
     }
 
-    public static int posMayorCoste(List<Integer> elegidos, List<Long> costes) {
+    public static int posMayorCoste(ArrayList<Integer> elegidos, ArrayList<Long> costes) {
 
         int indicePoblacionMayor = elegidos.get(0);
         long mayorCoste = costes.get(indicePoblacionMayor);
@@ -73,13 +73,13 @@ public class utilities {
         return indicePoblacionMayor;
     }
 
-    public static void cruceOx2(int[] h1, int[] h2) {
+    public static void cruceOx2(int[] h1, int[] h2, Random rand) {
         int size = h1.length;
-        int numGenes = RAND.nextInt(size - 1) + 1; // número de genes a tomar de h2
+        int numGenes = rand.nextInt(size - 1) + 1; // número de genes a tomar de h2
 
         Set<Integer> posiciones = new HashSet<>();
         while (posiciones.size() < numGenes) {
-            posiciones.add(RAND.nextInt(size));
+            posiciones.add(rand.nextInt(size));
         }
 
         int[] tempH1 = h1.clone();
@@ -117,14 +117,10 @@ public class utilities {
         }
     }
 
-
-    // Usaremos un objeto Random accesible, o lo crearemos localmente
-    private static final Random RAND = new Random();
-
-    public static void cruceMOC(int[] h1, int[] h2) {
+    public static void cruceMOC(int[] h1, int[] h2, Random rand) {
         int size = h1.length;
-        int start = RAND.nextInt(size);
-        int end = RAND.nextInt(size - start) + start;
+        int start = rand.nextInt(size);
+        int end = rand.nextInt(size - start) + start;
 
         // Clonar el segmento de h1 para h2 y viceversa
         int[] tempH1 = h1.clone();

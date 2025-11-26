@@ -10,10 +10,9 @@ public class Configurador {
     private ArrayList<String> archivos;
     private ArrayList<String> algoritmos;
     ArrayList<Integer> semilla;
-    private ArrayList<String> cruces;
-    private ArrayList<Integer> elite;
-    private ArrayList<Integer> kBestGen;
-    private ArrayList<Integer> kBestEst;
+    private String cruce;
+    private int elite;
+    private int kBestMGen;
     private int k;
     private int kWorstGen;
     private int kWorstEst;
@@ -21,19 +20,16 @@ public class Configurador {
     private int evaluaciones;
     private int tiempoMax;
     private int porPoblAle;
-    private double probMutaGen;
-    private double probCruceGen;
-    private double probMutaEst;
+    private double probMutaMGen;
+    private double probCruceMGen;
 
     public Configurador(String ruta) {
         // Inicializamos las listas
         archivos = new ArrayList<>();
         algoritmos = new ArrayList<>();
         semilla = new ArrayList<>();
-        cruces = new ArrayList<>();
-        elite = new ArrayList<>();
-        kBestGen = new ArrayList<>();
-        kBestEst = new ArrayList<>();
+        iteraciones = new ArrayList<>();
+        evaluaciones = new ArrayList<>();
 
         String linea;
         try (FileReader f = new FileReader(ruta); BufferedReader b = new BufferedReader(f)) {
@@ -66,19 +62,16 @@ public class Configurador {
                         }
                         break;
 
-                    case "Cruces":
-                        String[] vCruces = valor.split(" ");
-                        for (String s : vCruces) cruces.add(s);
+                    case "Cruce":
+                        cruce = valor;
                         break;
 
                     case "Elite":
-                        String[] vElite = valor.split(" ");
-                        for (String s : vElite) elite.add(Integer.parseInt(s));
+                        elite = Integer.parseInt(valor);
                         break;
 
-                    case "kBestGen":
-                        String[] vkBestGen = valor.split(" ");
-                        for (String s : vkBestGen) kBestGen.add(Integer.parseInt(s));
+                    case "kBestMGen":
+                        kBestMGen = Integer.parseInt(valor);
                         break;
 
                     case "kBestEst":
@@ -103,7 +96,8 @@ public class Configurador {
                         break;
 
                     case "evaluaciones":
-                        evaluaciones = Integer.parseInt(valor);
+                        String[] vEvaluaciones = valor.split(" ");
+                        for (String s : vEvaluaciones) evaluaciones.add(Integer.parseInt(s));
                         break;
 
                     case "tiempoMax":
@@ -122,14 +116,8 @@ public class Configurador {
                         probCruceGen = Double.parseDouble(valor);
                         break;
 
-                    case "probMutaEST":
-                        probMutaEst = Double.parseDouble(valor);
-                        break;
-
-
-                    default:
-                        // Opcional: Imprimir si hay una clave no reconocida
-                        // System.out.println("Clave no reconocida en config: " + clave);
+                    case "evaluacionesMax":
+                        evaluacionesMax = Integer.parseInt(valor);
                         break;
                 }
             }
@@ -143,10 +131,9 @@ public class Configurador {
     public ArrayList<String> getArchivos() { return archivos; }
     public ArrayList<String> getAlgoritmos() { return algoritmos; }
     public ArrayList<Integer> getSemillas() {return semilla;}
-    public ArrayList<String> getCruces() { return cruces; }
-    public ArrayList<Integer> getElite() { return elite; }
-    public ArrayList<Integer> getKBestGen() { return kBestGen; }
-    public ArrayList<Integer> getKBestEst() { return kBestEst; }
+    public String getCruce() { return cruce; }
+    public int getElite() { return elite; }
+    public int getKBestMGen() { return kBestMGen; }
     public int getK() { return k; }
     public int getKWorstGen() { return kWorstGen; }
     public int getKWorstEst() { return kWorstEst; }

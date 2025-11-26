@@ -6,7 +6,7 @@ import meta1.utilities;
 
 public class AlgEst_Clase01_Grupo05 {
 
-    public static double AlgEst(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones,
+    public static long[] AlgEst(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones,
                                 ArrayList<Integer> mejorSolIn, int tiempoMax, int kBest, int kWorst,
                                 double kProbMuta, int porPoblAle, int tipoCruce, int k, int semilla) {
 
@@ -48,9 +48,9 @@ public class AlgEst_Clase01_Grupo05 {
 
             //CRUCE 100%
             if (tipoCruce == 0) {
-                utilities.cruceOx2(hijo1, hijo2);
+                utilities.cruceOx2(hijo1, hijo2, rand);
             } else {
-                utilities.cruceMOC(hijo1, hijo2);
+                utilities.cruceMOC(hijo1, hijo2, rand);
             }
 
             // MUTACIÓN
@@ -69,7 +69,7 @@ public class AlgEst_Clase01_Grupo05 {
         }
 
         // Obtener mejor solución
-        int mejorIdx = 0; //indice mejor sol
+        int mejorIdx = 0; //índice mejor sol
         long mejorCosto = costes.get(0); //mejor costo encontrado
         for (int i = 1; i < tamPobl; i++) {
             if (costes.get(i) < mejorCosto) { //coste actual mejor q mejor costo
@@ -84,7 +84,7 @@ public class AlgEst_Clase01_Grupo05 {
         System.out.println("Total Evaluaciones:" + contadorE);
         System.out.println("Total Generaciones:" + generaciones);
 
-        return mejorCosto;
+        return new long[]{mejorCosto, (long)generaciones};
     }
 
     // TORNEO BINARIO

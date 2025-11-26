@@ -23,14 +23,16 @@ public class Logs implements Runnable {
 
     // Resultados
     private List<Integer> solucionFinal;
-    private double costoFinal;
+    public long costoFinal;
     private long tiempoTotalMs;
+    private int evaluaciones; // NUEVO: Para guardar las evaluaciones máximas
+    private int generaciones;
 
 
     public Logs(String nombreAlgoritmo, String nombreArchivoDatos, long semilla,
                 int elite, int kBest, int kWorst, String tipoCruce,
                 double probMuta, double probCruce, int tamPoblacion,
-                List<Integer> solFinal, double costoFinal, long tiempoTotalMs) {
+                List<Integer> solFinal, long costoFinal, long tiempoTotalMs, int evaluaciones, int generaciones) {
 
         this.nombreAlgoritmo = nombreAlgoritmo;
         this.nombreArchivoDatos = nombreArchivoDatos;
@@ -45,6 +47,19 @@ public class Logs implements Runnable {
         this.solucionFinal = solFinal;
         this.costoFinal = costoFinal;
         this.tiempoTotalMs = tiempoTotalMs;
+        this.evaluaciones = evaluaciones;
+        this.generaciones = generaciones;
+    }
+
+    public void registrarIntercambio(int pos1, int pos2, int nuevoCosto, boolean mejora) {
+        String linea;
+        if (mejora) {
+            linea = String.format("Intercambio (%d, %d) -> Nueva solución con coste %d\n", pos1, pos2, nuevoCosto);
+        } else {
+            //Este caso aplica a Busqueda Tabu si acepta un movimiento no mejorador/peor
+            linea = String.format("Intercambio (%d, %d) -> Peor solución (coste %d) — no aceptada\n", pos1, pos2, nuevoCosto);
+        }
+        this.logEvolucion.append(linea);
     }
 
     public void construirYGuardarLog() {
@@ -65,6 +80,8 @@ public class Logs implements Runnable {
         sb.append("Costo Final:    ").append(costoFinal).append("\n");
         sb.append("Tiempo (ms):    ").append(tiempoTotalMs).append("\n");
         sb.append("Solución:       ").append(solucionFinal != null ? solucionFinal.toString() : "null").append("\n");
+        sb.append("Evaluaciones Max: ").append(evaluaciones).append("\n");
+        sb.append("Generaciones:     ").append(generaciones).append("\n");
         sb.append("========================================\n");
 
         guardarArchivo(sb.toString());
@@ -93,6 +110,8 @@ public class Logs implements Runnable {
         } catch (IOException e) {
             System.err.println("Error guardando log: " + e.getMessage());
         }
+        //Metodo que llaman BusquedaLocal y BusquedaTabu para grabar cada paso
+
     }
 
     @Override
