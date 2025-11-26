@@ -68,6 +68,6 @@ public class AlgGA15 {
         return solucion;
     }
 
-}//caca c
+}
 
 

@@ -114,4 +114,4 @@ public class AlgBT15 {
     // Metodo auxiliar para intercambiar
     void intercambiar(int[] s, int i, int j) { int t=s[i]; s[i]=s[j]; s[j]=t; }
 
-}//caca c
+}
