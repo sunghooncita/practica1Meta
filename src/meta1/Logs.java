@@ -78,7 +78,6 @@ public class Logs implements Runnable {
 
         // Sección específica para el Algoritmo Memético
         if (nombreAlgoritmo.equals("Memetico")) {
-            sb.append("PARAMETROS MEMÉTICO (BT):\n");
             sb.append("Evaluaciones BT: ").append(evaluacionesBT).append(" evaluaciones\n");
             sb.append("Iteraciones BT: ").append(iteracionesBT).append(" iteraciones (Profundidad)\n");
             sb.append("----------------------------------------\n");
