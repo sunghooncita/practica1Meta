@@ -1,0 +1,24 @@
+========================================
+ RESUMEN DE EJECUCIÓN 
+========================================
+Algoritmo:      Memetico
+Archivo:        ford04.dat
+Semilla:        40753067
+----------------------------------------
+Población:      100
+kBest:          2
+kWorst:         3
+Elite:          1
+Cruce:          OX2
+----------------------------------------
+PARAMETROS MEMÉTICO (BT):
+Evaluaciones BT: 1000 evaluaciones
+Iteraciones BT: 50 iteraciones (Profundidad)
+----------------------------------------
+RESULTADOS FINALES:
+Evaluaciones Max: 10000
+Generaciones:     8628
+Tiempo (ms):    226
+Costo Final:    172488
+Solución:       [29, 28, 2, 3, 20, 24, 12, 7, 4, 27, 21, 14, 6, 13, 22, 15, 19, 5, 9, 23, 18, 10, 26, 1, 17, 8, 16, 25, 11, 0]
+========================================

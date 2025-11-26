@@ -1,0 +1,24 @@
+========================================
+ RESUMEN DE EJECUCIÓN 
+========================================
+Algoritmo:      Memetico
+Archivo:        ford02.dat
+Semilla:        35470364
+----------------------------------------
+Población:      100
+kBest:          2
+kWorst:         3
+Elite:          1
+Cruce:          OX2
+----------------------------------------
+PARAMETROS MEMÉTICO (BT):
+Evaluaciones BT: 1000 evaluaciones
+Iteraciones BT: 10 iteraciones (Profundidad)
+----------------------------------------
+RESULTADOS FINALES:
+Evaluaciones Max: 10000
+Generaciones:     9061
+Tiempo (ms):    132
+Costo Final:    29940
+Solución:       [12, 1, 2, 8, 13, 9, 6, 10, 3, 5, 7, 11, 0, 4, 17, 15, 16, 12, 18, 19]
+========================================
