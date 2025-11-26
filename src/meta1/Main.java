@@ -24,21 +24,16 @@ public class Main {
 
         int K = config.getK();
         int tamPobl = config.getTamPoblacion();
-        int evaluaciones = config.getEvaluaciones();
-        int tiempoMax = config.getTiempoMax();
+        String cruce = config.getCruce();
         int porPoblAle = config.getPorPoblAle();
+        int tiempoMax = config.getTiempoMax();
 
-        // Parámetros GEN
-        ArrayList<Integer> eliteGen = config.getElite();
-        ArrayList<Integer> kBestGen = config.getKBestGen();
-        int kWorstGen = config.getKWorstGen();
-        double probMutaGen = config.getProbMutaGen();
-        double probCruceGen = config.getProbCruceGen();
+        int elite = config.getElite();
+        int kBestMGen = config.getKBestMGen();
+        int kWorstMGen = config.getkWorstMGen();
+        double probMutaMGen = config.getProbMutaMGen();
+        double probCruceMGen = config.getProbCruceMGen();
 
-        // Parámetros EST
-        ArrayList<Integer> kBestEst = config.getKBestEst();
-        int kWorstEst = config.getKWorstEst();
-        double probMutaEst = config.getProbMutaEst();
 
         //Creamos varios hilos para guardar los logs al mismo tiempo,
         //así el programa no se queda esperando mientras se escriben los archivos.
@@ -69,14 +64,14 @@ public class Main {
 
                            System.out.println("\nEjecutando Algoritmo: Generacional");
                            for (Integer semilla : semillaConfig) {
-                               for (Integer E : eliteGen) {
-                                   for (Integer kB : kBestGen) {
-                                       for (String cruce : cruces) {
+                               for (Integer E : elite) {
+                                   for (Integer kB : kBestMGen) {
+                                       for (String cruceM : cruce) {
 
-                                           int tipoCruce = cruce.equals("MOC") ? 1 : 0;
+                                           int tipoCruce = cruceM.equals("MOC") ? 1 : 0;
                                            ArrayList<Integer> mejorSolIn = new ArrayList<>();
 
-                                           System.out.printf("Configuración GEN -> Elite: %d, kBest: %d, kWorst: %d, Cruce: %s, Semilla: %d\n", E, kB, kWorstGen, cruce,semilla);
+                                           System.out.printf("Configuración GEN -> Elite: %d, kBest: %d, kWorst: %d, Cruce: %s, Semilla: %d\n", E, kB, kWorstGen, cruceM,semilla);
                                            long inicioTiempo = System.currentTimeMillis();
 
                                            long[] resultados = AlgGen_Clase01_Grupo05.AlgMGen(tamPobl, flujos.length, evaluaciones, flujos, distancias, mejorSolIn, tiempoMax, kB, kWorstGen, probMutaGen, probCruceGen, E, porPoblAle, tipoCruce, K,semilla);
@@ -90,7 +85,7 @@ public class Main {
                                            Logs log = new Logs(
                                                    "Generacional",
                                                    archivo.getName(), semilla,
-                                                   E, kB, kWorstGen, cruce, probMutaGen, probCruceGen, tamPobl,
+                                                   E, kB, kWorstMGen, cruceM, probMutaGen, probCruceGen, tamPobl,
                                                    new ArrayList<>(mejorSolIn), //copia d la solución
                                                    resultado,
                                                    tiempoGen, evaluaciones,generaciones

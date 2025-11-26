@@ -1,12 +1,13 @@
 package algoritmos;
-import java.util.ArrayList;
-import java.util.Random;
 
 import meta1.utilities;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class AlgGen_Clase01_Grupo05 {
 
-    public static double AlgGen(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones, ArrayList<Integer> mejorSolIn, int tiempoMax, int kbest, int kworst, double kProbMuta, double kProbCruce, int elitismo, int porPoblAle, int tipoCruce, int k,int semilla) {
+    public static long[] AlgMGen(int tamPobl, int tamCrom, int evaluacionesMax, int[][] flujos, int[][] localizaciones, ArrayList<Integer> mejorSolIn, int tiempoMax, int kbest, int kworst, double kProbMuta, double kProbCruce, int elitismo, int porPoblAle, int tipoCruce, int k, int semilla) {
 
         Random rand = new Random(semilla);
 
@@ -45,7 +46,7 @@ public class AlgGen_Clase01_Grupo05 {
         for (int i = 0; i < tamPobl; i++) {
 
             if (i < porPoblAle * tamPobl / 100) {
-                cromosomas.set(i,utilities.generarSolucionAleatoria(tamCrom, rand));
+                cromosomas.set(i, utilities.generarSolucionAleatoria(tamCrom, rand));
             } else {
                 cromosomas.set(i,AlgGA15.algoritmoGreedyAleatorio(flujos, localizaciones, k, rand));
             }
@@ -84,7 +85,7 @@ public class AlgGen_Clase01_Grupo05 {
             // ACTUALIZACIÓN DE COSTES
             contadorE = actualizarCostes(tamPobl, flujos, localizaciones, nuevaGen, costesGen, contadorE, marcados);
 
-            // MANTENER ELITISMO (reemplazo del peor por el élite si es necesario)
+            // MANTENER ELITISMO (reemplazo del peor por la élite si es necesario)
             reemplazoConTorneoDePerdedores(elitismo, kworst, mejorCromosoma, mejorCoste, nuevaGen, costesGen, rand);
 
             // Preparar para la siguiente iteración
@@ -103,7 +104,8 @@ public class AlgGen_Clase01_Grupo05 {
         System.out.println("Total Evaluaciones:" + contadorE);
         System.out.println("Total Generaciones:" + generaciones);
 
-        return mejorCoste.get(0);
+
+        return new long[]{mejorCoste.get(0), (long) generaciones};
     }
 
 
@@ -211,9 +213,9 @@ public class AlgGen_Clase01_Grupo05 {
                 int[] h2 = nuevaGen.get(c2).clone();
 
                 if (tipoCruce == 0)
-                    utilities.cruceOx2(h1, h2);
+                    utilities.cruceOx2(h1, h2, rand);
                 else
-                    utilities.cruceMOC(h1, h2);
+                    utilities.cruceMOC(h1, h2, rand);
 
                 nuevaGenDCruceOut.add(h1);
                 marcados[nuevaGenDCruceOut.size() - 1] = true;
@@ -278,8 +280,8 @@ public class AlgGen_Clase01_Grupo05 {
      * Implementa la recuperación de los individuos élite que no sobrevivieron.
      */
     private static void reemplazoConTorneoDePerdedores(int elitismo, int kworst,
-                                         ArrayList<int[]> mejorCromosoma, ArrayList<Long> mejorCoste,
-                                         ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen, Random rand) {
+                                                       ArrayList<int[]> mejorCromosoma, ArrayList<Long> mejorCoste,
+                                                       ArrayList<int[]> nuevaGen, ArrayList<Long> costesGen, Random rand) {
         boolean[] encElite = new boolean[elitismo];
         for (int i = 0; i < nuevaGen.size(); i++) {
             for (int j = 0; j < elitismo; j++) {
@@ -347,5 +349,4 @@ public class AlgGen_Clase01_Grupo05 {
         }
         return true;
     }
-
 }

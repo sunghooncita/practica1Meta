@@ -14,10 +14,11 @@ public class Configurador {
     private int elite;
     private int kBestMGen;
     private int k;
-    private int kWorstGen;
-    private int kWorstEst;
+    private int kWorstMGen;
     private int tamPoblacion;
-    private int evaluaciones;
+    private ArrayList<Integer> evaluaciones;
+    private ArrayList<Integer> iteraciones;
+    private int evaluacionesMax;
     private int tiempoMax;
     private int porPoblAle;
     private double probMutaMGen;
@@ -74,21 +75,12 @@ public class Configurador {
                         kBestMGen = Integer.parseInt(valor);
                         break;
 
-                    case "kBestEst":
-                        String[] vkBestEst = valor.split(" ");
-                        for (String s : vkBestEst) kBestEst.add(Integer.parseInt(s));
-                        break;
-
                     case "K":
                         k = Integer.parseInt(valor);
                         break;
 
-                    case "kWorstGen":
-                        kWorstGen = Integer.parseInt(valor);
-                        break;
-
-                    case "kWorstEst":
-                        kWorstEst = Integer.parseInt(valor);
+                    case "kWorstMGen":
+                        kWorstMGen = Integer.parseInt(valor);
                         break;
 
                     case "tamPoblacion":
@@ -104,16 +96,21 @@ public class Configurador {
                         tiempoMax = Integer.parseInt(valor);
                         break;
 
+                    case "iteraciones":
+                        String[] vIteraciones = valor.split(" ");
+                        for (String s : vIteraciones) iteraciones.add(Integer.parseInt(s));
+                        break;
+
                     case "porPoblAle":
                         porPoblAle = Integer.parseInt(valor);
                         break;
 
-                    case "probMutaGEN":
-                        probMutaGen = Double.parseDouble(valor);
+                    case "probMutaMGEN":
+                        probMutaMGen = Double.parseDouble(valor);
                         break;
 
-                    case "probCruceGEN":
-                        probCruceGen = Double.parseDouble(valor);
+                    case "probCruceMGEN":
+                        probCruceMGen = Double.parseDouble(valor);
                         break;
 
                     case "evaluacionesMax":
@@ -135,13 +132,13 @@ public class Configurador {
     public int getElite() { return elite; }
     public int getKBestMGen() { return kBestMGen; }
     public int getK() { return k; }
-    public int getKWorstGen() { return kWorstGen; }
-    public int getKWorstEst() { return kWorstEst; }
+    public int getkWorstMGen() { return kWorstMGen; }
     public int getTamPoblacion() { return tamPoblacion; }
-    public int getEvaluaciones() { return evaluaciones; }
+    public ArrayList<Integer> getEvaluaciones() { return evaluaciones; }
     public int getTiempoMax() { return tiempoMax; }
+    public ArrayList<Integer> getIteraciones() { return iteraciones; }
     public int getPorPoblAle() { return porPoblAle; }
-    public double getProbMutaGen() { return probMutaGen; }
-    public double getProbCruceGen() { return probCruceGen; }
-    public double getProbMutaEst() { return probMutaEst; }
+    public int getEvaluacionesMax() { return evaluacionesMax; }
+    public double getProbMutaMGen() { return probMutaMGen; }
+    public double getProbCruceMGen() { return probCruceMGen; }
 }
