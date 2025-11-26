@@ -136,4 +136,4 @@ public class Logs implements Runnable {
     public void run() {
         construirYGuardarLog();
     }
-}
+}//caca c

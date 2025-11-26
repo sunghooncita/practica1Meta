@@ -141,4 +141,4 @@ public class Configurador {
     public int getEvaluacionesMax() { return evaluacionesMax; }
     public double getProbMutaMGen() { return probMutaMGen; }
     public double getProbCruceMGen() { return probCruceMGen; }
-}
+}//caca c

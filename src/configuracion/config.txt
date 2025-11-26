@@ -14,3 +14,5 @@ porPoblAle=80
 probMutaMGEN=0.1
 probCruceMGEN=0.7
 Cruce=OX2
+//caca c
+
