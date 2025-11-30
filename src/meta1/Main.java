@@ -62,9 +62,8 @@ public class Main {
 
                     System.out.println("\nEjecutando Algoritmo: Memético Generacional (MGen)");
 
-                    // Bucle anidado para las 9 combinaciones requeridas
-                    for (Integer eval : evaluaciones) { // 1000, 2000, 5000 (Frecuencia/Anchura)
-                        for (Integer iter : iteraciones) { // 10, 50, 100 (Profundidad/Explotación)
+                    for (Integer eval : evaluaciones) {
+                        for (Integer iter : iteraciones) {
                             for (Integer semilla : semillaConfig) {
 
                                 int tipoCruce = cruce.equals("MOC") ? 1 : 0;
@@ -73,13 +72,10 @@ public class Main {
                                 System.out.printf("Configuración MGen -> Evaluaciones: %d, Iteraciones: %d, Semilla: %d\n", eval, iter, semilla);
                                 long inicioTiempo = System.currentTimeMillis();
 
-                                // Llamada al nuevo método AlgMGenMemetico
                                 long[] resultados = AlgMGen_Clase01_Grupo05.AlgMGen(
                                         tamPobl, flujos.length, evaluacionesMax, flujos, distancias, mejorSolIn,
                                         tiempoMax, kBestMGen, kWorstMGen, probMutaMGen, probCruceMGen, elite,
-                                        porPoblAle, tipoCruce, K, semilla,
-                                        eval, // evaluacionLanzamientoBT
-                                        iter    // iteracionesBT
+                                        porPoblAle, tipoCruce, K, semilla, eval, iter
                                 );
 
                                 long resultado = resultados[0];
