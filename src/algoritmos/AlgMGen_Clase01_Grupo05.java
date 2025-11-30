@@ -51,6 +51,7 @@ public class AlgMGen_Clase01_Grupo05 {
             }
             costes.set(i, utilities.calcularCosto(cromosomas.get(i), flujos, localizaciones));
         }
+
         int contadorE = tamPobl; //contador de las evaluaciones realizadas
         long inicio = 0;// instante en el que empieza el bucle
         double tiempoTranscurrido = 0;
@@ -66,23 +67,19 @@ public class AlgMGen_Clase01_Grupo05 {
             actualizarElitismo(tamPobl, elitismo, cromosomas, costes, mejorCromosoma, mejorCoste);
 
             // 2. BUSQUEDA TABU SOBRE ELITE
-            // Implementa la lógica: BT al individuo ELITE cada N evaluaciones.
+            // Aplica la Búsqueda Tabú al mejor individuo élite cada N evaluaciones.
             if (contadorE > 0 && contadorE % evaluacionLanzamientoBT == 0) {
 
-                // Aplicamos la Búsqueda Tabú Modificada al mejor individuo élite
+                // Aplicamos la busqueda al mejor individuo élite
                 AlgBT15 bt = new AlgBT15();
 
-                // La BT toma el élite (copia) y lo optimiza
                 int[] eliteOptimizada = bt.ejecutar(
                         mejorCromosoma.get(0).clone(),
-                        iteracionesBT,
-                        localizaciones, // Matriz de distancias
-                        flujos,         // Matriz de flujos
-                        10            // Tenencia Tabú (fijo, por ejemplo, 10)
+                        iteracionesBT, localizaciones, flujos, 10
                 );
 
                 long costeEliteOpt = utilities.calcularCosto(eliteOptimizada, flujos, localizaciones);
-                contadorE += iteracionesBT; // Sumamos las evaluaciones de la BT
+                contadorE += iteracionesBT;
 
                 // Si la solución optimizada es mejor que el élite actual, lo reemplazamos
                 if (costeEliteOpt < mejorCoste.get(0)) {
