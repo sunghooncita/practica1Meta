@@ -73,7 +73,7 @@ public class Main {
                                 long inicioTiempo = System.currentTimeMillis();
 
                                 long[] resultados = AlgMGen_Clase01_Grupo05.AlgMGen(
-                                        tamPobl, flujos.length, evaluacionesMax, flujos, distancias, mejorSolIn,
+                                        tamPobl, flujos.length, evaluacionesMax,  distancias,flujos, mejorSolIn,
                                         tiempoMax, kBestMGen, kWorstMGen, probMutaMGen, probCruceMGen, elite,
                                         porPoblAle, tipoCruce, K, semilla, eval, iter
                                 );

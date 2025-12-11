@@ -15,8 +15,6 @@ public class AlgBT15 {
         // Memoria a corto plazo (Lista Tabú)
         Deque<int[]> listaTabu = new ArrayDeque<>();
 
-        Random rand = new Random();
-
         for (int iter = 0; iter < maxIter; iter++) {
             int[] mejorMovimiento = null;
             double mejorValMov = Double.MAX_VALUE;
